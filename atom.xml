@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2021-03-01T09:40:18.841Z</updated>
+  <updated>2021-01-21T16:00:00.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://www.sissioy.com/archives/4a17b156.html"/>
-    <id>http://www.sissioy.com/archives/4a17b156.html</id>
-    <published>2021-03-01T09:40:18.841Z</published>
-    <updated>2021-03-01T09:40:18.841Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; rel=&quot;external nofollow noreferrer&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>python做题记录004</title>
@@ -253,29 +230,6 @@
   </entry>
   
   <entry>
-    <title>代码块折叠设置</title>
-    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
-    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>文章热榜设置</title>
     <link href="http://www.sissioy.com/archives/8962fe46.html"/>
     <id>http://www.sissioy.com/archives/8962fe46.html</id>
@@ -323,6 +277,29 @@
       <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
     
       <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>代码块折叠设置</title>
+    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
+    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
+    <published>2020-10-09T16:00:00.000Z</published>
+    <updated>2020-10-09T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
+    
+      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
     
   </entry>
   
@@ -514,6 +491,43 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- /TOC --&gt;
+    
+    </summary>
+    
+    
+      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
+    
+      <category term="English" scheme="http://www.sissioy.com/categories/Professional-learning/English/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>总结托福考试写作笔记————Tips</title>
+    <link href="http://www.sissioy.com/archives/46b9a25a.html"/>
+    <id>http://www.sissioy.com/archives/46b9a25a.html</id>
+    <published>2020-04-21T16:00:00.000Z</published>
+    <updated>2020-04-21T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- TOC --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#答题备考小技巧&quot;&gt;答题&amp;amp;备考小技巧&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#综合写作&quot;&gt;综合写作&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#综合写作tips&quot;&gt;综合写作Tips:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#综合写作考场准备草稿纸&quot;&gt;综合写作——考场准备草稿纸&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#综合听力练习方法&quot;&gt;综合听力练习方法：&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tpo练完了怎么办&quot;&gt;TPO练完了怎么办？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#听力十大重点&quot;&gt;听力十大重点——&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#独立写作&quot;&gt;独立写作&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#独立写作tips&quot;&gt;独立写作Tips:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#备考phase1先复习笔记&quot;&gt;备考Phase1——先复习笔记&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#备考phase2精写&quot;&gt;备考Phase2——精写&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#备考phase3限时写&quot;&gt;备考Phase3——限时写&lt;/a&gt;
     
     </summary>
     

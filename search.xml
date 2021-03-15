@@ -15,24 +15,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/archives/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" rel="external nofollow noreferrer">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noreferrer">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noreferrer">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noreferrer">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noreferrer">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noreferrer">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noreferrer">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" rel="external nofollow noreferrer">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>python做题记录004</title>
     <url>/archives/d28b2785.html</url>
     <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>对于非负整数<code>X</code>而言，<code>X</code>的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 <code>X = 1231</code>，那么其数组形式为 <code>[1,2,3,1]</code>。<br>给定非负整数<code>X</code>的数组形式<code>A</code>，返回整数<code>X+K</code>的数组形式。</p>
@@ -272,6 +254,33 @@
       </tags>
   </entry>
   <entry>
+    <title>文章热榜设置</title>
+    <url>/archives/8962fe46.html</url>
+    <content><![CDATA[<a id="more"></a>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-class">.post-description</span> &#123; <span class="attribute">display</span>: none; &#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">AV.initialize(<span class="string">"PNS4giXtrg20IMnwK4FkySYk-gzGzoHsz"</span>, <span class="string">"OFT996P6mikqInfTWwlvVef7"</span>);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> time=<span class="number">0</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> title=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> url=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(<span class="string">'Counter'</span>);</span></span><br><span class="line"><span class="actionscript">  query.notEqualTo(<span class="string">'id'</span>,<span class="number">0</span>);</span></span><br><span class="line"><span class="actionscript">  query.descending(<span class="string">'time'</span>); <span class="comment">//结果按阅读次数降序排序</span></span></span><br><span class="line"><span class="actionscript">  query.limit(<span class="number">1000</span>); <span class="comment">//最终只返回1000条结果</span></span></span><br><span class="line"><span class="actionscript">  query.find().then(<span class="function"><span class="keyword">function</span> <span class="params">(todo)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> result=todo[i].attributes;</span></span><br><span class="line">      time=result.time;</span><br><span class="line">      title=result.title;</span><br><span class="line">      url=result.url;</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> content=<span class="string">"&lt;p&gt;"</span>+<span class="string">"&lt;font color='#1C1C1C'&gt;"</span>+<span class="string">"【文章热度:"</span>+time+<span class="string">"℃】"</span>+<span class="string">"&lt;/font&gt;"</span>+<span class="string">"&lt;a href='"</span>+<span class="string">"https://www.sissioy.com"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;"</span>+<span class="string">"&lt;/p&gt;"</span>;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>).innerHTML+=content</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">  &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(error)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">"error"</span>);</span></span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>作文记录————读 the Declaration of Independence 后的思考</title>
+    <url>/archives/c4e96787.html</url>
+    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
+<p>Write a passage in no less than 100 words, on your understanding of “the Declaration of Independence”, what impresses you most, how you think this document has influenced the United States.</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="提交作品"><a href="#提交作品" class="headerlink" title="提交作品"></a>提交作品</h3><p>After reading “the Declaration of Independence”, I noticed that the man who wrote the Declaration of Independence was very brave. The man who signed it also risked being killed, especially the one who signed his name in the most prominent place. This kind of fearless defiance needs to be learned and no matter what age we live in. Not only that, but they knew exactly what they wanted to gain through their independence. A total of 27 things they needed to change through their independence to create the thirteen United States of America. </p>
+<p>But there are also some omissions in it. The whole Declaration of Independence is based on one particular foundation, “God”. “All men are created equal” actually means “all men are created equal by God”, which is different from “all men are born equal”. “God” makes the social life in America is closely related to religion. The society, the party, and the government are all influenced by religious groups. All presidents have to take the oath of office by touching the Bible.Also, “men created equal” does not include women, slaves, which has set the stage for the various affirmative movements that followed in the U.S. It can’t really be said that it was a problem of decision making at the time, only that the times were different and they didn’t realize that such problems would arise more than two hundred years later.</p>
+<p>U.S. Justice Ruth Bader Ginsburg(RBG) speaks out for affirmative action and the world marches for Floyd ……If no policies satisfy the public, there may be more of this in the future.</p>
+]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>English</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>short essay</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>代码块折叠设置</title>
     <url>/archives/2dbc2a40.html</url>
     <content><![CDATA[<h2 id="设置代码块折叠的步骤"><a href="#设置代码块折叠的步骤" class="headerlink" title="设置代码块折叠的步骤"></a>设置代码块折叠的步骤</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><code>/hexo/script/tags</code>文件目录下，新建<code>fold_tag.js</code>:</p>
@@ -300,33 +309,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文章热榜设置</title>
-    <url>/archives/8962fe46.html</url>
-    <content><![CDATA[<a id="more"></a>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-class">.post-description</span> &#123; <span class="attribute">display</span>: none; &#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">AV.initialize(<span class="string">"PNS4giXtrg20IMnwK4FkySYk-gzGzoHsz"</span>, <span class="string">"OFT996P6mikqInfTWwlvVef7"</span>);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> time=<span class="number">0</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> title=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> url=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(<span class="string">'Counter'</span>);</span></span><br><span class="line"><span class="actionscript">  query.notEqualTo(<span class="string">'id'</span>,<span class="number">0</span>);</span></span><br><span class="line"><span class="actionscript">  query.descending(<span class="string">'time'</span>); <span class="comment">//结果按阅读次数降序排序</span></span></span><br><span class="line"><span class="actionscript">  query.limit(<span class="number">1000</span>); <span class="comment">//最终只返回1000条结果</span></span></span><br><span class="line"><span class="actionscript">  query.find().then(<span class="function"><span class="keyword">function</span> <span class="params">(todo)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> result=todo[i].attributes;</span></span><br><span class="line">      time=result.time;</span><br><span class="line">      title=result.title;</span><br><span class="line">      url=result.url;</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> content=<span class="string">"&lt;p&gt;"</span>+<span class="string">"&lt;font color='#1C1C1C'&gt;"</span>+<span class="string">"【文章热度:"</span>+time+<span class="string">"℃】"</span>+<span class="string">"&lt;/font&gt;"</span>+<span class="string">"&lt;a href='"</span>+<span class="string">"https://www.sissioy.com"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;"</span>+<span class="string">"&lt;/p&gt;"</span>;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>).innerHTML+=content</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">  &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(error)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">"error"</span>);</span></span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>作文记录————读 the Declaration of Independence 后的思考</title>
-    <url>/archives/c4e96787.html</url>
-    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
-<p>Write a passage in no less than 100 words, on your understanding of “the Declaration of Independence”, what impresses you most, how you think this document has influenced the United States.</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="提交作品"><a href="#提交作品" class="headerlink" title="提交作品"></a>提交作品</h3><p>After reading “the Declaration of Independence”, I noticed that the man who wrote the Declaration of Independence was very brave. The man who signed it also risked being killed, especially the one who signed his name in the most prominent place. This kind of fearless defiance needs to be learned and no matter what age we live in. Not only that, but they knew exactly what they wanted to gain through their independence. A total of 27 things they needed to change through their independence to create the thirteen United States of America. </p>
-<p>But there are also some omissions in it. The whole Declaration of Independence is based on one particular foundation, “God”. “All men are created equal” actually means “all men are created equal by God”, which is different from “all men are born equal”. “God” makes the social life in America is closely related to religion. The society, the party, and the government are all influenced by religious groups. All presidents have to take the oath of office by touching the Bible.Also, “men created equal” does not include women, slaves, which has set the stage for the various affirmative movements that followed in the U.S. It can’t really be said that it was a problem of decision making at the time, only that the times were different and they didn’t realize that such problems would arise more than two hundred years later.</p>
-<p>U.S. Justice Ruth Bader Ginsburg(RBG) speaks out for affirmative action and the world marches for Floyd ……If no policies satisfy the public, there may be more of this in the future.</p>
-]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>English</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
-        <tag>short essay</tag>
       </tags>
   </entry>
   <entry>
@@ -369,11 +351,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts1843" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts4903" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts1843'));
+	var myChart = echarts.init(document.getElementById('echarts4903'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -409,11 +391,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts8184" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts1529" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8184'));
+	var myChart = echarts.init(document.getElementById('echarts1529'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
@@ -1246,21 +1228,6 @@ option = {
       </categories>
   </entry>
   <entry>
-    <title>Nginx config 文件</title>
-    <url>/archives/bd43a1d3.html</url>
-    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
-<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
-<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
-<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
-
-<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
     <title>2020年4月读书计划</title>
     <url>/archives/977a2c8.html</url>
     <content><![CDATA[<ul>
@@ -1284,6 +1251,21 @@ option = {
       <tags>
         <tag>plan</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Nginx config 文件</title>
+    <url>/archives/bd43a1d3.html</url>
+    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
+<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
+<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
+<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
+
+<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>Linux</category>
+      </categories>
   </entry>
   <entry>
     <title>covid-19各国病死率</title>
