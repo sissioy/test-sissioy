@@ -230,6 +230,29 @@
   </entry>
   
   <entry>
+    <title>代码块折叠设置</title>
+    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
+    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
+    <published>2020-10-09T16:00:00.000Z</published>
+    <updated>2020-10-09T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
+    
+      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文章热榜设置</title>
     <link href="http://www.sissioy.com/archives/8962fe46.html"/>
     <id>http://www.sissioy.com/archives/8962fe46.html</id>
@@ -277,29 +300,6 @@
       <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
     
       <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码块折叠设置</title>
-    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
-    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
     
   </entry>
   
