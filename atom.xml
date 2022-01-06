@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2021-01-21T16:00:00.000Z</updated>
+  <updated>2022-01-06T19:24:47.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -17,15 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python做题记录004</title>
-    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
-    <id>http://www.sissioy.com/archives/d28b2785.html</id>
-    <published>2021-01-21T16:00:00.000Z</published>
-    <updated>2021-01-21T16:00:00.000Z</updated>
+    <title>用hexo更新文章的报错记录</title>
+    <link href="http://www.sissioy.com/archives/1718214a.html"/>
+    <id>http://www.sissioy.com/archives/1718214a.html</id>
+    <published>2022-01-06T19:24:47.000Z</published>
+    <updated>2022-01-06T19:24:47.000Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
+      &lt;p&gt;前几天写了个题解，今天打算上传博客，居然出错了，找了一圈错误原因，最后发现是yaml语言规范问题。就缺少一个空格，折腾了半天，下次要好好看报错内容。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="others" scheme="http://www.sissioy.com/categories/others/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>刷题记录——跳跃游戏</title>
+    <link href="http://www.sissioy.com/archives/c01764a5.html"/>
+    <id>http://www.sissioy.com/archives/c01764a5.html</id>
+    <published>2022-01-03T18:24:47.000Z</published>
+    <updated>2022-01-03T18:24:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一道题地址：&lt;br&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/jump-game&quot; rel=&quot;external nofollow noreferrer&quot;&gt;&lt;/a&gt;&lt;br&gt;第二道题地址：&lt;br&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -67,7 +86,32 @@
   </entry>
   
   <entry>
-    <title>python做题记录002</title>
+    <title>刷题记录————整数加数组</title>
+    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
+    <id>http://www.sissioy.com/archives/d28b2785.html</id>
+    <published>2021-01-21T16:00:00.000Z</published>
+    <updated>2021-01-21T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
+    
+      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
+    
+    
+      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
+    
+      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刷题记录————汉诺塔</title>
     <link href="http://www.sissioy.com/archives/3be882b0.html"/>
     <id>http://www.sissioy.com/archives/3be882b0.html</id>
     <published>2020-12-02T16:00:00.000Z</published>
@@ -92,7 +136,7 @@
   </entry>
   
   <entry>
-    <title>Topcoder---python记录001</title>
+    <title>刷题记录————topcoder</title>
     <link href="http://www.sissioy.com/archives/3572b528.html"/>
     <id>http://www.sissioy.com/archives/3572b528.html</id>
     <published>2020-12-02T16:00:00.000Z</published>
@@ -178,7 +222,7 @@
   </entry>
   
   <entry>
-    <title>python做题记录001</title>
+    <title>刷题记录————两道小题</title>
     <link href="http://www.sissioy.com/archives/a2e1d30a.html"/>
     <id>http://www.sissioy.com/archives/a2e1d30a.html</id>
     <published>2020-11-11T16:00:00.000Z</published>
@@ -230,29 +274,6 @@
   </entry>
   
   <entry>
-    <title>代码块折叠设置</title>
-    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
-    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>文章热榜设置</title>
     <link href="http://www.sissioy.com/archives/8962fe46.html"/>
     <id>http://www.sissioy.com/archives/8962fe46.html</id>
@@ -300,6 +321,29 @@
       <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
     
       <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>代码块折叠设置</title>
+    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
+    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
+    <published>2020-10-09T16:00:00.000Z</published>
+    <updated>2020-10-09T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
+    
+      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
     
   </entry>
   
@@ -460,82 +504,10 @@
     
       <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
     
-      <category term="Python" scheme="http://www.sissioy.com/categories/Professional-learning/Python/"/>
+      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
     
     
       <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>总结托福考试写作笔记————Examples</title>
-    <link href="http://www.sissioy.com/archives/68263b2e.html"/>
-    <id>http://www.sissioy.com/archives/68263b2e.html</id>
-    <published>2020-04-22T16:00:00.000Z</published>
-    <updated>2020-04-22T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- TOC --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#举例&quot;&gt;举例&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#开头段和主体思路的例子&quot;&gt;开头段和主体思路的例子&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#双边论证的例子&quot;&gt;双边论证的例子&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分情况讨论的例子1&quot;&gt;分情况讨论的例子1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分情况讨论的例子2&quot;&gt;分情况讨论的例子2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#证明收入越高生活质量越高-对比以下两段内容&quot;&gt;证明：收入越高，生活质量越高   //对比以下两段内容&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#例证细节填充&quot;&gt;例证细节填充&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#要背的的综合写作模板&quot;&gt;要背的的综合写作模板：&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- /TOC --&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="English" scheme="http://www.sissioy.com/categories/Professional-learning/English/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>总结托福考试写作笔记————Tips</title>
-    <link href="http://www.sissioy.com/archives/46b9a25a.html"/>
-    <id>http://www.sissioy.com/archives/46b9a25a.html</id>
-    <published>2020-04-21T16:00:00.000Z</published>
-    <updated>2020-04-21T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- TOC --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#答题备考小技巧&quot;&gt;答题&amp;amp;备考小技巧&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#综合写作&quot;&gt;综合写作&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#综合写作tips&quot;&gt;综合写作Tips:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#综合写作考场准备草稿纸&quot;&gt;综合写作——考场准备草稿纸&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#综合听力练习方法&quot;&gt;综合听力练习方法：&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#tpo练完了怎么办&quot;&gt;TPO练完了怎么办？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#听力十大重点&quot;&gt;听力十大重点——&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#独立写作&quot;&gt;独立写作&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#独立写作tips&quot;&gt;独立写作Tips:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#备考phase1先复习笔记&quot;&gt;备考Phase1——先复习笔记&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#备考phase2精写&quot;&gt;备考Phase2——精写&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#备考phase3限时写&quot;&gt;备考Phase3——限时写&lt;/a&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="English" scheme="http://www.sissioy.com/categories/Professional-learning/English/"/>
-    
     
   </entry>
   
