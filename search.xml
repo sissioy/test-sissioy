@@ -15,6 +15,70 @@
 ]]></content>
   </entry>
   <entry>
+    <title>2022-03-31-Record</title>
+    <url>/archives/cd1b6b19.html</url>
+    <content><![CDATA[<a id="more"></a>
+<h3 id="一点杂记"><a href="#一点杂记" class="headerlink" title="一点杂记"></a>一点杂记</h3><p>早上和下午一直在看经济学原理·宏观部分，看完了，有个问题没有被解答，后面有问题的时候再说吧。  </p>
+<p>下次要借 经济学原理·微观部分  </p>
+<p>后面还可以根据书单去看经济学领域的其他书。  </p>
+<p>学了点sql注入的方法，可以在靶机上操作一番。<br>晚上回到宿舍想把树莓派变成个热点，但是没有成功，可能是最初没有HDMI的线，所以设置了ssid的配置去联电脑开启的热点。第二种可能是我用脚本连接校园网的时候，设置了ssid的影响。</p>
+<h3 id="一点思考"><a href="#一点思考" class="headerlink" title="一点思考"></a>一点思考</h3><p>内向和外向的性格不过是个度量，我恰恰位于二者中间吧，没有过分内向也不是很外向。举例来说，给大脑充电这件事，我可以从独处中获得能量，也可以从和别人的交流沟通中获得能量；我也同时具有内向不喜欢说话的特点，也具有外向开朗的特点，听起来有些矛盾，但确实会在这二者之间切换。这也减少了我给自己贴标签的乐趣（或说麻烦），不过我一直很难给自己找到一个定位，这多少让我有些不安————我无法看清自己。  </p>
+]]></content>
+      <categories>
+        <category>Broken thoughts</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2022-03-30-Record</title>
+    <url>/archives/1b16b87.html</url>
+    <content><![CDATA[<a id="more"></a>
+<p>早上和下午玩了树莓派，但没有配置成功  </p>
+<p>读了周志华教授2022的review  </p>
+]]></content>
+      <categories>
+        <category>Broken thoughts</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2022-03-29-Record</title>
+    <url>/archives/98564ef.html</url>
+    <content><![CDATA[<a id="more"></a>
+
+<p>今天看了77页的经济学原理</p>
+<p>背了托福单词</p>
+<p>大创添加扫码功能</p>
+<p>看稍后再看的教学视频，linux进程 java进程</p>
+<p>下载了DeepLearn领域的论文</p>
+<p>不错的，效率很高。</p>
+<p>DeepLearn论文的整理，这些论文还没有下载。</p>
+<p><a href="https://github.com/louisfb01/best_AI_papers_2021" rel="external nofollow noreferrer">https://github.com/louisfb01/best_AI_papers_2021</a></p>
+]]></content>
+      <categories>
+        <category>Broken thoughts</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2022-03-24-Thinking</title>
+    <url>/archives/113c81ad.html</url>
+    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV15T4y1S7cr" rel="external nofollow noreferrer">温铁军：解读2022中央”一号文件”【云讲座分享】_哔哩哔哩_bilibili</a></p>
+<a id="more"></a>
+
+<ol>
+<li>中国的肉类供给总体过剩？</li>
+<li>猪周期波动—-经济波动 国家的控制？</li>
+<li>集中养殖 大量甲烷排放？为什么不允许散户养殖？</li>
+<li>根本的问题是什么？</li>
+<li>期货 贷款 保险公司 担保?</li>
+</ol>
+<p>农业生态化转型<br>有些人不考虑中国的生态，为了积累资本后移民国外</p>
+<p>农业数字化企业没有生产端数据？（存疑）<br>京东的 拼多多的<br>农村各个地方情况复杂</p>
+<p><strong>应对产能过剩：信息穿透</strong></p>
+]]></content>
+      <categories>
+        <category>Broken thoughts</category>
+      </categories>
+  </entry>
+  <entry>
     <title>用hexo更新文章的报错记录</title>
     <url>/archives/1718214a.html</url>
     <content><![CDATA[<p>前几天写了个题解，今天打算上传博客，居然出错了，找了一圈错误原因，最后发现是yaml语言规范问题。就缺少一个空格，折腾了半天，下次要好好看报错内容。</p>
@@ -39,7 +103,7 @@
   <entry>
     <title>刷题记录——跳跃游戏</title>
     <url>/archives/c01764a5.html</url>
-    <content><![CDATA[<p>第一道题地址：<br><a href="https://leetcode-cn.com/problems/jump-game" rel="external nofollow noreferrer"></a><br>第二道题地址：<br><a href=""></a></p>
+    <content><![CDATA[<p>第一道题地址：<br><a href="https://leetcode-cn.com/problems/jump-game" rel="external nofollow noreferrer">leetcode-jump-1</a><br>第二道题地址：<br><a href="https://leetcode-cn.com/problems/jump-game-ii" rel="external nofollow noreferrer">leetcode-jump-2</a></p>
 <a id="more"></a>
 
 <h3 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h3><p><img src="https://tva1.sinaimg.cn/large/008aoOh1ly1gy1om3yxmvj30k80rjadp.jpg" alt="image.png"></p>
@@ -48,6 +112,26 @@
 <h3 id="题目二"><a href="#题目二" class="headerlink" title="题目二"></a>题目二</h3><p><img src="https://tva1.sinaimg.cn/large/008aoOh1ly1gy4gv3poavj30l80qewho.jpg" alt="image.png"></p>
 <h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jump</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line"></span><br><span class="line">        long = len(nums)</span><br><span class="line">        jump, max_jump, end = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(long - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> max_jump &gt;= i:</span><br><span class="line">                <span class="comment"># 更新值</span></span><br><span class="line">                max_jump = max(max_jump, i + nums[i])</span><br><span class="line">                <span class="comment"># 跳</span></span><br><span class="line">                <span class="keyword">if</span> i == end:</span><br><span class="line">                    jump += <span class="number">1</span></span><br><span class="line">                    end = max_jump</span><br><span class="line">        <span class="keyword">return</span> jump</span><br></pre></td></tr></table></figure>
 <p>这道题最开始想得太复杂，想每一步怎么跳，跳到哪里，更新那些值。看了题解之后，才知道其实不用这么麻烦，只用判断i的落点，如果和上一次跳完更新的end值相等，可以再一次跳。</p>
+]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>practice</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>刷题记录————整数加数组</title>
+    <url>/archives/d28b2785.html</url>
+    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>对于非负整数<code>X</code>而言，<code>X</code>的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 <code>X = 1231</code>，那么其数组形式为 <code>[1,2,3,1]</code>。<br>给定非负整数<code>X</code>的数组形式<code>A</code>，返回整数<code>X+K</code>的数组形式。</p>
+<a id="more"></a>
+<p><img src="https://tva1.sinaimg.cn/large/008aoOh1ly1gmwq38nfygj30rm0lgmyl.jpg" alt="image.png"></p>
+<h3 id="第一种解法"><a href="#第一种解法" class="headerlink" title="第一种解法"></a>第一种解法</h3><p>把list转化为int</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        first </span><br><span class="line">        num = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> A:</span><br><span class="line">            num = num *<span class="number">10</span> + i</span><br><span class="line">        ans_num = num +K</span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> str(ans_num):</span><br><span class="line">            ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<h3 id="第二种解法"><a href="#第二种解法" class="headerlink" title="第二种解法"></a>第二种解法</h3><p>把int转化为list</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="comment"># second</span></span><br><span class="line">        li = []</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> str(K):</span><br><span class="line">            li.append(int(x))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&gt;len(li):</span><br><span class="line">            li.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&lt; len(li):</span><br><span class="line">            A.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        out = <span class="number">0</span></span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> x,y <span class="keyword">in</span> zip(li[::<span class="number">-1</span>],A[::<span class="number">-1</span>]):</span><br><span class="line">            temp = x+y+out</span><br><span class="line">            <span class="keyword">if</span> temp &lt; <span class="number">10</span>:</span><br><span class="line">                ans.append(temp)</span><br><span class="line">                out = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                out = <span class="number">1</span></span><br><span class="line">                ans.append(temp<span class="number">-10</span>)</span><br><span class="line">        <span class="keyword">if</span> out == <span class="number">1</span>:</span><br><span class="line">            ans.append(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> ans[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Professional learning</category>
@@ -83,26 +167,6 @@
       <tags>
         <tag>python</tag>
         <tag>project</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>刷题记录————整数加数组</title>
-    <url>/archives/d28b2785.html</url>
-    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>对于非负整数<code>X</code>而言，<code>X</code>的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 <code>X = 1231</code>，那么其数组形式为 <code>[1,2,3,1]</code>。<br>给定非负整数<code>X</code>的数组形式<code>A</code>，返回整数<code>X+K</code>的数组形式。</p>
-<a id="more"></a>
-<p><img src="https://tva1.sinaimg.cn/large/008aoOh1ly1gmwq38nfygj30rm0lgmyl.jpg" alt="image.png"></p>
-<h3 id="第一种解法"><a href="#第一种解法" class="headerlink" title="第一种解法"></a>第一种解法</h3><p>把list转化为int</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        first </span><br><span class="line">        num = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> A:</span><br><span class="line">            num = num *<span class="number">10</span> + i</span><br><span class="line">        ans_num = num +K</span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> str(ans_num):</span><br><span class="line">            ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-<h3 id="第二种解法"><a href="#第二种解法" class="headerlink" title="第二种解法"></a>第二种解法</h3><p>把int转化为list</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="comment"># second</span></span><br><span class="line">        li = []</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> str(K):</span><br><span class="line">            li.append(int(x))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&gt;len(li):</span><br><span class="line">            li.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&lt; len(li):</span><br><span class="line">            A.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        out = <span class="number">0</span></span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> x,y <span class="keyword">in</span> zip(li[::<span class="number">-1</span>],A[::<span class="number">-1</span>]):</span><br><span class="line">            temp = x+y+out</span><br><span class="line">            <span class="keyword">if</span> temp &lt; <span class="number">10</span>:</span><br><span class="line">                ans.append(temp)</span><br><span class="line">                out = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                out = <span class="number">1</span></span><br><span class="line">                ans.append(temp<span class="number">-10</span>)</span><br><span class="line">        <span class="keyword">if</span> out == <span class="number">1</span>:</span><br><span class="line">            ans.append(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> ans[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>practice</tag>
       </tags>
   </entry>
   <entry>
@@ -298,33 +362,6 @@
       </tags>
   </entry>
   <entry>
-    <title>文章热榜设置</title>
-    <url>/archives/8962fe46.html</url>
-    <content><![CDATA[<a id="more"></a>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-class">.post-description</span> &#123; <span class="attribute">display</span>: none; &#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">AV.initialize(<span class="string">"PNS4giXtrg20IMnwK4FkySYk-gzGzoHsz"</span>, <span class="string">"OFT996P6mikqInfTWwlvVef7"</span>);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> time=<span class="number">0</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> title=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> url=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(<span class="string">'Counter'</span>);</span></span><br><span class="line"><span class="actionscript">  query.notEqualTo(<span class="string">'id'</span>,<span class="number">0</span>);</span></span><br><span class="line"><span class="actionscript">  query.descending(<span class="string">'time'</span>); <span class="comment">//结果按阅读次数降序排序</span></span></span><br><span class="line"><span class="actionscript">  query.limit(<span class="number">1000</span>); <span class="comment">//最终只返回1000条结果</span></span></span><br><span class="line"><span class="actionscript">  query.find().then(<span class="function"><span class="keyword">function</span> <span class="params">(todo)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> result=todo[i].attributes;</span></span><br><span class="line">      time=result.time;</span><br><span class="line">      title=result.title;</span><br><span class="line">      url=result.url;</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> content=<span class="string">"&lt;p&gt;"</span>+<span class="string">"&lt;font color='#1C1C1C'&gt;"</span>+<span class="string">"【文章热度:"</span>+time+<span class="string">"℃】"</span>+<span class="string">"&lt;/font&gt;"</span>+<span class="string">"&lt;a href='"</span>+<span class="string">"https://www.sissioy.com"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;"</span>+<span class="string">"&lt;/p&gt;"</span>;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>).innerHTML+=content</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">  &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(error)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">"error"</span>);</span></span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>作文记录————读 the Declaration of Independence 后的思考</title>
-    <url>/archives/c4e96787.html</url>
-    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
-<p>Write a passage in no less than 100 words, on your understanding of “the Declaration of Independence”, what impresses you most, how you think this document has influenced the United States.</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="提交作品"><a href="#提交作品" class="headerlink" title="提交作品"></a>提交作品</h3><p>After reading “the Declaration of Independence”, I noticed that the man who wrote the Declaration of Independence was very brave. The man who signed it also risked being killed, especially the one who signed his name in the most prominent place. This kind of fearless defiance needs to be learned and no matter what age we live in. Not only that, but they knew exactly what they wanted to gain through their independence. A total of 27 things they needed to change through their independence to create the thirteen United States of America. </p>
-<p>But there are also some omissions in it. The whole Declaration of Independence is based on one particular foundation, “God”. “All men are created equal” actually means “all men are created equal by God”, which is different from “all men are born equal”. “God” makes the social life in America is closely related to religion. The society, the party, and the government are all influenced by religious groups. All presidents have to take the oath of office by touching the Bible.Also, “men created equal” does not include women, slaves, which has set the stage for the various affirmative movements that followed in the U.S. It can’t really be said that it was a problem of decision making at the time, only that the times were different and they didn’t realize that such problems would arise more than two hundred years later.</p>
-<p>U.S. Justice Ruth Bader Ginsburg(RBG) speaks out for affirmative action and the world marches for Floyd ……If no policies satisfy the public, there may be more of this in the future.</p>
-]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>English</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
-        <tag>short essay</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>代码块折叠设置</title>
     <url>/archives/2dbc2a40.html</url>
     <content><![CDATA[<h2 id="设置代码块折叠的步骤"><a href="#设置代码块折叠的步骤" class="headerlink" title="设置代码块折叠的步骤"></a>设置代码块折叠的步骤</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><code>/hexo/script/tags</code>文件目录下，新建<code>fold_tag.js</code>:</p>
@@ -353,6 +390,33 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章热榜设置</title>
+    <url>/archives/8962fe46.html</url>
+    <content><![CDATA[<a id="more"></a>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-class">.post-description</span> &#123; <span class="attribute">display</span>: none; &#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">AV.initialize(<span class="string">"PNS4giXtrg20IMnwK4FkySYk-gzGzoHsz"</span>, <span class="string">"OFT996P6mikqInfTWwlvVef7"</span>);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> time=<span class="number">0</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> title=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> url=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(<span class="string">'Counter'</span>);</span></span><br><span class="line"><span class="actionscript">  query.notEqualTo(<span class="string">'id'</span>,<span class="number">0</span>);</span></span><br><span class="line"><span class="actionscript">  query.descending(<span class="string">'time'</span>); <span class="comment">//结果按阅读次数降序排序</span></span></span><br><span class="line"><span class="actionscript">  query.limit(<span class="number">1000</span>); <span class="comment">//最终只返回1000条结果</span></span></span><br><span class="line"><span class="actionscript">  query.find().then(<span class="function"><span class="keyword">function</span> <span class="params">(todo)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> result=todo[i].attributes;</span></span><br><span class="line">      time=result.time;</span><br><span class="line">      title=result.title;</span><br><span class="line">      url=result.url;</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> content=<span class="string">"&lt;p&gt;"</span>+<span class="string">"&lt;font color='#1C1C1C'&gt;"</span>+<span class="string">"【文章热度:"</span>+time+<span class="string">"℃】"</span>+<span class="string">"&lt;/font&gt;"</span>+<span class="string">"&lt;a href='"</span>+<span class="string">"https://www.sissioy.com"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;"</span>+<span class="string">"&lt;/p&gt;"</span>;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>).innerHTML+=content</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">  &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(error)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">"error"</span>);</span></span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>作文记录————读 the Declaration of Independence 后的思考</title>
+    <url>/archives/c4e96787.html</url>
+    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
+<p>Write a passage in no less than 100 words, on your understanding of “the Declaration of Independence”, what impresses you most, how you think this document has influenced the United States.</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="提交作品"><a href="#提交作品" class="headerlink" title="提交作品"></a>提交作品</h3><p>After reading “the Declaration of Independence”, I noticed that the man who wrote the Declaration of Independence was very brave. The man who signed it also risked being killed, especially the one who signed his name in the most prominent place. This kind of fearless defiance needs to be learned and no matter what age we live in. Not only that, but they knew exactly what they wanted to gain through their independence. A total of 27 things they needed to change through their independence to create the thirteen United States of America. </p>
+<p>But there are also some omissions in it. The whole Declaration of Independence is based on one particular foundation, “God”. “All men are created equal” actually means “all men are created equal by God”, which is different from “all men are born equal”. “God” makes the social life in America is closely related to religion. The society, the party, and the government are all influenced by religious groups. All presidents have to take the oath of office by touching the Bible.Also, “men created equal” does not include women, slaves, which has set the stage for the various affirmative movements that followed in the U.S. It can’t really be said that it was a problem of decision making at the time, only that the times were different and they didn’t realize that such problems would arise more than two hundred years later.</p>
+<p>U.S. Justice Ruth Bader Ginsburg(RBG) speaks out for affirmative action and the world marches for Floyd ……If no policies satisfy the public, there may be more of this in the future.</p>
+]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>English</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>short essay</tag>
       </tags>
   </entry>
   <entry>
@@ -395,11 +459,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts2749" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts4027" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts2749'));
+	var myChart = echarts.init(document.getElementById('echarts4027'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -435,11 +499,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts6818" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts4051" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts6818'));
+	var myChart = echarts.init(document.getElementById('echarts4051'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
@@ -962,51 +1026,19 @@ option = {
 <h4 id="背景引入-找名人名言"><a href="#背景引入-找名人名言" class="headerlink" title="背景引入-找名人名言"></a>背景引入-找名人名言</h4><p>名人名言1：<br>26 th president :””<br>Just as Theodore Roosevelt, the 32th president of the States, once put it, “the most important single ingredient in the formula of success is knowing how to get along with people” Success depends on network to a large degree.<br>名人名言2：<br>Just as Thomas Edison, the best-known American inventor and business man, once put it, “I have not failed, I have just found 10000 ways that will not work”<br>名人名言3：<br>Just as Aristotle, “Father of Western Philosophy”, once put it, “Excellence, therefore, is not an act, but a habit” 亚里士多德：优秀是一种习惯<br>不知道是谁说的——<br>1 just as an old saying goes   “knowledge is power”<br>2 just as an ancient Chinese proverb谚语 goes</p>
 <h4 id="背景引入-排比反问"><a href="#背景引入-排比反问" class="headerlink" title="背景引入-排比反问"></a>背景引入-排比反问</h4><h4 id="背景引入-个例引入"><a href="#背景引入-个例引入" class="headerlink" title="背景引入-个例引入"></a>背景引入-个例引入</h4><h3 id="结尾：总的来说，经过上文的分析，可以很合理-自然地得到的结论为。。。。"><a href="#结尾：总的来说，经过上文的分析，可以很合理-自然地得到的结论为。。。。" class="headerlink" title="结尾：总的来说，经过上文的分析，可以很合理/自然地得到的结论为。。。。"></a>结尾：总的来说，经过上文的分析，可以很合理/自然地得到的结论为。。。。</h3><figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">To sum up, taking <span class="keyword">into</span> account/<span class="keyword">from</span> all <span class="keyword">the</span> factor discussed <span class="keyword">above</span>, <span class="keyword">it</span> <span class="keyword">is</span> natural <span class="keyword">to</span> draw <span class="keyword">the</span> conclusion <span class="keyword">that</span> competition can promote friendship.</span><br></pre></td></tr></table></figure>
 
-<h3 id="中间段：主题句-解释-例证-小结"><a href="#中间段：主题句-解释-例证-小结" class="headerlink" title="中间段：主题句+解释+例证+小结"></a>中间段：主题句+解释+例证+小结</h3><h4 id="主题句"><a href="#主题句" class="headerlink" title="主题句"></a>主题句</h4><h4 id="解释——本质：因果论证"><a href="#解释——本质：因果论证" class="headerlink" title="解释——本质：因果论证"></a>解释——本质：因果论证</h4><p>Is no longer beyond reach//可及<br>I am forever on a diet<br>In that(与except反)</p>
+<h3 id="中间段：主题句-解释-例证-小结"><a href="#中间段：主题句-解释-例证-小结" class="headerlink" title="中间段：主题句+解释+例证+小结"></a>中间段：主题句+解释+例证+小结</h3><h4 id="主题句"><a href="#主题句" class="headerlink" title="主题句"></a>主题句</h4><h4 id="解释——本质：因果论证"><a href="#解释——本质：因果论证" class="headerlink" title="解释——本质：因果论证"></a>解释——本质：因果论证</h4><p>Is no longer beyond reach//可及<br>I am forever on a diet<br>In that(与except反)  </p>
 <ul>
 <li>This is because/since/in that</li>
 <li>The primary reason is that</li>
 <li>To be more specific, …/ specifically,</li>
 <li>In detail, …/ To explain it further, …</li>
 </ul>
-<p>解释展开——CHEMIST<br>Convenience<br>Health &amp; Safety<br>Environment<br>Money<br>Interpersonal relationship &amp; relax<br>Success(quality见下)<br>Technology: information technology(IT) communication technology(CT) industrial Automation(IA) transpotation technology(TT)</p>
+<p>解释展开——CHEMIST<br>Convenience<br>Health &amp; Safety<br>Environment<br>Money<br>Interpersonal relationship &amp; relax<br>Success(quality见下)<br>Technology: information technology(IT) communication technology(CT) industrial Automation(IA) transpotation technology(TT)  </p>
 <!-- 此处举例 -->
-<blockquote>
-<p>A/D: It is better to travel abroad than to travel domestically.</p>
-<blockquote>
-<p>Disagree(国内游好)    travel at home<br>First, traveling domestically is more convenient.  Unlike foreign ones, domestic tour does not entail </p>
-<blockquote>
-<p>getting a visa<br>Exchanging currency<br>And learning a foreign language</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">&gt; A/D: It <span class="keyword">is</span> better <span class="keyword">to</span> travel abroad than <span class="keyword">to</span> travel domestically.</span><br><span class="line">&gt; Disagree(国内游好)    travel at home</span><br><span class="line">&gt;   First, traveling domestically <span class="keyword">is</span> more convenient.  Unlike <span class="keyword">foreign</span> ones, domestic tour does <span class="keyword">not</span> entail </span><br><span class="line">&gt;     getting a visa</span><br><span class="line">&gt;     Exchanging currency</span><br><span class="line">&gt;     <span class="keyword">And</span> learning a <span class="keyword">foreign</span> <span class="keyword">language</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="例证"><a href="#例证" class="headerlink" title="例证"></a>例证</h4><p>例证的原则：<strong>具体性+有效细节</strong><br>Eg.<a href="#证明收入越高生活质量越高---对比以下两段内容">证明：收入越高，生活质量越高   //对比以下两段内容</a><br><a href="#例证细节填充">例证细节填充</a></p>
 <h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">Therefore/ Thus/ Hence/ So</span><br><span class="line"><span class="section">= It seems clear/ obvious/ evident that…</span></span><br><span class="line"><span class="section">= It is imperative for sb to do…</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>English</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>总结托福考试写作笔记————综合写作模板</title>
-    <url>/archives/4692aec6.html</url>
-    <content><![CDATA[<ul>
-<li><a href="#综合写作">综合写作</a><ul>
-<li><a href="#综合写作框架和模板">综合写作框架和模板：</a><ul>
-<li><a href="#中文框架">中文框架</a></li>
-<li><a href="#英文模板">英文模板</a><a id="more"></a>
-
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="综合写作"><a href="#综合写作" class="headerlink" title="综合写作"></a>综合写作</h2><p>Step1 - 阅读结构：<strong>四段式</strong> 总分分分<br>全文主旨在：首段末句<br>其余各段主旨在：各段首句<br>背单词背单词背单词！！！<br>Step2 - 听力结构：逐条反驳<br>2 min Listen for：解释和例子都要写！！！比听力更详细<br>Step3 - 写作<br>Reading reappears<br>Finish in （15）minutes</p>
-<h3 id="综合写作框架和模板："><a href="#综合写作框架和模板：" class="headerlink" title="综合写作框架和模板："></a>综合写作框架和模板：</h3><h4 id="中文框架"><a href="#中文框架" class="headerlink" title="中文框架"></a>中文框架</h4><p>1听力和阅读讨论了+议题。阅读认为+R总论点，被听力所反驳。<br>2首先，阅读说+R分论点1.而听力反驳了这个说法,这是因为+L分论点1+分论据1<br>3其次，阅读说+R分论点2.而听力反驳了这个说法,这是因为+L分论点2+分论据2<br>4最后，阅读说+R分论点3.而听力反驳了这个说法,这是因为+L分论点3+分论据3</p>
-<h4 id="英文模板"><a href="#英文模板" class="headerlink" title="英文模板"></a>英文模板</h4><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">开头： The listening and reading materials have a debate on 议题. The writer believes that +总论点  ,  which is contradicted by the following lecturer.</span><br><span class="line"><span class="bullet">1. </span>First, the writer claims that 分论点1 （没句号） while the speaker views this issue from an opposite angle. According to him/her, 分论点1+分论据1</span><br><span class="line"><span class="bullet">2. </span>Secondly, the author states that 分论点2 . However, the lecturer opposes the writer’s opinion by saying that 分论点2+分论据2</span><br><span class="line"><span class="bullet">3. </span>Thirdly, the passage argues that 分论点3 . By contrast, in accordance with the professor, the reading’s claim does not hold water站得住脚 because 分论点3+分论据3</span><br></pre></td></tr></table></figure>
-<p>更清晰————<br><a href="#要背的的综合写作模板">要背的的综合写作模板：</a><br><strong>不写结尾</strong>（完整文章就是Passage vs lecture）</p>
-]]></content>
       <categories>
         <category>Professional learning</category>
         <category>English</category>
@@ -1135,7 +1167,7 @@ option = {
 <li><a href="#双边论证的例子">双边论证的例子</a></li>
 <li><a href="#分情况讨论的例子1">分情况讨论的例子1</a></li>
 <li><a href="#分情况讨论的例子2">分情况讨论的例子2</a></li>
-<li><a href="#证明收入越高生活质量越高-对比以下两段内容">证明：收入越高，生活质量越高   //对比以下两段内容</a></li>
+<li><a href="#证明收入越高生活质量越高---对比以下两段内容">证明：收入越高，生活质量越高   //对比以下两段内容</a></li>
 <li><a href="#例证细节填充">例证细节填充</a></li>
 <li><a href="#要背的的综合写作模板">要背的的综合写作模板：</a></li>
 </ul>
@@ -1184,7 +1216,7 @@ option = {
 <h2 id="谋篇布局"><a href="#谋篇布局" class="headerlink" title="谋篇布局"></a>谋篇布局</h2><h3 id="独立写作文章结构"><a href="#独立写作文章结构" class="headerlink" title="独立写作文章结构"></a>独立写作文章结构</h3><p>单边论证<br>A+A+A+<br>双边论证<br>A+A+ B+/A-或B+/A- A+A+<br>其中B+/A-是让步段<br>A+A+  A+&gt;A-（A的好处更大）<br>分情况讨论<br><a href="#分情况讨论的例子1">分情况讨论的例子1</a><br><a href="#分情况讨论的例子2">分情况讨论的例子2</a></p>
 <h4 id="何时用单边论证？"><a href="#何时用单边论证？" class="headerlink" title="何时用单边论证？"></a>何时用单边论证？</h4><p>1 第一维度，能单则单<br>2 今昔对比题<br>3 因果题</p>
 <h4 id="何时用双边论证？（让步段）"><a href="#何时用双边论证？（让步段）" class="headerlink" title="何时用双边论证？（让步段）"></a>何时用双边论证？（让步段）</h4><p><a href="#双边论证的例子">双边论证的例子</a><br>1 绝对词题必须用!<br>However, to say … , is an overstatement<br>is too exaggerated<br>2 利弊比较       虽然A+ 但是B-<br>3 第一维度论点想不全时， 用双边</p>
-<h4 id="让步段模板"><a href="#让步段模板" class="headerlink" title="让步段模板"></a>让步段模板</h4><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">1.让步段主旨句（语气削弱）</span><br><span class="line">Admittedly/ Granted,</span><br><span class="line">Some people may/might削弱语气防止前后矛盾 argue that marrying FJ is a  bad idea.</span><br><span class="line">This, in their mind, is because (she is deformed to some extent/degree.)</span><br><span class="line">to some extent/degree某种程度上</span><br><span class="line">2.原因+展开：</span><br><span class="line">3.转折：however</span><br><span class="line">(1) 重要性转折：</span><br><span class="line">However, on balance, it seems to be secondary/insignificant</span><br><span class="line">However, to say… is an overstatement.</span><br><span class="line">However, the benefits of … outweigh its demerits. 好处超过坏处</span><br><span class="line">(2) 解决方案转折:</span><br><span class="line">However, as long as +解决方案, the problem will be solved</span><br><span class="line">(3) 利弊转化：</span><br><span class="line">However if viewed from a different angle, it also means。。。//具体的优先</span><br><span class="line">主语与主句相同时，省略主谓</span><br><span class="line">However, it is not the case in reality. //实在想不出来写这个</span><br></pre></td></tr></table></figure>
+<h4 id="让步段模板"><a href="#让步段模板" class="headerlink" title="让步段模板"></a>让步段模板</h4><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">1.让步段主旨句（语气削弱）</span><br><span class="line">Admittedly/ Granted,</span><br><span class="line">Some people may/might削弱语气防止前后矛盾 argue that marrying FJ is a  bad idea.</span><br><span class="line">This, in their mind, is because (she is deformed to some extent/degree.)</span><br><span class="line">2.原因+展开：</span><br><span class="line">3.转折：however</span><br><span class="line">(1) 重要性转折：</span><br><span class="line">However, on balance, it seems to be secondary/insignificant</span><br><span class="line">However, to say… is an overstatement.</span><br><span class="line">However, the benefits of … outweigh its demerits. 好处超过坏处</span><br><span class="line">(2) 解决方案转折:</span><br><span class="line">However, as long as +解决方案, the problem will be solved</span><br><span class="line">(3) 利弊转化：</span><br><span class="line">However if viewed from a different angle, it also means。。。//具体的优先</span><br><span class="line">主语与主句相同时，省略主谓</span><br><span class="line">However, it is not the case in reality. //实在想不出来写这个</span><br></pre></td></tr></table></figure>
 
 <h2 id="独立写作常见主题"><a href="#独立写作常见主题" class="headerlink" title="独立写作常见主题"></a>独立写作常见主题</h2><h3 id="学校类"><a href="#学校类" class="headerlink" title="学校类"></a>学校类</h3><h4 id="学生题常用思路Quality-job"><a href="#学生题常用思路Quality-job" class="headerlink" title="学生题常用思路Quality+job"></a>学生题常用思路Quality+job</h4><p>1 academic performance<br>be instrumental in performing …/be beneficial to …<br>get to show a better …/ enable them to show a better …<br>! acquire more knowledge<br>! arouse interest<br>! efficiency: reduce time&amp;errors, concentrate<br>2 foster skills and qualities三大能力十大品质<br>Communication skills = interpersonal relationship<br>Organizing skills = multitasking<br>Leadership/ charisma<br>3 professional development<br>! land a job    找到工作<br>! promotion</p>
 <h4 id="老师题常用思路"><a href="#老师题常用思路" class="headerlink" title="老师题常用思路"></a>老师题常用思路</h4><p>1 benefit teacher/ lecturer/ professor<br>Teaching methods<br>Achievement/ satisfaction/ motivation<br>2 benefit students 学习、工作、品质</p>
@@ -1265,6 +1297,31 @@ option = {
 <figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">主题句：</span><br><span class="line">First off, a good appearance brings a good impression（可不可数都可以）.</span><br><span class="line">解释：</span><br><span class="line">To explain <span class="keyword">it</span> further, being presentable体面的 makes people feel more <span class="keyword">at</span> ease when they attend formal events.</span><br><span class="line">举例：Take <span class="keyword">my</span> brother <span class="keyword">for</span> instance. He once went <span class="keyword">to</span> a job interview （unshaved）, wearing （old jeans） <span class="keyword">and</span> a （baggy overcoat） <span class="keyword">with</span> a big （coffee stain） <span class="keyword">on</span> <span class="keyword">it</span>. We didn't know what happened there <span class="keyword">but</span> he came home quite upset, <span class="keyword">with</span> no good news.</span><br><span class="line">（Nevertheless）, <span class="keyword">after</span> <span class="keyword">some</span> contemplation思考, he decided <span class="keyword">to</span> take another shot/have another . This <span class="built_in">time</span> he did <span class="keyword">some</span> serious preparation, having （<span class="keyword">the</span> hair trimmed）, putting <span class="keyword">on</span> his （newly-bought suit <span class="keyword">and</span> tie）. It wasn't long <span class="keyword">before</span> we heard <span class="keyword">that</span> he got <span class="keyword">the</span> job offer.</span><br><span class="line">小结：</span><br><span class="line">So <span class="keyword">it</span> seems clear <span class="keyword">to</span> <span class="keyword">me</span> <span class="keyword">that</span> <span class="keyword">the</span> proper look conveys positive message <span class="keyword">to</span> people <span class="keyword">around</span> us.</span><br></pre></td></tr></table></figure>
 
 <h3 id="要背的的综合写作模板："><a href="#要背的的综合写作模板：" class="headerlink" title="要背的的综合写作模板："></a>要背的的综合写作模板：</h3><figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">The reading <span class="keyword">and</span> listening materials have <span class="keyword">a</span> debate <span class="keyword">on</span> … . <span class="title">The</span> <span class="title">writer</span> <span class="title">believes</span> …, <span class="title">which</span> <span class="title">is</span> <span class="title">contradicted</span> <span class="title">by</span> <span class="title">the</span> <span class="title">following</span> <span class="title">lecturer</span>.</span><br><span class="line"> </span><br><span class="line">Firstly, <span class="keyword">the</span> author claims that … <span class="keyword">while</span> <span class="keyword">the</span> lecturer views this issue <span class="built_in">from</span> <span class="keyword">an</span> opposite angle. According <span class="built_in">to</span> him/her …</span><br><span class="line">Secondly, <span class="keyword">the</span> writer states that … . However, <span class="keyword">the</span> speaker opposes <span class="keyword">the</span> writer’s opinion <span class="keyword">by</span> saying that …</span><br><span class="line">Thirdly, <span class="keyword">the</span> passage argues that … . By contrast, <span class="keyword">in</span> accordance <span class="keyword">with</span> <span class="keyword">the</span> professor, <span class="keyword">the</span> reading’s claim does <span class="keyword">not</span> hold water because …</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>English</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>总结托福考试写作笔记————综合写作模板</title>
+    <url>/archives/4692aec6.html</url>
+    <content><![CDATA[<ul>
+<li><a href="#综合写作">综合写作</a><ul>
+<li><a href="#综合写作框架和模板">综合写作框架和模板：</a><ul>
+<li><a href="#中文框架">中文框架</a></li>
+<li><a href="#英文模板">英文模板</a><a id="more"></a>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="综合写作"><a href="#综合写作" class="headerlink" title="综合写作"></a>综合写作</h2><p>Step1 - 阅读结构：<strong>四段式</strong> 总分分分<br>全文主旨在：首段末句<br>其余各段主旨在：各段首句<br>背单词背单词背单词！！！<br>Step2 - 听力结构：逐条反驳<br>2 min Listen for：解释和例子都要写！！！比听力更详细<br>Step3 - 写作<br>Reading reappears<br>Finish in （15）minutes</p>
+<h3 id="综合写作框架和模板："><a href="#综合写作框架和模板：" class="headerlink" title="综合写作框架和模板："></a>综合写作框架和模板：</h3><h4 id="中文框架"><a href="#中文框架" class="headerlink" title="中文框架"></a>中文框架</h4><p>1听力和阅读讨论了+议题。阅读认为+R总论点，被听力所反驳。<br>2首先，阅读说+R分论点1.而听力反驳了这个说法,这是因为+L分论点1+分论据1<br>3其次，阅读说+R分论点2.而听力反驳了这个说法,这是因为+L分论点2+分论据2<br>4最后，阅读说+R分论点3.而听力反驳了这个说法,这是因为+L分论点3+分论据3</p>
+<h4 id="英文模板"><a href="#英文模板" class="headerlink" title="英文模板"></a>英文模板</h4><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">开头： The listening and reading materials have a debate on 议题. The writer believes that +总论点  ,  which is contradicted by the following lecturer.</span><br><span class="line"><span class="bullet">1. </span>First, the writer claims that 分论点1 （没句号） while the speaker views this issue from an opposite angle. According to him/her, 分论点1+分论据1</span><br><span class="line"><span class="bullet">2. </span>Secondly, the author states that 分论点2 . However, the lecturer opposes the writer’s opinion by saying that 分论点2+分论据2</span><br><span class="line"><span class="bullet">3. </span>Thirdly, the passage argues that 分论点3 . By contrast, in accordance with the professor, the reading’s claim does not hold water站得住脚 because 分论点3+分论据3</span><br></pre></td></tr></table></figure>
+<p>更清晰————<br><a href="#要背的的综合写作模板">要背的的综合写作模板：</a><br><strong>不写结尾</strong>（完整文章就是Passage vs lecture）</p>
 ]]></content>
       <categories>
         <category>Professional learning</category>

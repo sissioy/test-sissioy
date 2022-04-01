@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2022-01-06T19:24:47.000Z</updated>
+  <updated>2022-03-30T16:00:00.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022-03-31-Record</title>
+    <link href="http://www.sissioy.com/archives/cd1b6b19.html"/>
+    <id>http://www.sissioy.com/archives/cd1b6b19.html</id>
+    <published>2022-03-30T16:00:00.000Z</published>
+    <updated>2022-03-30T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;一点杂记&quot;&gt;&lt;a href=&quot;#一点杂记&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Broken thoughts" scheme="http://www.sissioy.com/categories/Broken-thoughts/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2022-03-30-Record</title>
+    <link href="http://www.sissioy.com/archives/1b16b87.html"/>
+    <id>http://www.sissioy.com/archives/1b16b87.html</id>
+    <published>2022-03-29T16:00:00.000Z</published>
+    <updated>2022-03-29T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;早上和下午玩了树莓派，但没有配置成功  &lt;/p&gt;
+&lt;p&gt;读了周志华教授2022的review 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Broken thoughts" scheme="http://www.sissioy.com/categories/Broken-thoughts/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2022-03-29-Record</title>
+    <link href="http://www.sissioy.com/archives/98564ef.html"/>
+    <id>http://www.sissioy.com/archives/98564ef.html</id>
+    <published>2022-03-28T16:00:00.000Z</published>
+    <updated>2022-03-28T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+&lt;p&gt;今天看了77页的经济学原理&lt;/p&gt;
+&lt;p&gt;背了托福单词&lt;/p&gt;
+&lt;p&gt;大创添加扫码功能&lt;/p&gt;
+&lt;p&gt;看稍后再看的教学视频，linux进程
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Broken thoughts" scheme="http://www.sissioy.com/categories/Broken-thoughts/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2022-03-24-Thinking</title>
+    <link href="http://www.sissioy.com/archives/113c81ad.html"/>
+    <id>http://www.sissioy.com/archives/113c81ad.html</id>
+    <published>2022-03-23T16:00:00.000Z</published>
+    <updated>2022-03-23T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV15T4y1S7cr&quot; rel=&quot;external nofollow noreferrer&quot;&gt;温铁军：解读2022中央”一号文件”【云讲座分享】_哔哩哔哩_bilibili&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Broken thoughts" scheme="http://www.sissioy.com/categories/Broken-thoughts/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>用hexo更新文章的报错记录</title>
@@ -44,7 +146,32 @@
     
     <summary type="html">
     
-      &lt;p&gt;第一道题地址：&lt;br&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/jump-game&quot; rel=&quot;external nofollow noreferrer&quot;&gt;&lt;/a&gt;&lt;br&gt;第二道题地址：&lt;br&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;第一道题地址：&lt;br&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/jump-game&quot; rel=&quot;external nofollow noreferrer&quot;&gt;leetcode-jump-1&lt;/a&gt;&lt;br&gt;第二道题地址：&lt;br&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/jump-game-ii&quot; rel=&quot;external nofollow noreferrer&quot;&gt;leetcode-jump-2&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
+    
+      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
+    
+    
+      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
+    
+      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刷题记录————整数加数组</title>
+    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
+    <id>http://www.sissioy.com/archives/d28b2785.html</id>
+    <published>2021-01-21T16:00:00.000Z</published>
+    <updated>2021-01-21T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
     
     </summary>
     
@@ -82,31 +209,6 @@
       <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
     
       <category term="project" scheme="http://www.sissioy.com/tags/project/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刷题记录————整数加数组</title>
-    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
-    <id>http://www.sissioy.com/archives/d28b2785.html</id>
-    <published>2021-01-21T16:00:00.000Z</published>
-    <updated>2021-01-21T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
     
   </entry>
   
@@ -274,6 +376,29 @@
   </entry>
   
   <entry>
+    <title>代码块折叠设置</title>
+    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
+    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
+    <published>2020-10-09T16:00:00.000Z</published>
+    <updated>2020-10-09T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
+    
+      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文章热榜设置</title>
     <link href="http://www.sissioy.com/archives/8962fe46.html"/>
     <id>http://www.sissioy.com/archives/8962fe46.html</id>
@@ -321,29 +446,6 @@
       <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
     
       <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码块折叠设置</title>
-    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
-    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
     
   </entry>
   
@@ -424,90 +526,6 @@
     
       <category term="bilibili" scheme="http://www.sissioy.com/categories/Entertainment/bilibili/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>欢迎查看我的网站</title>
-    <link href="http://www.sissioy.com/archives/a5547e95.html"/>
-    <id>http://www.sissioy.com/archives/a5547e95.html</id>
-    <published>2020-09-03T16:00:00.000Z</published>
-    <updated>2020-09-03T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Git Chart&lt;br&gt;&lt;img src=&quot;https://ghchart.rshah.org/sissioy&quot; alt=&quot;sissioy&amp;#39;s Github chart&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>甄嬛传</title>
-    <link href="http://www.sissioy.com/archives/c69f2845.html"/>
-    <id>http://www.sissioy.com/archives/c69f2845.html</id>
-    <published>2020-07-28T16:00:00.000Z</published>
-    <updated>2020-07-28T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这篇文章发在知乎上。&lt;br&gt;甄嬛传属于看一遍爱一遍的剧，每次暑假必刷，每次都能发现一些新的华点。&lt;br&gt;第一遍是看主线剧情：嬛嬛和四郎、嬛嬛和十七爷、嬛嬛撕华妃、嬛嬛撕皇后&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Entertainment" scheme="http://www.sissioy.com/categories/Entertainment/"/>
-    
-      <category term="TV series" scheme="http://www.sissioy.com/categories/Entertainment/TV-series/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>PR 学习记录 01</title>
-    <link href="http://www.sissioy.com/archives/45c7650d.html"/>
-    <id>http://www.sissioy.com/archives/45c7650d.html</id>
-    <published>2020-05-26T16:00:00.000Z</published>
-    <updated>2020-05-26T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;重要：&lt;/strong&gt;&lt;br&gt;复制：Alt+鼠标拖动素材&lt;br&gt;两段素材中间加素材：素材库里选中素材之后时间轴移动到指定位置 按逗号键“，”&lt;br&gt;更换两个素材的顺序：Alt + Ctrl/cmd +拖动&lt;br&gt;快速选择：“向前选择工具”&lt;br&gt;切断同一时间轴所有素材：Shift + C&lt;br&gt;快速推进：按住 L 键&lt;br&gt;素材画面停留：素材标尺移到想要的位置，右键——设置标识帧&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="PR" scheme="http://www.sissioy.com/categories/Moonlighting/PR/"/>
-    
-    
-      <category term="PR" scheme="http://www.sissioy.com/tags/PR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式语法</title>
-    <link href="http://www.sissioy.com/archives/f81acfd4.html"/>
-    <id>http://www.sissioy.com/archives/f81acfd4.html</id>
-    <published>2020-05-05T16:00:00.000Z</published>
-    <updated>2020-05-05T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天心血来潮，重学了一下python。去年学了一段时间的python，各种原因就搁置下来了，如今发现爬虫这项技能还是蛮重要的，以后找数据，找资料，数据可视化，网络安全都用得到。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
     
   </entry>
   
