@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/archives/bd43a1d3.html</loc>
+    <loc>http://www.sissioy.com/archives/977a2c8.html</loc>
     
     <lastmod>2020-04-12</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/archives/977a2c8.html</loc>
+    <loc>http://www.sissioy.com/archives/bd43a1d3.html</loc>
     
     <lastmod>2020-04-12</lastmod>
     
@@ -403,13 +403,6 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/tags/novel/</loc>
-    <lastmod>2022-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.sissioy.com/tags/plugin/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
@@ -417,7 +410,7 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/tags/course/</loc>
+    <loc>http://www.sissioy.com/tags/novel/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -425,6 +418,13 @@
   
   <url>
     <loc>http://www.sissioy.com/tags/covid-19/</loc>
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.sissioy.com/tags/course/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -587,7 +587,7 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Professional-learning/</loc>
+    <loc>http://www.sissioy.com/categories/Personal-promotion/plans/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -601,7 +601,7 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Personal-promotion/plans/</loc>
+    <loc>http://www.sissioy.com/categories/Professional-learning/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -615,14 +615,14 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Professional-learning/python/</loc>
+    <loc>http://www.sissioy.com/categories/Personal-promotion/plans/2020/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Professional-learning/Linux/</loc>
+    <loc>http://www.sissioy.com/categories/Entertainment/TV-series/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -643,14 +643,7 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Entertainment/TV-series/</loc>
-    <lastmod>2022-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.sissioy.com/categories/Personal-promotion/plans/2020/</loc>
+    <loc>http://www.sissioy.com/categories/Professional-learning/Linux/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -665,6 +658,13 @@
   
   <url>
     <loc>http://www.sissioy.com/categories/Personal-promotion/computer-using/</loc>
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.sissioy.com/categories/Professional-learning/python/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
