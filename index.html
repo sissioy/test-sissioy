@@ -153,7 +153,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">41</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">43</span></a>
 
   </li>
         <li class="menu-item menu-item-rbg">
@@ -544,6 +544,406 @@
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/oblique/create_ap</span><br><span class="line"></span><br><span class="line"><span class="keyword">cd</span> create_ap</span><br><span class="line"></span><br><span class="line">sudo <span class="keyword">make</span> install</span><br></pre></td></tr></table></figure>
 <p>3.安装依赖的库</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install util-linux procps hostapd iproute2 iw haveged dnsmasq</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.sissioy.com/archives/4cef7765.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="Sissioy">
+      <meta itemprop="description" content="Keep it simple and stupid.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sissioy的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/4cef7765.html" class="post-title-link" itemprop="url">树莓派学习记录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-22 03:24:47" itemprop="dateCreated datePublished" datetime="2022-03-22T03:24:47+08:00">2022-03-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Learning-note/" itemprop="url" rel="index"><span itemprop="name">Learning note</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/archives/4cef7765.html" class="post-meta-item leancloud_visitors" data-flag-title="树莓派学习记录" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/4cef7765.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/4cef7765.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><a href="#安装-rzsz">安装 rzsz</a></li>
+<li><a href="#vnc开机自启动">vnc开机自启动</a></li>
+<li><a href="#连接校园网">连接校园网</a></li>
+<li><a href="#换源">换源</a></li>
+<li><a href="#安装v2ray客户端">安装v2ray客户端</a><ul>
+<li><a href="#第一步">第一步</a></li>
+<li><a href="#第二步">第二步</a></li>
+<li><a href="#第三步">第三步</a></li>
+</ul>
+</li>
+<li><a href="#用树莓派开热点">用树莓派开热点</a></li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/archives/4cef7765.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.sissioy.com/archives/19328116.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="Sissioy">
+      <meta itemprop="description" content="Keep it simple and stupid.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sissioy的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/19328116.html" class="post-title-link" itemprop="url">LEETCODE刷题记录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-08 00:00:00" itemprop="dateCreated datePublished" datetime="2022-03-08T00:00:00+08:00">2022-03-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Learning-note/" itemprop="url" rel="index"><span itemprop="name">Learning note</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/archives/19328116.html" class="post-meta-item leancloud_visitors" data-flag-title="LEETCODE刷题记录" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/19328116.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/19328116.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://images.unsplash.com/photo-1643040829889-9edfa7c2aca4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></p>
+<h3 id="2022-年-3-月-8-日"><a href="#2022-年-3-月-8-日" class="headerlink" title="2022 年 3 月 8 日"></a>2022 年 3 月 8 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：无</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：2小时</p>
+<p>学习了那些题目：<br>4. 合并有序链表<br>6. 环形链表 II<br>7. 反转链表 II<br>8. 复制带复杂指针的链表<br>12. 最小栈</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-9-日"><a href="#2022-年-3-月-9-日" class="headerlink" title="2022 年 3 月 9 日"></a>2022 年 3 月 9 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：无</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：2小时</p>
+<p>学习了那些题目：<br>14. 每日温度<br>15. 接雨水</p>
+<p>遇到的问题：<br>自己写<strong>15.接雨水</strong>的代码时，会漏掉一些细节，逻辑也没有答案给的那么清晰，需要后面继续复习。  </p>
+<h3 id="2022-年-3-月-10-日"><a href="#2022-年-3-月-10-日" class="headerlink" title="2022 年 3 月 10 日"></a>2022 年 3 月 10 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：否。</p>
+<p>没有学习的话记录一下原因。<br>原因：没有时间。</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：0</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-11-日"><a href="#2022-年-3-月-11-日" class="headerlink" title="2022 年 3 月 11 日"></a>2022 年 3 月 11 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：无</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：2小时</p>
+<p>学习了那些题目：<br>18. 滑动窗口最大值<br>21. K 个一组翻转链表</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-12-日"><a href="#2022-年-3-月-12-日" class="headerlink" title="2022 年 3 月 12 日"></a>2022 年 3 月 12 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：偷懒了</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-13-日"><a href="#2022-年-3-月-13-日" class="headerlink" title="2022 年 3 月 13 日"></a>2022 年 3 月 13 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：偷懒了</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-14-日"><a href="#2022-年-3-月-14-日" class="headerlink" title="2022 年 3 月 14 日"></a>2022 年 3 月 14 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：无</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：2小时</p>
+<p>学习了那些题目：<br>5. 快速排序基础知识<br>13. 颜色分类<br>17. 盛水最多的容器<br>18. 两数之和<br>23. 跳跃游戏</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-15-日"><a href="#2022-年-3-月-15-日" class="headerlink" title="2022 年 3 月 15 日"></a>2022 年 3 月 15 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：无</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：2小时</p>
+<p>学习了那些题目：</p>
+<ol>
+<li>递归基础知识</li>
+<li>冒泡排序基础知识</li>
+<li>选择排序基础知识</li>
+<li>插入排序基础知识</li>
+<li>计数排序</li>
+<li>归并排序</li>
+<li>剑指 Offer 40. 最小的k个数</li>
+</ol>
+<p>遇到的问题：<br>剑指 Offer 40大意看懂了，但代码还没写出来。明天再试。</p>
+<h3 id="2022-年-3-月-16-日"><a href="#2022-年-3-月-16-日" class="headerlink" title="2022 年 3 月 16 日"></a>2022 年 3 月 16 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：偷懒了</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-17-日"><a href="#2022-年-3-月-17-日" class="headerlink" title="2022 年 3 月 17 日"></a>2022 年 3 月 17 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：偷懒了</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-18-日"><a href="#2022-年-3-月-18-日" class="headerlink" title="2022 年 3 月 18 日"></a>2022 年 3 月 18 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：偷懒了</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-19-日"><a href="#2022-年-3-月-19-日" class="headerlink" title="2022 年 3 月 19 日"></a>2022 年 3 月 19 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：偷懒了</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-20-日"><a href="#2022-年-3-月-20-日" class="headerlink" title="2022 年 3 月 20 日"></a>2022 年 3 月 20 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：没有时间</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-21-日"><a href="#2022-年-3-月-21-日" class="headerlink" title="2022 年 3 月 21 日"></a>2022 年 3 月 21 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：没有时间</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-22-日"><a href="#2022-年-3-月-22-日" class="headerlink" title="2022 年 3 月 22 日"></a>2022 年 3 月 22 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：没有时间</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：无</p>
+<p>学习了那些题目：<br>无</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-23-日"><a href="#2022-年-3-月-23-日" class="headerlink" title="2022 年 3 月 23 日"></a>2022 年 3 月 23 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：无</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：2小时</p>
+<p>学习了那些题目：<br>【第二周】</p>
+<ol start="8">
+<li>剑指 Offer 40. 最小的k个数</li>
+</ol>
+<p>【第三周】</p>
+<ol start="0">
+<li>补充二叉树的一些概念</li>
+<li>二叉树基础知识</li>
+<li>二叉树的前序遍历（ LeetCode 144 ）</li>
+<li>二叉树的中序遍历（ LeetCode 94 ）</li>
+<li>二叉树的后序遍历（ LeetCode 145 ）</li>
+<li>二叉树的右视图（ LeetCode 199 ）</li>
+</ol>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-24-日"><a href="#2022-年-3-月-24-日" class="headerlink" title="2022 年 3 月 24 日"></a>2022 年 3 月 24 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：无</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：2小时</p>
+<p>学习了那些题目：<br>5. 二叉树的层序遍历（ LeetCode 102 ）<br>7. 从前序与中序遍历序列构造二叉树（ LeetCode 105 ）<br>9. 二叉树的最近公共祖先（ LeetCode 236 ）</p>
+<p>遇到的问题：<br>无</p>
+<h3 id="2022-年-3-月-25-日"><a href="#2022-年-3-月-25-日" class="headerlink" title="2022 年 3 月 25 日"></a>2022 年 3 月 25 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-3-月-26-日"><a href="#2022-年-3-月-26-日" class="headerlink" title="2022 年 3 月 26 日"></a>2022 年 3 月 26 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-3-月-27-日"><a href="#2022-年-3-月-27-日" class="headerlink" title="2022 年 3 月 27 日"></a>2022 年 3 月 27 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-3-月-28-日"><a href="#2022-年-3-月-28-日" class="headerlink" title="2022 年 3 月 28 日"></a>2022 年 3 月 28 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-3-月-29-日"><a href="#2022-年-3-月-29-日" class="headerlink" title="2022 年 3 月 29 日"></a>2022 年 3 月 29 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-3-月-30-日"><a href="#2022-年-3-月-30-日" class="headerlink" title="2022 年 3 月 30 日"></a>2022 年 3 月 30 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-3-月-31-日"><a href="#2022-年-3-月-31-日" class="headerlink" title="2022 年 3 月 31 日"></a>2022 年 3 月 31 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-4-月-1-日"><a href="#2022-年-4-月-1-日" class="headerlink" title="2022 年 4 月 1 日"></a>2022 年 4 月 1 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：无。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：</p>
+<p>遇到的问题：</p>
+<h3 id="2022-年-4-月-2-日"><a href="#2022-年-4-月-2-日" class="headerlink" title="2022 年 4 月 2 日"></a>2022 年 4 月 2 日</h3><p>今天是否学习了算法训练营的内容：</p>
+<p>答案：是。</p>
+<p>没有学习的话记录一下原因。<br>原因：</p>
+<p>如果学习的话记录一下学习了多少时间。<br>学习时长：</p>
+<p>学习了那些题目：<br>练习了第一周没有做过的题目。<br>#224 基本计算器    困难<br>#86 分隔链表    中等<br>#160 相交链表    简单<br>#206 反转链表    简单<br>#203 移除链表元素    简单<br>#232 用栈实现队列    简单    </p>
+<p>遇到的问题：<br>无</p>
+
       
     </div>
 
@@ -1010,120 +1410,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.sissioy.com/archives/3572b528.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.png">
-      <meta itemprop="name" content="Sissioy">
-      <meta itemprop="description" content="Keep it simple and stupid.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sissioy的个人博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/3572b528.html" class="post-title-link" itemprop="url">刷题记录————topcoder</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-03 00:00:00" itemprop="dateCreated datePublished" datetime="2020-12-03T00:00:00+08:00">2020-12-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Professional-learning/" itemprop="url" rel="index"><span itemprop="name">Professional learning</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Professional-learning/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/archives/3572b528.html" class="post-meta-item leancloud_visitors" data-flag-title="刷题记录————topcoder" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/3572b528.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/3572b528.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>670</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>第一次在topcoder上做题，分享一个小视频：</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7mdw94MZ5wI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/3572b528.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.sissioy.com/archives/3be882b0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1214,121 +1500,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/archives/3be882b0.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.sissioy.com/archives/2d397f14.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.png">
-      <meta itemprop="name" content="Sissioy">
-      <meta itemprop="description" content="Keep it simple and stupid.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sissioy的个人博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/2d397f14.html" class="post-title-link" itemprop="url">西迁过程的Homestead Act（宅基地法）</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-11-26 00:00:00" itemprop="dateCreated datePublished" datetime="2020-11-26T00:00:00+08:00">2020-11-26</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Professional-learning/" itemprop="url" rel="index"><span itemprop="name">Professional learning</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Professional-learning/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/archives/2d397f14.html" class="post-meta-item leancloud_visitors" data-flag-title="西迁过程的Homestead Act（宅基地法）" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/2d397f14.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/2d397f14.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Homestead-Act-措施"><a href="#Homestead-Act-措施" class="headerlink" title="Homestead Act 措施"></a>Homestead Act 措施</h3><blockquote>
-<p>the spike in western migration came with the Homestead Act of 1862.<br>In this period, individuals could apply for a 160-acre homestead west of the Mississippi River.<br>the land was free but in order to get the deed the owner had to build a 12 by 14 foot home and grow crops for five years.</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/2d397f14.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1444,15 +1615,15 @@
           </li>
         
           <li>
+            <a href="/archives/4cef7765.html" title="树莓派学习记录" target="_blank">树莓派学习记录</a>
+          </li>
+        
+          <li>
+            <a href="/archives/19328116.html" title="LEETCODE刷题记录" target="_blank">LEETCODE刷题记录</a>
+          </li>
+        
+          <li>
             <a href="/archives/1718214a.html" title="用hexo更新文章的报错记录" target="_blank">用hexo更新文章的报错记录</a>
-          </li>
-        
-          <li>
-            <a href="/archives/c01764a5.html" title="刷题记录——跳跃游戏" target="_blank">刷题记录——跳跃游戏</a>
-          </li>
-        
-          <li>
-            <a href="/archives/d28b2785.html" title="刷题记录————整数加数组" target="_blank">刷题记录————整数加数组</a>
           </li>
         
       </ul>
@@ -1484,12 +1655,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">74k</span>
+    <span title="站点总字数">80k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:07</span>
+    <span title="站点阅读时长">1:13</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
