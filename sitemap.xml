@@ -573,13 +573,6 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Professional-learning/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.sissioy.com/categories/others/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>daily</changefreq>
@@ -588,6 +581,13 @@
   
   <url>
     <loc>http://www.sissioy.com/categories/Moonlighting/Hexo/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.sissioy.com/categories/Professional-learning/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -608,7 +608,7 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Professional-learning/English/</loc>
+    <loc>http://www.sissioy.com/categories/Moonlighting/PR/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -622,14 +622,7 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Professional-learning/python/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.sissioy.com/categories/Moonlighting/PR/</loc>
+    <loc>http://www.sissioy.com/categories/Entertainment/TV-series/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -643,13 +636,6 @@
   </url>
   
   <url>
-    <loc>http://www.sissioy.com/categories/Entertainment/TV-series/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.sissioy.com/categories/Personal-promotion/plans/2020/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>daily</changefreq>
@@ -657,7 +643,21 @@
   </url>
   
   <url>
+    <loc>http://www.sissioy.com/categories/Professional-learning/English/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.sissioy.com/categories/Personal-promotion/computer-using/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.sissioy.com/categories/Professional-learning/python/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

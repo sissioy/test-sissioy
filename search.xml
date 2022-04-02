@@ -439,21 +439,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx config 文件</title>
-    <url>/archives/bd43a1d3.html</url>
-    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
-<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
-<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
-<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
-
-<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机系统基础实验：拆炸弹第一关</title>
     <url>/archives/96ce9bbc.html</url>
     <content><![CDATA[<!-- TOC -->
@@ -702,6 +687,21 @@
       <tags>
         <tag>covid-19</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Nginx config 文件</title>
+    <url>/archives/bd43a1d3.html</url>
+    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
+<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
+<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
+<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
+
+<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>Linux</category>
+      </categories>
   </entry>
   <entry>
     <title>2020年4月读书计划</title>
@@ -1393,6 +1393,44 @@
       </tags>
   </entry>
   <entry>
+    <title>甄嬛传</title>
+    <url>/archives/c69f2845.html</url>
+    <content><![CDATA[<p>这篇文章发在知乎上。<br>甄嬛传属于看一遍爱一遍的剧，每次暑假必刷，每次都能发现一些新的华点。<br>第一遍是看主线剧情：嬛嬛和四郎、嬛嬛和十七爷、嬛嬛撕华妃、嬛嬛撕皇后</p>
+<a id="more"></a>
+<!-- ![wEp6eg.png](https://s1.ax1x.com/2020/09/05/wEp6eg.png)
+![wEpfWq.png](https://s1.ax1x.com/2020/09/05/wEpfWq.png)-->
+<p><img src="https://pic2.zhimg.com/80/v2-416b8192d1138c58ad97616442867365_1440w.jpg?source=c8b7c179" alt=""><br><img src="https://pic1.zhimg.com/80/v2-734e4d25d5074e20d7670a3f758c0ce2_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第二遍，看甄嬛黑化之后宫斗，看她沉稳、不动声色、对允礼有情也不能表现分毫的隐忍，在允礼喝下毒酒的一刻彻底心碎奔溃。</p>
+<!-- ![wEpHw4.png](https://s1.ax1x.com/2020/09/05/wEpHw4.png) -->
+<p><img src="https://pic2.zhimg.com/80/v2-350723690eee76905ae31f86fd105489_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第三遍，看十七和嬛嬛的互动，从开始一步错步步错的经历线。越看越惋惜，是不是甄嬛不进宫她和允礼真的有可能在一起呢？</p>
+<!-- ![wE99mD.png](https://s1.ax1x.com/2020/09/05/wE99mD.png) -->
+<p><img src="https://pic2.zhimg.com/80/v2-c323193838da19b4b4094523838016be_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第四遍，看眉姐姐大气的性格。看她和菊一样孤高傲世、心性高洁，看她笑起来明媚动人。从初入宫满心期盼到心如死灰不想再折腾。后来眉姐姐和温实初也错过了。眉姐姐一死，甄嬛在宫内没有了纯粹对她好的人了，幼时的友谊、儿时的记忆也一并而去了。</p>
+<!-- ![wE9C0e.png](https://s1.ax1x.com/2020/09/05/wE9C0e.png)
+![wE9AfI.png](https://s1.ax1x.com/2020/09/05/wE9AfI.png)  -->
+<p><img src="https://pic4.zhimg.com/80/v2-db15f95a0b4d0ba6d94d5aa356eb7d1f_1440w.jpg?source=c8b7c179" alt=""><br><img src="https://pic1.zhimg.com/80/v2-cc7f9a4d2fa78d98d7e7c3dc2e8412f2_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第五遍，看华妃身居高位患得患失。同样是因为身份注定结局悲惨，她与安陵容不同、比安陵容还惨。她没有甄嬛的睿智、没有皇后的心机、没有敬妃审时度势，只有阴狠、莽撞和在皇帝眼中的可爱。因为她不在乎别人如何评价她，不在乎别人的感受甚至生命，新人刚入宫给下马威就赏了夏常在一丈红。一个眼里只有皇帝、对皇帝没有警惕心的人，被皇帝教育何为皇权：我能捧你、亦能覆你。</p>
+<!-- ![wE9lkj.png](https://s1.ax1x.com/2020/09/05/wE9lkj.png) -->
+<p><img src="https://pic2.zhimg.com/80/v2-2f2e8d2d70624452ce0a12b4e7eb4257_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第六遍，看安陵容如何从懦弱无助到落入皇后陷阱成为棋子，看她多心误会嬛嬛和眉姐姐，地位低微的她在后宫因为嫉妒心，用过各种手段，后期还和祺贵人暗波涌动。虽然不认同，可以理解她为何做出这些。她本就和甄嬛不是一类人，来时孤零零，走时更孤零零。全剧里她最对得起的恐怕是皇帝了。</p>
+<!-- ![wE9YcV.png](https://s1.ax1x.com/2020/09/05/wE9YcV.png)  -->
+<p><img src="https://pic3.zhimg.com/80/v2-d0e83fc5efe3e1af6e981467c82280eb_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第七遍，看浣碧的小性子，看浣碧的自私，后来的她改了，但是还是因为果郡王自私了最后一次。她对果郡王，我想只是类似私生饭对偶像的感情。</p>
+<!-- ![wE90AJ.png](https://s1.ax1x.com/2020/09/05/wE90AJ.png)   -->
+<p><img src="https://pic3.zhimg.com/80/v2-c3a45343f7e01a6ee6adb75db90b25c4_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第八遍，看端妃在宫里默默活下去。端妃与华妃曾经的感情这一段虽然没有明说，但可以推测华妃喝安胎药之前她们的关系还是不错的，华妃不是不谨慎的人。皇帝死后，端妃没有出现，也许因为她多年只感受到了皇帝的怜悯没有感受到皇帝的残酷，是除了皇后外唯一爱着皇帝的人。</p>
+<!-- ![wE9y1x.png](https://s1.ax1x.com/2020/09/05/wE9y1x.png)   -->
+<p><img src="https://pic4.zhimg.com/80/v2-cb453145229363db75654939ad240e06_1440w.jpg?source=c8b7c179" alt=""></p>
+<p>第九遍，……</p>
+<p>总的来说，剧里各种用心的细节可以慢慢发现，这真的是经典之作。</p>
+]]></content>
+      <categories>
+        <category>Entertainment</category>
+        <category>TV series</category>
+      </categories>
+  </entry>
+  <entry>
     <title>敬汉卿北漂视频观感</title>
     <url>/archives/ede4bc9f.html</url>
     <content><![CDATA[<p>从粉丝量来看，作为一个b站头部up主，我认为他的视频质量真的不行，可以说是劣币驱逐良币了，浪费了大量宣传资源（b站可以把更多的资源分给其他更好更值得的up主码？）</p>
@@ -1423,11 +1461,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts8394" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts1614" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8394'));
+	var myChart = echarts.init(document.getElementById('echarts1614'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -1463,11 +1501,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts4376" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts1979" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts4376'));
+	var myChart = echarts.init(document.getElementById('echarts1979'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
@@ -1564,44 +1602,6 @@ option = {
         <tag>analytics</tag>
         <tag>echarts</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>甄嬛传</title>
-    <url>/archives/c69f2845.html</url>
-    <content><![CDATA[<p>这篇文章发在知乎上。<br>甄嬛传属于看一遍爱一遍的剧，每次暑假必刷，每次都能发现一些新的华点。<br>第一遍是看主线剧情：嬛嬛和四郎、嬛嬛和十七爷、嬛嬛撕华妃、嬛嬛撕皇后</p>
-<a id="more"></a>
-<!-- ![wEp6eg.png](https://s1.ax1x.com/2020/09/05/wEp6eg.png)
-![wEpfWq.png](https://s1.ax1x.com/2020/09/05/wEpfWq.png)-->
-<p><img src="https://pic2.zhimg.com/80/v2-416b8192d1138c58ad97616442867365_1440w.jpg?source=c8b7c179" alt=""><br><img src="https://pic1.zhimg.com/80/v2-734e4d25d5074e20d7670a3f758c0ce2_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第二遍，看甄嬛黑化之后宫斗，看她沉稳、不动声色、对允礼有情也不能表现分毫的隐忍，在允礼喝下毒酒的一刻彻底心碎奔溃。</p>
-<!-- ![wEpHw4.png](https://s1.ax1x.com/2020/09/05/wEpHw4.png) -->
-<p><img src="https://pic2.zhimg.com/80/v2-350723690eee76905ae31f86fd105489_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第三遍，看十七和嬛嬛的互动，从开始一步错步步错的经历线。越看越惋惜，是不是甄嬛不进宫她和允礼真的有可能在一起呢？</p>
-<!-- ![wE99mD.png](https://s1.ax1x.com/2020/09/05/wE99mD.png) -->
-<p><img src="https://pic2.zhimg.com/80/v2-c323193838da19b4b4094523838016be_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第四遍，看眉姐姐大气的性格。看她和菊一样孤高傲世、心性高洁，看她笑起来明媚动人。从初入宫满心期盼到心如死灰不想再折腾。后来眉姐姐和温实初也错过了。眉姐姐一死，甄嬛在宫内没有了纯粹对她好的人了，幼时的友谊、儿时的记忆也一并而去了。</p>
-<!-- ![wE9C0e.png](https://s1.ax1x.com/2020/09/05/wE9C0e.png)
-![wE9AfI.png](https://s1.ax1x.com/2020/09/05/wE9AfI.png)  -->
-<p><img src="https://pic4.zhimg.com/80/v2-db15f95a0b4d0ba6d94d5aa356eb7d1f_1440w.jpg?source=c8b7c179" alt=""><br><img src="https://pic1.zhimg.com/80/v2-cc7f9a4d2fa78d98d7e7c3dc2e8412f2_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第五遍，看华妃身居高位患得患失。同样是因为身份注定结局悲惨，她与安陵容不同、比安陵容还惨。她没有甄嬛的睿智、没有皇后的心机、没有敬妃审时度势，只有阴狠、莽撞和在皇帝眼中的可爱。因为她不在乎别人如何评价她，不在乎别人的感受甚至生命，新人刚入宫给下马威就赏了夏常在一丈红。一个眼里只有皇帝、对皇帝没有警惕心的人，被皇帝教育何为皇权：我能捧你、亦能覆你。</p>
-<!-- ![wE9lkj.png](https://s1.ax1x.com/2020/09/05/wE9lkj.png) -->
-<p><img src="https://pic2.zhimg.com/80/v2-2f2e8d2d70624452ce0a12b4e7eb4257_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第六遍，看安陵容如何从懦弱无助到落入皇后陷阱成为棋子，看她多心误会嬛嬛和眉姐姐，地位低微的她在后宫因为嫉妒心，用过各种手段，后期还和祺贵人暗波涌动。虽然不认同，可以理解她为何做出这些。她本就和甄嬛不是一类人，来时孤零零，走时更孤零零。全剧里她最对得起的恐怕是皇帝了。</p>
-<!-- ![wE9YcV.png](https://s1.ax1x.com/2020/09/05/wE9YcV.png)  -->
-<p><img src="https://pic3.zhimg.com/80/v2-d0e83fc5efe3e1af6e981467c82280eb_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第七遍，看浣碧的小性子，看浣碧的自私，后来的她改了，但是还是因为果郡王自私了最后一次。她对果郡王，我想只是类似私生饭对偶像的感情。</p>
-<!-- ![wE90AJ.png](https://s1.ax1x.com/2020/09/05/wE90AJ.png)   -->
-<p><img src="https://pic3.zhimg.com/80/v2-c3a45343f7e01a6ee6adb75db90b25c4_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第八遍，看端妃在宫里默默活下去。端妃与华妃曾经的感情这一段虽然没有明说，但可以推测华妃喝安胎药之前她们的关系还是不错的，华妃不是不谨慎的人。皇帝死后，端妃没有出现，也许因为她多年只感受到了皇帝的怜悯没有感受到皇帝的残酷，是除了皇后外唯一爱着皇帝的人。</p>
-<!-- ![wE9y1x.png](https://s1.ax1x.com/2020/09/05/wE9y1x.png)   -->
-<p><img src="https://pic4.zhimg.com/80/v2-cb453145229363db75654939ad240e06_1440w.jpg?source=c8b7c179" alt=""></p>
-<p>第九遍，……</p>
-<p>总的来说，剧里各种用心的细节可以慢慢发现，这真的是经典之作。</p>
-]]></content>
-      <categories>
-        <category>Entertainment</category>
-        <category>TV series</category>
-      </categories>
   </entry>
   <entry>
     <title>如何水出一篇论文————看毕导THU视频的总结</title>
@@ -1981,7 +1981,8 @@ option = {
   <entry>
     <title>LEETCODE刷题记录</title>
     <url>/archives/19328116.html</url>
-    <content><![CDATA[<p><img src="https://images.unsplash.com/photo-1643040829889-9edfa7c2aca4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></p>
+    <content><![CDATA[<p><img src="https://images.unsplash.com/photo-1643040829889-9edfa7c2aca4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""><br>简单记录一下每天的刷题进度。</p>
+<a id="more"></a>
 <h3 id="2022-年-3-月-8-日"><a href="#2022-年-3-月-8-日" class="headerlink" title="2022 年 3 月 8 日"></a>2022 年 3 月 8 日</h3><p>今天是否学习了算法训练营的内容：</p>
 <p>答案：是。</p>
 <p>没有学习的话记录一下原因。<br>原因：无</p>
@@ -2165,20 +2166,6 @@ option = {
       </categories>
   </entry>
   <entry>
-    <title>欢迎查看我的网站</title>
-    <url>/archives/a5547e95.html</url>
-    <content><![CDATA[<p>Git Chart<br><img src="https://ghchart.rshah.org/sissioy" alt="sissioy&#39;s Github chart"></p>
-<a id="more"></a>
-
-<p>关于我：</p>
-<ul>
-<li>WHU/CS/19级</li>
-<li>爱好跑步爬山等各种运动</li>
-</ul>
-<p>如果想交流可以在下方评论~</p>
-]]></content>
-  </entry>
-  <entry>
     <title>树莓派学习记录</title>
     <url>/archives/4cef7765.html</url>
     <content><![CDATA[<ul>
@@ -2232,6 +2219,20 @@ option = {
       <categories>
         <category>Learning note</category>
       </categories>
+  </entry>
+  <entry>
+    <title>欢迎查看我的网站</title>
+    <url>/archives/a5547e95.html</url>
+    <content><![CDATA[<p>Git Chart<br><img src="https://ghchart.rshah.org/sissioy" alt="sissioy&#39;s Github chart"></p>
+<a id="more"></a>
+
+<p>关于我：</p>
+<ul>
+<li>WHU/CS/19级</li>
+<li>爱好跑步爬山等各种运动</li>
+</ul>
+<p>如果想交流可以在下方评论~</p>
+]]></content>
   </entry>
   <entry>
     <title>关于我的Notion主页</title>
