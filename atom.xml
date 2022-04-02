@@ -48,43 +48,12 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;安装-rzsz&quot;&gt;&lt;a href=&quot;#安装-rzsz&quot; class=&quot;headerlink&quot; title=&quot;安装 rzsz&quot;&gt;&lt;/a&gt;安装 rzsz&lt;/h2&gt;&lt;p&gt;首先下载源代码 &lt;/p&gt;
-&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派学习记录</title>
-    <link href="http://www.sissioy.com/archives/4cef7765.html"/>
-    <id>http://www.sissioy.com/archives/4cef7765.html</id>
-    <published>2022-03-21T19:24:47.000Z</published>
-    <updated>2022-03-21T19:24:47.000Z</updated>
-    
-    <summary type="html">
-    
       &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#安装-rzsz&quot;&gt;安装 rzsz&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#vnc开机自启动&quot;&gt;vnc开机自启动&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#连接校园网&quot;&gt;连接校园网&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#换源&quot;&gt;换源&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#安装v2ray客户端&quot;&gt;安装v2ray客户端&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#第一步&quot;&gt;第一步&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#第二步&quot;&gt;第二步&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#第三步&quot;&gt;第三步&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#安装v2ray客户端&quot;&gt;安装v2ray客户端&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#用树莓派开热点&quot;&gt;用树莓派开热点&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
     
@@ -379,6 +348,29 @@
   </entry>
   
   <entry>
+    <title>代码块折叠设置</title>
+    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
+    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
+    <published>2020-10-09T16:00:00.000Z</published>
+    <updated>2020-10-09T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
+    
+      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文章热榜设置</title>
     <link href="http://www.sissioy.com/archives/8962fe46.html"/>
     <id>http://www.sissioy.com/archives/8962fe46.html</id>
@@ -426,29 +418,6 @@
       <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
     
       <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码块折叠设置</title>
-    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
-    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
     
   </entry>
   
@@ -528,6 +497,23 @@
       <category term="Entertainment" scheme="http://www.sissioy.com/categories/Entertainment/"/>
     
       <category term="bilibili" scheme="http://www.sissioy.com/categories/Entertainment/bilibili/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>欢迎查看我的网站</title>
+    <link href="http://www.sissioy.com/archives/a5547e95.html"/>
+    <id>http://www.sissioy.com/archives/a5547e95.html</id>
+    <published>2020-09-03T16:00:00.000Z</published>
+    <updated>2020-09-03T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git Chart&lt;br&gt;&lt;img src=&quot;https://ghchart.rshah.org/sissioy&quot; alt=&quot;sissioy&amp;#39;s Github chart&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
     
     
   </entry>
