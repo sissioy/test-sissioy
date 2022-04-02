@@ -25,14 +25,7 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;一点杂记&quot;&gt;&lt;a href=&quot;#一点杂记&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;一点杂记&quot;&gt;&lt;a href=&quot;#一点杂记&quot; class=&quot;headerlink&quot; title=&quot;一点杂记&quot;&gt;&lt;/a&gt;一点杂记&lt;/h3&gt;
     
     </summary>
     
@@ -55,8 +48,7 @@
       
         
         
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;早上和下午玩了树莓派，但没有配置成功  &lt;/p&gt;
+          &lt;p&gt;早上和下午玩了树莓派，但没有配置成功   &lt;/p&gt;
 &lt;p&gt;读了周志华教授2022的review 
         
       
@@ -78,18 +70,7 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-&lt;p&gt;今天看了77页的经济学原理&lt;/p&gt;
-&lt;p&gt;背了托福单词&lt;/p&gt;
-&lt;p&gt;大创添加扫码功能&lt;/p&gt;
-&lt;p&gt;看稍后再看的教学视频，linux进程
-        
-      
+      &lt;p&gt;记录一天&lt;/p&gt;
     
     </summary>
     
@@ -399,30 +380,6 @@
   </entry>
   
   <entry>
-    <title>文章热榜设置</title>
-    <link href="http://www.sissioy.com/archives/8962fe46.html"/>
-    <id>http://www.sissioy.com/archives/8962fe46.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>作文记录————读 the Declaration of Independence 后的思考</title>
     <link href="http://www.sissioy.com/archives/c4e96787.html"/>
     <id>http://www.sissioy.com/archives/c4e96787.html</id>
@@ -446,6 +403,30 @@
       <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
     
       <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文章热榜设置</title>
+    <link href="http://www.sissioy.com/archives/8962fe46.html"/>
+    <id>http://www.sissioy.com/archives/8962fe46.html</id>
+    <published>2020-10-09T16:00:00.000Z</published>
+    <updated>2020-10-09T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
     
   </entry>
   

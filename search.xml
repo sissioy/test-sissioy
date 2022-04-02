@@ -17,8 +17,8 @@
   <entry>
     <title>2022-03-31-Record</title>
     <url>/archives/cd1b6b19.html</url>
-    <content><![CDATA[<a id="more"></a>
-<h3 id="一点杂记"><a href="#一点杂记" class="headerlink" title="一点杂记"></a>一点杂记</h3><p>早上和下午一直在看经济学原理·宏观部分，看完了，有个问题没有被解答，后面有问题的时候再说吧。  </p>
+    <content><![CDATA[<h3 id="一点杂记"><a href="#一点杂记" class="headerlink" title="一点杂记"></a>一点杂记</h3><a id="more"></a>
+<p>早上和下午一直在看经济学原理·宏观部分，看完了，有个问题没有被解答，后面有问题的时候再说吧。  </p>
 <p>下次要借 经济学原理·微观部分  </p>
 <p>后面还可以根据书单去看经济学领域的其他书。  </p>
 <p>学了点sql注入的方法，可以在靶机上操作一番。<br>晚上回到宿舍想把树莓派变成个热点，但是没有成功，可能是最初没有HDMI的线，所以设置了ssid的配置去联电脑开启的热点。第二种可能是我用脚本连接校园网的时候，设置了ssid的影响。</p>
@@ -31,8 +31,7 @@
   <entry>
     <title>2022-03-30-Record</title>
     <url>/archives/1b16b87.html</url>
-    <content><![CDATA[<a id="more"></a>
-<p>早上和下午玩了树莓派，但没有配置成功  </p>
+    <content><![CDATA[<p>早上和下午玩了树莓派，但没有配置成功   </p>
 <p>读了周志华教授2022的review  </p>
 ]]></content>
       <categories>
@@ -42,15 +41,16 @@
   <entry>
     <title>2022-03-29-Record</title>
     <url>/archives/98564ef.html</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>记录一天</p>
+<a id="more"></a>
 
-<p>今天看了77页的经济学原理</p>
-<p>背了托福单词</p>
-<p>大创添加扫码功能</p>
-<p>看稍后再看的教学视频，linux进程 java进程</p>
-<p>下载了DeepLearn领域的论文</p>
-<p>不错的，效率很高。</p>
-<p>DeepLearn论文的整理，这些论文还没有下载。</p>
+<p>今天看了77页的经济学原理  </p>
+<p>背了托福单词  </p>
+<p>大创添加扫码功能  </p>
+<p>看稍后再看的教学视频，linux进程 java进程   </p>
+<p>下载了DeepLearn领域的论文  </p>
+<p>不错的，效率很高。  </p>
+<p>DeepLearn论文的整理，这些论文还没有下载。  </p>
 <p><a href="https://github.com/louisfb01/best_AI_papers_2021" rel="external nofollow noreferrer">https://github.com/louisfb01/best_AI_papers_2021</a></p>
 ]]></content>
       <categories>
@@ -393,13 +393,6 @@
       </tags>
   </entry>
   <entry>
-    <title>文章热榜设置</title>
-    <url>/archives/8962fe46.html</url>
-    <content><![CDATA[<a id="more"></a>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-class">.post-description</span> &#123; <span class="attribute">display</span>: none; &#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">AV.initialize(<span class="string">"PNS4giXtrg20IMnwK4FkySYk-gzGzoHsz"</span>, <span class="string">"OFT996P6mikqInfTWwlvVef7"</span>);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> time=<span class="number">0</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> title=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> url=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(<span class="string">'Counter'</span>);</span></span><br><span class="line"><span class="actionscript">  query.notEqualTo(<span class="string">'id'</span>,<span class="number">0</span>);</span></span><br><span class="line"><span class="actionscript">  query.descending(<span class="string">'time'</span>); <span class="comment">//结果按阅读次数降序排序</span></span></span><br><span class="line"><span class="actionscript">  query.limit(<span class="number">1000</span>); <span class="comment">//最终只返回1000条结果</span></span></span><br><span class="line"><span class="actionscript">  query.find().then(<span class="function"><span class="keyword">function</span> <span class="params">(todo)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> result=todo[i].attributes;</span></span><br><span class="line">      time=result.time;</span><br><span class="line">      title=result.title;</span><br><span class="line">      url=result.url;</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> content=<span class="string">"&lt;p&gt;"</span>+<span class="string">"&lt;font color='#1C1C1C'&gt;"</span>+<span class="string">"【文章热度:"</span>+time+<span class="string">"℃】"</span>+<span class="string">"&lt;/font&gt;"</span>+<span class="string">"&lt;a href='"</span>+<span class="string">"https://www.sissioy.com"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;"</span>+<span class="string">"&lt;/p&gt;"</span>;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>).innerHTML+=content</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">  &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(error)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">"error"</span>);</span></span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>作文记录————读 the Declaration of Independence 后的思考</title>
     <url>/archives/c4e96787.html</url>
     <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
@@ -418,6 +411,13 @@
         <tag>English</tag>
         <tag>short essay</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>文章热榜设置</title>
+    <url>/archives/8962fe46.html</url>
+    <content><![CDATA[<a id="more"></a>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-class">.post-description</span> &#123; <span class="attribute">display</span>: none; &#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">AV.initialize(<span class="string">"PNS4giXtrg20IMnwK4FkySYk-gzGzoHsz"</span>, <span class="string">"OFT996P6mikqInfTWwlvVef7"</span>);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> time=<span class="number">0</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> title=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> url=<span class="string">""</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> query = <span class="keyword">new</span> AV.Query(<span class="string">'Counter'</span>);</span></span><br><span class="line"><span class="actionscript">  query.notEqualTo(<span class="string">'id'</span>,<span class="number">0</span>);</span></span><br><span class="line"><span class="actionscript">  query.descending(<span class="string">'time'</span>); <span class="comment">//结果按阅读次数降序排序</span></span></span><br><span class="line"><span class="actionscript">  query.limit(<span class="number">1000</span>); <span class="comment">//最终只返回1000条结果</span></span></span><br><span class="line"><span class="actionscript">  query.find().then(<span class="function"><span class="keyword">function</span> <span class="params">(todo)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1000</span>;i++)&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> result=todo[i].attributes;</span></span><br><span class="line">      time=result.time;</span><br><span class="line">      title=result.title;</span><br><span class="line">      url=result.url;</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> content=<span class="string">"&lt;p&gt;"</span>+<span class="string">"&lt;font color='#1C1C1C'&gt;"</span>+<span class="string">"【文章热度:"</span>+time+<span class="string">"℃】"</span>+<span class="string">"&lt;/font&gt;"</span>+<span class="string">"&lt;a href='"</span>+<span class="string">"https://www.sissioy.com"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;"</span>+<span class="string">"&lt;/p&gt;"</span>;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>).innerHTML+=content</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">  &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(error)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">"error"</span>);</span></span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>如何水出一篇论文————看毕导THU视频的总结</title>
@@ -459,11 +459,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts4138" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts1405" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts4138'));
+	var myChart = echarts.init(document.getElementById('echarts1405'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -499,11 +499,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts7421" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts1697" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts7421'));
+	var myChart = echarts.init(document.getElementById('echarts1697'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
@@ -1045,6 +1045,31 @@ option = {
       </categories>
   </entry>
   <entry>
+    <title>总结托福考试写作笔记————综合写作模板</title>
+    <url>/archives/4692aec6.html</url>
+    <content><![CDATA[<ul>
+<li><a href="#综合写作">综合写作</a><ul>
+<li><a href="#综合写作框架和模板">综合写作框架和模板：</a><ul>
+<li><a href="#中文框架">中文框架</a></li>
+<li><a href="#英文模板">英文模板</a><a id="more"></a>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="综合写作"><a href="#综合写作" class="headerlink" title="综合写作"></a>综合写作</h2><p>Step1 - 阅读结构：<strong>四段式</strong> 总分分分<br>全文主旨在：首段末句<br>其余各段主旨在：各段首句<br>背单词背单词背单词！！！<br>Step2 - 听力结构：逐条反驳<br>2 min Listen for：解释和例子都要写！！！比听力更详细<br>Step3 - 写作<br>Reading reappears<br>Finish in （15）minutes</p>
+<h3 id="综合写作框架和模板："><a href="#综合写作框架和模板：" class="headerlink" title="综合写作框架和模板："></a>综合写作框架和模板：</h3><h4 id="中文框架"><a href="#中文框架" class="headerlink" title="中文框架"></a>中文框架</h4><p>1听力和阅读讨论了+议题。阅读认为+R总论点，被听力所反驳。<br>2首先，阅读说+R分论点1.而听力反驳了这个说法,这是因为+L分论点1+分论据1<br>3其次，阅读说+R分论点2.而听力反驳了这个说法,这是因为+L分论点2+分论据2<br>4最后，阅读说+R分论点3.而听力反驳了这个说法,这是因为+L分论点3+分论据3</p>
+<h4 id="英文模板"><a href="#英文模板" class="headerlink" title="英文模板"></a>英文模板</h4><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">开头： The listening and reading materials have a debate on 议题. The writer believes that +总论点  ,  which is contradicted by the following lecturer.</span><br><span class="line"><span class="bullet">1. </span>First, the writer claims that 分论点1 （没句号） while the speaker views this issue from an opposite angle. According to him/her, 分论点1+分论据1</span><br><span class="line"><span class="bullet">2. </span>Secondly, the author states that 分论点2 . However, the lecturer opposes the writer’s opinion by saying that 分论点2+分论据2</span><br><span class="line"><span class="bullet">3. </span>Thirdly, the passage argues that 分论点3 . By contrast, in accordance with the professor, the reading’s claim does not hold water站得住脚 because 分论点3+分论据3</span><br></pre></td></tr></table></figure>
+<p>更清晰————<br><a href="#要背的的综合写作模板">要背的的综合写作模板：</a><br><strong>不写结尾</strong>（完整文章就是Passage vs lecture）</p>
+]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>English</category>
+      </categories>
+  </entry>
+  <entry>
     <title>总结托福考试写作笔记————完整版</title>
     <url>/archives/d03f0ed0.html</url>
     <content><![CDATA[<p>篇幅较长，直接看吧！</p>
@@ -1297,31 +1322,6 @@ option = {
 <figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">主题句：</span><br><span class="line">First off, a good appearance brings a good impression（可不可数都可以）.</span><br><span class="line">解释：</span><br><span class="line">To explain <span class="keyword">it</span> further, being presentable体面的 makes people feel more <span class="keyword">at</span> ease when they attend formal events.</span><br><span class="line">举例：Take <span class="keyword">my</span> brother <span class="keyword">for</span> instance. He once went <span class="keyword">to</span> a job interview （unshaved）, wearing （old jeans） <span class="keyword">and</span> a （baggy overcoat） <span class="keyword">with</span> a big （coffee stain） <span class="keyword">on</span> <span class="keyword">it</span>. We didn't know what happened there <span class="keyword">but</span> he came home quite upset, <span class="keyword">with</span> no good news.</span><br><span class="line">（Nevertheless）, <span class="keyword">after</span> <span class="keyword">some</span> contemplation思考, he decided <span class="keyword">to</span> take another shot/have another . This <span class="built_in">time</span> he did <span class="keyword">some</span> serious preparation, having （<span class="keyword">the</span> hair trimmed）, putting <span class="keyword">on</span> his （newly-bought suit <span class="keyword">and</span> tie）. It wasn't long <span class="keyword">before</span> we heard <span class="keyword">that</span> he got <span class="keyword">the</span> job offer.</span><br><span class="line">小结：</span><br><span class="line">So <span class="keyword">it</span> seems clear <span class="keyword">to</span> <span class="keyword">me</span> <span class="keyword">that</span> <span class="keyword">the</span> proper look conveys positive message <span class="keyword">to</span> people <span class="keyword">around</span> us.</span><br></pre></td></tr></table></figure>
 
 <h3 id="要背的的综合写作模板："><a href="#要背的的综合写作模板：" class="headerlink" title="要背的的综合写作模板："></a>要背的的综合写作模板：</h3><figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">The reading <span class="keyword">and</span> listening materials have <span class="keyword">a</span> debate <span class="keyword">on</span> … . <span class="title">The</span> <span class="title">writer</span> <span class="title">believes</span> …, <span class="title">which</span> <span class="title">is</span> <span class="title">contradicted</span> <span class="title">by</span> <span class="title">the</span> <span class="title">following</span> <span class="title">lecturer</span>.</span><br><span class="line"> </span><br><span class="line">Firstly, <span class="keyword">the</span> author claims that … <span class="keyword">while</span> <span class="keyword">the</span> lecturer views this issue <span class="built_in">from</span> <span class="keyword">an</span> opposite angle. According <span class="built_in">to</span> him/her …</span><br><span class="line">Secondly, <span class="keyword">the</span> writer states that … . However, <span class="keyword">the</span> speaker opposes <span class="keyword">the</span> writer’s opinion <span class="keyword">by</span> saying that …</span><br><span class="line">Thirdly, <span class="keyword">the</span> passage argues that … . By contrast, <span class="keyword">in</span> accordance <span class="keyword">with</span> <span class="keyword">the</span> professor, <span class="keyword">the</span> reading’s claim does <span class="keyword">not</span> hold water because …</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>English</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>总结托福考试写作笔记————综合写作模板</title>
-    <url>/archives/4692aec6.html</url>
-    <content><![CDATA[<ul>
-<li><a href="#综合写作">综合写作</a><ul>
-<li><a href="#综合写作框架和模板">综合写作框架和模板：</a><ul>
-<li><a href="#中文框架">中文框架</a></li>
-<li><a href="#英文模板">英文模板</a><a id="more"></a>
-
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="综合写作"><a href="#综合写作" class="headerlink" title="综合写作"></a>综合写作</h2><p>Step1 - 阅读结构：<strong>四段式</strong> 总分分分<br>全文主旨在：首段末句<br>其余各段主旨在：各段首句<br>背单词背单词背单词！！！<br>Step2 - 听力结构：逐条反驳<br>2 min Listen for：解释和例子都要写！！！比听力更详细<br>Step3 - 写作<br>Reading reappears<br>Finish in （15）minutes</p>
-<h3 id="综合写作框架和模板："><a href="#综合写作框架和模板：" class="headerlink" title="综合写作框架和模板："></a>综合写作框架和模板：</h3><h4 id="中文框架"><a href="#中文框架" class="headerlink" title="中文框架"></a>中文框架</h4><p>1听力和阅读讨论了+议题。阅读认为+R总论点，被听力所反驳。<br>2首先，阅读说+R分论点1.而听力反驳了这个说法,这是因为+L分论点1+分论据1<br>3其次，阅读说+R分论点2.而听力反驳了这个说法,这是因为+L分论点2+分论据2<br>4最后，阅读说+R分论点3.而听力反驳了这个说法,这是因为+L分论点3+分论据3</p>
-<h4 id="英文模板"><a href="#英文模板" class="headerlink" title="英文模板"></a>英文模板</h4><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">开头： The listening and reading materials have a debate on 议题. The writer believes that +总论点  ,  which is contradicted by the following lecturer.</span><br><span class="line"><span class="bullet">1. </span>First, the writer claims that 分论点1 （没句号） while the speaker views this issue from an opposite angle. According to him/her, 分论点1+分论据1</span><br><span class="line"><span class="bullet">2. </span>Secondly, the author states that 分论点2 . However, the lecturer opposes the writer’s opinion by saying that 分论点2+分论据2</span><br><span class="line"><span class="bullet">3. </span>Thirdly, the passage argues that 分论点3 . By contrast, in accordance with the professor, the reading’s claim does not hold water站得住脚 because 分论点3+分论据3</span><br></pre></td></tr></table></figure>
-<p>更清晰————<br><a href="#要背的的综合写作模板">要背的的综合写作模板：</a><br><strong>不写结尾</strong>（完整文章就是Passage vs lecture）</p>
 ]]></content>
       <categories>
         <category>Professional learning</category>
