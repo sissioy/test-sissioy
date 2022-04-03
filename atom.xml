@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2022-04-01T16:00:00.000Z</updated>
+  <updated>2022-04-02T16:00:00.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 315</title>
+    <link href="http://www.sissioy.com/archives/26242ca.html"/>
+    <id>http://www.sissioy.com/archives/26242ca.html</id>
+    <published>2022-04-02T16:00:00.000Z</published>
+    <updated>2022-04-02T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这道题真的把我绕进去好久，提交也一直报错，找不出原因orz，一行一行看代码也没看出哪里有问题。栽倒了小细节上。&lt;/p&gt;
+&lt;p&gt;大概思路是用递归排序，在排序的过程中，可以更新（下标对应的）元素后面有多少个小于自己的数。&lt;br&gt;用一个新数组&lt;code&gt;[0,1,2,3,...]&lt;/code&gt;记录原数组下标。所以，递归排序改变元素位置时，下标也对应移动，以此作为记录答案的依据。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="python" scheme="http://www.sissioy.com/categories/Learning-note/python/"/>
+    
+    
+      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
+    
+      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
+    
+  </entry>
   
   <entry>
     <title>关于我的Notion主页</title>
@@ -491,23 +517,6 @@
       <category term="Entertainment" scheme="http://www.sissioy.com/categories/Entertainment/"/>
     
       <category term="bilibili" scheme="http://www.sissioy.com/categories/Entertainment/bilibili/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>欢迎查看我的网站</title>
-    <link href="http://www.sissioy.com/archives/a5547e95.html"/>
-    <id>http://www.sissioy.com/archives/a5547e95.html</id>
-    <published>2020-09-03T16:00:00.000Z</published>
-    <updated>2020-09-03T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Git Chart&lt;br&gt;&lt;img src=&quot;https://ghchart.rshah.org/sissioy&quot; alt=&quot;sissioy&amp;#39;s Github chart&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
     
     
   </entry>
