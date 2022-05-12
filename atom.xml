@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2022-04-02T16:00:00.000Z</updated>
+  <updated>2022-05-10T16:00:00.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-10T16:00:00.000Z</published>
+    <updated>2022-05-10T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;上午2.5小时考RHCSA，下午3小时考RHCE。&lt;br&gt;考试日期：5月31日&lt;br&gt;倒计时20天。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-10T16:00:00.000Z</published>
+    <updated>2022-05-10T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月31日&lt;br&gt;倒计时19天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 452</title>
+    <link href="http://www.sissioy.com/archives/fd2504e8.html"/>
+    <id>http://www.sissioy.com/archives/fd2504e8.html</id>
+    <published>2022-04-04T16:00:00.000Z</published>
+    <updated>2022-04-04T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这道题最初没有想出来，看了题解恍然大悟。右边界升序排列是问题的关键。&lt;/p&gt;
+&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;原题链接：&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="python" scheme="http://www.sissioy.com/categories/Learning-note/python/"/>
+    
+    
+      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
+    
+      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 315</title>
@@ -155,31 +241,6 @@
   </entry>
   
   <entry>
-    <title>刷题记录————整数加数组</title>
-    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
-    <id>http://www.sissioy.com/archives/d28b2785.html</id>
-    <published>2021-01-21T16:00:00.000Z</published>
-    <updated>2021-01-21T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python爬虫项目（基础）</title>
     <link href="http://www.sissioy.com/archives/a526df3b.html"/>
     <id>http://www.sissioy.com/archives/a526df3b.html</id>
@@ -205,15 +266,15 @@
   </entry>
   
   <entry>
-    <title>刷题记录————汉诺塔</title>
-    <link href="http://www.sissioy.com/archives/3be882b0.html"/>
-    <id>http://www.sissioy.com/archives/3be882b0.html</id>
-    <published>2020-12-02T16:00:00.000Z</published>
-    <updated>2020-12-02T16:00:00.000Z</updated>
+    <title>刷题记录————整数加数组</title>
+    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
+    <id>http://www.sissioy.com/archives/d28b2785.html</id>
+    <published>2021-01-21T16:00:00.000Z</published>
+    <updated>2021-01-21T16:00:00.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;借个不重要的课记录一下我做的题~&lt;br&gt;这周又开始懈怠了，还有超多的作业没有写完，难受……&lt;/p&gt;
+      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
     
     </summary>
     
@@ -254,6 +315,31 @@
       <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
     
       <category term="topcoder" scheme="http://www.sissioy.com/tags/topcoder/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刷题记录————汉诺塔</title>
+    <link href="http://www.sissioy.com/archives/3be882b0.html"/>
+    <id>http://www.sissioy.com/archives/3be882b0.html</id>
+    <published>2020-12-02T16:00:00.000Z</published>
+    <updated>2020-12-02T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;借个不重要的课记录一下我做的题~&lt;br&gt;这周又开始懈怠了，还有超多的作业没有写完，难受……&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
+    
+      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
+    
+    
+      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
+    
+      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
     
   </entry>
   
@@ -391,30 +477,6 @@
   </entry>
   
   <entry>
-    <title>文章热榜设置</title>
-    <link href="http://www.sissioy.com/archives/8962fe46.html"/>
-    <id>http://www.sissioy.com/archives/8962fe46.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>作文记录————读 the Declaration of Independence 后的思考</title>
     <link href="http://www.sissioy.com/archives/c4e96787.html"/>
     <id>http://www.sissioy.com/archives/c4e96787.html</id>
@@ -442,81 +504,25 @@
   </entry>
   
   <entry>
-    <title>如何水出一篇论文————看毕导THU视频的总结</title>
-    <link href="http://www.sissioy.com/archives/718ec5.html"/>
-    <id>http://www.sissioy.com/archives/718ec5.html</id>
-    <published>2020-09-12T16:00:00.000Z</published>
-    <updated>2020-09-12T16:00:00.000Z</updated>
+    <title>文章热榜设置</title>
+    <link href="http://www.sissioy.com/archives/8962fe46.html"/>
+    <id>http://www.sissioy.com/archives/8962fe46.html</id>
+    <published>2020-10-09T16:00:00.000Z</published>
+    <updated>2020-10-09T16:00:00.000Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;原视频————如何快速肝出一篇优秀的学术论文？&quot;&gt;&lt;a href=&quot;#原视频————如何快速肝出一篇优秀的学术论文？&quot; class=&quot;headerlink&quot; title=&quot;原视频————如何快速肝出一篇优秀的学术论文？&quot;&gt;&lt;/a&gt;原视频————如何快速肝出一篇优秀的学术论文？&lt;/h2&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=838081263&amp;bvid=BV1Sg4y1q79G&amp;cid=186798973&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
     
     </summary>
     
-    
-      <category term="Entertainment" scheme="http://www.sissioy.com/categories/Entertainment/"/>
-    
-      <category term="bilibili" scheme="http://www.sissioy.com/categories/Entertainment/bilibili/"/>
-    
-    
-      <category term="bilibili" scheme="http://www.sissioy.com/tags/bilibili/"/>
-    
-      <category term="essay" scheme="http://www.sissioy.com/tags/essay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客下的Echarts展示</title>
-    <link href="http://www.sissioy.com/archives/80a0986.html"/>
-    <id>http://www.sissioy.com/archives/80a0986.html</id>
-    <published>2020-09-05T16:00:00.000Z</published>
-    <updated>2020-09-05T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;终于成功了！！！&quot;&gt;&lt;a href=&quot;#终于成功了！！！&quot; class=&quot;headerlink&quot; title=&quot;终于成功了！！！&quot;&gt;&lt;/a&gt;终于成功了！！！&lt;/h3&gt;&lt;p&gt;尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。&lt;br&gt;特别想唱一曲感动中国！&lt;br&gt;这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）&lt;br&gt;&lt;strong&gt;芜湖起飞&lt;del&gt;~&lt;/del&gt;&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
-    
-      <category term="analytics" scheme="http://www.sissioy.com/tags/analytics/"/>
-    
-      <category term="echarts" scheme="http://www.sissioy.com/tags/echarts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>敬汉卿北漂视频观感</title>
-    <link href="http://www.sissioy.com/archives/ede4bc9f.html"/>
-    <id>http://www.sissioy.com/archives/ede4bc9f.html</id>
-    <published>2020-09-04T16:00:00.000Z</published>
-    <updated>2020-09-04T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从粉丝量来看，作为一个b站头部up主，我认为他的视频质量真的不行，可以说是劣币驱逐良币了，浪费了大量宣传资源（b站可以把更多的资源分给其他更好更值得的up主码？）&lt;/p&gt;
-&lt;h2 id=&quot;先夹带一下私货&quot;&gt;&lt;a href=&quot;#先夹带一下私货&quot; class=&quot;headerlink&quot; title=&quot;先夹带一下私货&quot;&gt;&lt;/a&gt;先夹带一下私货&lt;/h2&gt;&lt;p&gt;推荐几个up主，视频质量很不错。&lt;br&gt;&lt;strong&gt;罗翔&lt;/strong&gt;老师应该要突破1000万粉丝了。&lt;/p&gt;
-&lt;p&gt;关于其他up主，量级大一点的：&lt;br&gt;&lt;strong&gt;何同学、绵羊料理、李子柒、郭杰瑞、党妹、小艾大叔、小潮院长、毕导THU&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;半佛、开心嘴炮、老邪说电影、哇哇哇妹&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;个人认为，以上每一位up主的视频拿出来都比他强。&lt;/p&gt;
-&lt;p&gt;量级小一点的：&lt;br&gt;&lt;strong&gt;智能路障、老蒋巨靠谱、硬件茶谈、极地手记、TenGuSan、LORIII阿姨、花小雕、vivi可爱多、巫托邦&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这些up的视频质量也是没得说。而且粉丝也在一直增长。&lt;br&gt;上面提到的几位全都是我最爱的up主，良心吐血分享！！！&lt;/p&gt;
-&lt;h2 id=&quot;说回主题&quot;&gt;&lt;a href=&quot;#说回主题&quot; class=&quot;headerlink&quot; title=&quot;说回主题&quot;&gt;&lt;/a&gt;说回主题&lt;/h2&gt;&lt;p&gt;他这次所做的30天挑战也有反思过去的意思，因为挑战之前他的视频质量下降粉丝也普遍不满，上一条视频评论区就可以看到很多：&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/09/05/wEmgTx.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Entertainment" scheme="http://www.sissioy.com/categories/Entertainment/"/>
-    
-      <category term="bilibili" scheme="http://www.sissioy.com/categories/Entertainment/bilibili/"/>
     
     
   </entry>

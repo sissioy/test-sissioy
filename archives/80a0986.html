@@ -151,17 +151,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">22</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">25</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">21</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">22</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">43</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">46</span></a>
 
   </li>
         <li class="menu-item menu-item-rbg">
@@ -333,11 +333,11 @@
         <h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts5482" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts9414" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts5482'));
+	var myChart = echarts.init(document.getElementById('echarts9414'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -373,11 +373,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts7005" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts3432" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts7005'));
+	var myChart = echarts.init(document.getElementById('echarts3432'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
@@ -674,23 +674,23 @@ option = {
         
         
           <li>
+            <a href="/archives/c895e024.html" title="RHCSA/RHCE学习记录" target="_blank">RHCSA/RHCE学习记录</a>
+          </li>
+        
+          <li>
+            <a href="/archives/c895e024.html" title="RHCSA/RHCE学习记录" target="_blank">RHCSA/RHCE学习记录</a>
+          </li>
+        
+          <li>
+            <a href="/archives/fd2504e8.html" title="Leetcode 452" target="_blank">Leetcode 452</a>
+          </li>
+        
+          <li>
             <a href="/archives/26242ca.html" title="Leetcode 315" target="_blank">Leetcode 315</a>
           </li>
         
           <li>
             <a href="/archives/57c262ef.html" title="关于我的Notion主页" target="_blank">关于我的Notion主页</a>
-          </li>
-        
-          <li>
-            <a href="/archives/4cef7765.html" title="树莓派学习记录" target="_blank">树莓派学习记录</a>
-          </li>
-        
-          <li>
-            <a href="/archives/19328116.html" title="LEETCODE刷题记录" target="_blank">LEETCODE刷题记录</a>
-          </li>
-        
-          <li>
-            <a href="/archives/1718214a.html" title="用hexo更新文章的报错记录" target="_blank">用hexo更新文章的报错记录</a>
           </li>
         
       </ul>
