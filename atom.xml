@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2022-05-10T16:00:00.000Z</updated>
+  <updated>2022-05-12T16:00:00.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -20,12 +20,72 @@
     <title>RHCSA/RHCE学习记录</title>
     <link href="http://www.sissioy.com/archives/c895e024.html"/>
     <id>http://www.sissioy.com/archives/c895e024.html</id>
-    <published>2022-05-10T16:00:00.000Z</published>
-    <updated>2022-05-10T16:00:00.000Z</updated>
+    <published>2022-05-12T16:00:00.000Z</published>
+    <updated>2022-05-12T16:00:00.000Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;上午2.5小时考RHCSA，下午3小时考RHCE。&lt;br&gt;考试日期：5月31日&lt;br&gt;倒计时20天。&lt;/p&gt;
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月31日&lt;br&gt;倒计时18天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows多SSH配置及ssh-agent自动化</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-12T02:00:00.000Z</published>
+    <updated>2022-05-12T02:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;多ssh配置&quot;&gt;&lt;a href=&quot;#多ssh配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Git" scheme="http://www.sissioy.com/categories/Learning-note/Git/"/>
+    
+    
+      <category term="Windows" scheme="http://www.sissioy.com/tags/Windows/"/>
+    
+      <category term="SSH" scheme="http://www.sissioy.com/tags/SSH/"/>
+    
+      <category term="Git" scheme="http://www.sissioy.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-11T16:00:00.000Z</published>
+    <updated>2022-05-11T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月31日&lt;br&gt;倒计时19天。  &lt;/p&gt;
     
     </summary>
     
@@ -52,7 +112,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月31日&lt;br&gt;倒计时19天。  &lt;/p&gt;
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;上午2.5小时考RHCSA，下午3小时考RHCE。&lt;br&gt;考试日期：5月31日&lt;br&gt;倒计时20天。&lt;/p&gt;
     
     </summary>
     
@@ -241,6 +301,31 @@
   </entry>
   
   <entry>
+    <title>刷题记录————整数加数组</title>
+    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
+    <id>http://www.sissioy.com/archives/d28b2785.html</id>
+    <published>2021-01-21T16:00:00.000Z</published>
+    <updated>2021-01-21T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
+    
+      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
+    
+    
+      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
+    
+      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python爬虫项目（基础）</title>
     <link href="http://www.sissioy.com/archives/a526df3b.html"/>
     <id>http://www.sissioy.com/archives/a526df3b.html</id>
@@ -266,15 +351,15 @@
   </entry>
   
   <entry>
-    <title>刷题记录————整数加数组</title>
-    <link href="http://www.sissioy.com/archives/d28b2785.html"/>
-    <id>http://www.sissioy.com/archives/d28b2785.html</id>
-    <published>2021-01-21T16:00:00.000Z</published>
-    <updated>2021-01-21T16:00:00.000Z</updated>
+    <title>刷题记录————汉诺塔</title>
+    <link href="http://www.sissioy.com/archives/3be882b0.html"/>
+    <id>http://www.sissioy.com/archives/3be882b0.html</id>
+    <published>2020-12-02T16:00:00.000Z</published>
+    <updated>2020-12-02T16:00:00.000Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;对于非负整数&lt;code&gt;X&lt;/code&gt;而言，&lt;code&gt;X&lt;/code&gt;的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 &lt;code&gt;X = 1231&lt;/code&gt;，那么其数组形式为 &lt;code&gt;[1,2,3,1]&lt;/code&gt;。&lt;br&gt;给定非负整数&lt;code&gt;X&lt;/code&gt;的数组形式&lt;code&gt;A&lt;/code&gt;，返回整数&lt;code&gt;X+K&lt;/code&gt;的数组形式。&lt;/p&gt;
+      &lt;p&gt;借个不重要的课记录一下我做的题~&lt;br&gt;这周又开始懈怠了，还有超多的作业没有写完，难受……&lt;/p&gt;
     
     </summary>
     
@@ -315,31 +400,6 @@
       <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
     
       <category term="topcoder" scheme="http://www.sissioy.com/tags/topcoder/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刷题记录————汉诺塔</title>
-    <link href="http://www.sissioy.com/archives/3be882b0.html"/>
-    <id>http://www.sissioy.com/archives/3be882b0.html</id>
-    <published>2020-12-02T16:00:00.000Z</published>
-    <updated>2020-12-02T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;借个不重要的课记录一下我做的题~&lt;br&gt;这周又开始懈怠了，还有超多的作业没有写完，难受……&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
     
   </entry>
   
@@ -473,57 +533,6 @@
     
     
       <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>作文记录————读 the Declaration of Independence 后的思考</title>
-    <link href="http://www.sissioy.com/archives/c4e96787.html"/>
-    <id>http://www.sissioy.com/archives/c4e96787.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Write a passage in no less than 100 words, on your understanding of “the Declaration of Independence”, what impresses you most, how you think this document has influenced the United States.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="English" scheme="http://www.sissioy.com/categories/Professional-learning/English/"/>
-    
-    
-      <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
-    
-      <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文章热榜设置</title>
-    <link href="http://www.sissioy.com/archives/8962fe46.html"/>
-    <id>http://www.sissioy.com/archives/8962fe46.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   

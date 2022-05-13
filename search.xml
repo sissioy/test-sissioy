@@ -23,11 +23,64 @@
   <entry>
     <title>RHCSA/RHCE学习记录</title>
     <url>/archives/c895e024.html</url>
-    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>上午2.5小时考RHCSA，下午3小时考RHCE。<br>考试日期：5月31日<br>倒计时20天。</p>
-<a id="more"></a>  
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月31日<br>倒计时18天。  </p>
+<a id="more"></a>
 
-<h3 id="开源历史"><a href="#开源历史" class="headerlink" title="开源历史"></a>开源历史</h3><h3 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h3><p>RedHatEnterpriseLinux 8<br>VmwareWorkStation  16  </p>
-<h3 id="安装VM-WorkStation"><a href="#安装VM-WorkStation" class="headerlink" title="安装VM WorkStation"></a>安装VM WorkStation</h3><p>选择镜像时，选择稍后安装。按照书上步骤的配置。  </p>
+<h3 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h3><p>网卡名称<br>IP地址<br>MAC地址</p>
+]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows多SSH配置及ssh-agent自动化</title>
+    <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="多ssh配置"><a href="#多ssh配置" class="headerlink" title="多ssh配置"></a>多ssh配置</h3><p>在用户根目录下创建<code>.ssh</code>文件夹，文件夹里包含的文件如下，需要什么名字就改成什么名字。<code>config</code>文件是新建的。<br><img src="http://tva1.sinaimg.cn/large/008aoOh1gy1h2616v4wpnj3065068aau.jpg" alt="image.png"></p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment"># github email address</span></span><br><span class="line">Host github</span><br><span class="line">HostName github.com </span><br><span class="line">User git</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/github_id_rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># vps git user</span></span><br><span class="line">Host vps-git</span><br><span class="line">HostName xxx.xxx.xxx.xxx # vps ip</span><br><span class="line">User git</span><br><span class="line">Port 22</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/git_id_rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># vps root user</span></span><br><span class="line">Host vps-root</span><br><span class="line">HostName xxx.xxx.xxx.xxx # vps ip</span><br><span class="line">User root</span><br><span class="line">Port 22</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+
+<h3 id="ssh-agent-配置-Git-bash-开启时自动化"><a href="#ssh-agent-配置-Git-bash-开启时自动化" class="headerlink" title="ssh-agent 配置 Git bash 开启时自动化"></a>ssh-agent 配置 Git bash 开启时自动化</h3><p>多ssh管理时，private key 默认名称不为id_rsa。所有每次打开git bash需要重复执行ssh-agent，ssh-add，然后再ssh，比较麻烦，因此我们通过脚本实现自动化。  </p>
+<p>参考：<a href="https://developer.aliyun.com/article/6923" rel="external nofollow noreferrer">https://developer.aliyun.com/article/6923</a><br>参见：<a href="https://help.github.com/articles/working-with-ssh-key-passphrases/#auto-launching-ssh-agent-on-msysgit" rel="external nofollow noreferrer">https://help.github.com/articles/working-with-ssh-key-passphrases/#auto-launching-ssh-agent-on-msysgit</a><br>在C盘<strong>用户</strong>根目录创建<code>.profile</code>文件（不是文件夹），写入以下内容:  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">env=~/.ssh/agent.env</span><br><span class="line"><span class="function"><span class="title">agent_load_env</span></span> () &#123; <span class="built_in">test</span> -f <span class="string">"<span class="variable">$env</span>"</span> &amp;&amp; . <span class="string">"<span class="variable">$env</span>"</span> &gt;| /dev/null ; &#125;</span><br><span class="line"><span class="function"><span class="title">agent_start</span></span> () &#123;</span><br><span class="line">    (<span class="built_in">umask</span> 077; ssh-agent &gt;| <span class="string">"<span class="variable">$env</span>"</span>)</span><br><span class="line">    . <span class="string">"<span class="variable">$env</span>"</span> &gt;| /dev/null ; &#125;</span><br><span class="line">agent_load_env</span><br><span class="line"><span class="comment"># agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running</span></span><br><span class="line">agent_run_state=$(ssh-add -l &gt;| /dev/null 2&gt;&amp;1; <span class="built_in">echo</span> $?)</span><br><span class="line"><span class="keyword">if</span> [ ! <span class="string">"<span class="variable">$SSH_AUTH_SOCK</span>"</span> ] || [ <span class="variable">$agent_run_state</span> = 2 ]; <span class="keyword">then</span></span><br><span class="line">    agent_start</span><br><span class="line">    ssh-add ~/.ssh/github_id_rsa</span><br><span class="line"><span class="keyword">elif</span> [ <span class="string">"<span class="variable">$SSH_AUTH_SOCK</span>"</span> ] &amp;&amp; [ <span class="variable">$agent_run_state</span> = 1 ]; <span class="keyword">then</span></span><br><span class="line">    ssh-add ~/.ssh/git_id_rsa</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">unset</span> env</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>SSH</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月31日<br>倒计时19天。  </p>
+<a id="more"></a>
+
+<h3 id="RPM"><a href="#RPM" class="headerlink" title="RPM"></a>RPM</h3><p>Redhat Package management<br>源代码+安装规则  </p>
+<p>YUM 仓库: 管理rpm包<br>RHEL 8 : DNF(YUMv4)    </p>
+<h3 id="管理服务的命令"><a href="#管理服务的命令" class="headerlink" title="管理服务的命令"></a>管理服务的命令</h3><p>RHEL7/8 systemd<br>RHEL5/6 init  </p>
+<p>systemctl是配置工具，systemd是服务名称。  </p>
+<p>要记住的东西：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">systemctl <span class="keyword">start</span>/restart/<span class="keyword">status</span>/<span class="keyword">stop</span>/<span class="keyword">enable</span> service</span><br></pre></td></tr></table></figure>
+
+<p>nftables是RHEL8的iptables。<br><a href="https://www.cnblogs.com/RXDXB/p/11660287.html" rel="external nofollow noreferrer">RHEL 7/8 区别</a><br><a href="http://softpanorama.org/Commercial_linuxes/RHEL/RHEL8_ideosyncracies/index.shtml" rel="external nofollow noreferrer">RHEL 7/8 differences</a></p>
+<p>###<br>硬件-内核-API-程序<br>命令 （参数） （对象）  </p>
+<h3 id="ps-aux"><a href="#ps-aux" class="headerlink" title="ps aux"></a>ps aux</h3><p><img src="http://tva1.sinaimg.cn/large/008aoOh1gy1h2633qss23j30v10d3119.jpg" alt="image.png"><br>R—正在运行的服务<br>S–中断进程 Sleep–等待为用户提供服务的进程<br>D—不可中断的服务，可能为用户提供服务<br>Z—（Zombie）<br>T—以及关闭的进程   </p>
+<h3 id="top-【重点】"><a href="#top-【重点】" class="headerlink" title="top 【重点】"></a>top 【重点】</h3><p>动态的<br><img src="http://tva1.sinaimg.cn/large/008aoOh1gy1h263icz4dhj30vj0is49s.jpg" alt="image.png"></p>
+<p>PR NI<br>数值越低，优先级越高，nc命令调整进程优先级  </p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">nc <span class="number">-20</span> [service]</span><br></pre></td></tr></table></figure>
+<p>VIRT RES SHR </p>
+<h3 id="pidof-serive"><a href="#pidof-serive" class="headerlink" title="pidof [serive]"></a>pidof [serive]</h3><p>查看pid，用kill结束pid，再重启service。</p>
+<p>killall [service] 这个方法可以关闭所有该service相关的进程。</p>
 ]]></content>
       <categories>
         <category>Learning note</category>
@@ -42,10 +95,11 @@
   <entry>
     <title>RHCSA/RHCE学习记录</title>
     <url>/archives/c895e024.html</url>
-    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月31日<br>倒计时19天。  </p>
-<a id="more"></a>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>上午2.5小时考RHCSA，下午3小时考RHCE。<br>考试日期：5月31日<br>倒计时20天。</p>
+<a id="more"></a>  
 
-<h3 id="RPM"><a href="#RPM" class="headerlink" title="RPM"></a>RPM</h3><p>Redhat Package management<br>源代码+安装规则  </p>
+<h3 id="开源历史"><a href="#开源历史" class="headerlink" title="开源历史"></a>开源历史</h3><h3 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h3><p>RedHatEnterpriseLinux 8<br>VmwareWorkStation  16  </p>
+<h3 id="安装VM-WorkStation"><a href="#安装VM-WorkStation" class="headerlink" title="安装VM WorkStation"></a>安装VM WorkStation</h3><p>选择镜像时，选择稍后安装。按照书上步骤的配置。  </p>
 ]]></content>
       <categories>
         <category>Learning note</category>
@@ -376,6 +430,26 @@
       </tags>
   </entry>
   <entry>
+    <title>刷题记录————整数加数组</title>
+    <url>/archives/d28b2785.html</url>
+    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>对于非负整数<code>X</code>而言，<code>X</code>的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 <code>X = 1231</code>，那么其数组形式为 <code>[1,2,3,1]</code>。<br>给定非负整数<code>X</code>的数组形式<code>A</code>，返回整数<code>X+K</code>的数组形式。</p>
+<a id="more"></a>
+<p><img src="https://tva1.sinaimg.cn/large/008aoOh1ly1gmwq38nfygj30rm0lgmyl.jpg" alt="image.png"></p>
+<h3 id="第一种解法"><a href="#第一种解法" class="headerlink" title="第一种解法"></a>第一种解法</h3><p>把list转化为int</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        first </span><br><span class="line">        num = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> A:</span><br><span class="line">            num = num *<span class="number">10</span> + i</span><br><span class="line">        ans_num = num +K</span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> str(ans_num):</span><br><span class="line">            ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<h3 id="第二种解法"><a href="#第二种解法" class="headerlink" title="第二种解法"></a>第二种解法</h3><p>把int转化为list</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="comment"># second</span></span><br><span class="line">        li = []</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> str(K):</span><br><span class="line">            li.append(int(x))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&gt;len(li):</span><br><span class="line">            li.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&lt; len(li):</span><br><span class="line">            A.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        out = <span class="number">0</span></span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> x,y <span class="keyword">in</span> zip(li[::<span class="number">-1</span>],A[::<span class="number">-1</span>]):</span><br><span class="line">            temp = x+y+out</span><br><span class="line">            <span class="keyword">if</span> temp &lt; <span class="number">10</span>:</span><br><span class="line">                ans.append(temp)</span><br><span class="line">                out = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                out = <span class="number">1</span></span><br><span class="line">                ans.append(temp<span class="number">-10</span>)</span><br><span class="line">        <span class="keyword">if</span> out == <span class="number">1</span>:</span><br><span class="line">            ans.append(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> ans[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>practice</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python爬虫项目（基础）</title>
     <url>/archives/a526df3b.html</url>
     <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV12E411A7ZQ?p=15" rel="external nofollow noreferrer">豆瓣电影TOP250————爬虫项目教程视频b站地址</a><br>有python语言基础的可以从第15个视频直接看。<br>后面的教程可以放1.25或1.5倍速观看。</p>
@@ -403,15 +477,23 @@
       </tags>
   </entry>
   <entry>
-    <title>刷题记录————整数加数组</title>
-    <url>/archives/d28b2785.html</url>
-    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>对于非负整数<code>X</code>而言，<code>X</code>的数组形式是每位数字按从左到右的顺序形成的数组。例如，如果 <code>X = 1231</code>，那么其数组形式为 <code>[1,2,3,1]</code>。<br>给定非负整数<code>X</code>的数组形式<code>A</code>，返回整数<code>X+K</code>的数组形式。</p>
+    <title>刷题记录————汉诺塔</title>
+    <url>/archives/3be882b0.html</url>
+    <content><![CDATA[<p>借个不重要的课记录一下我做的题~<br>这周又开始懈怠了，还有超多的作业没有写完，难受……</p>
 <a id="more"></a>
-<p><img src="https://tva1.sinaimg.cn/large/008aoOh1ly1gmwq38nfygj30rm0lgmyl.jpg" alt="image.png"></p>
-<h3 id="第一种解法"><a href="#第一种解法" class="headerlink" title="第一种解法"></a>第一种解法</h3><p>把list转化为int</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        first </span><br><span class="line">        num = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> A:</span><br><span class="line">            num = num *<span class="number">10</span> + i</span><br><span class="line">        ans_num = num +K</span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> str(ans_num):</span><br><span class="line">            ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-<h3 id="第二种解法"><a href="#第二种解法" class="headerlink" title="第二种解法"></a>第二种解法</h3><p>把int转化为list</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addToArrayForm</span><span class="params">(self, A: List[int], K: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="comment"># second</span></span><br><span class="line">        li = []</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> str(K):</span><br><span class="line">            li.append(int(x))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&gt;len(li):</span><br><span class="line">            li.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(A)&lt; len(li):</span><br><span class="line">            A.insert(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        </span><br><span class="line">        out = <span class="number">0</span></span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> x,y <span class="keyword">in</span> zip(li[::<span class="number">-1</span>],A[::<span class="number">-1</span>]):</span><br><span class="line">            temp = x+y+out</span><br><span class="line">            <span class="keyword">if</span> temp &lt; <span class="number">10</span>:</span><br><span class="line">                ans.append(temp)</span><br><span class="line">                out = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                out = <span class="number">1</span></span><br><span class="line">                ans.append(temp<span class="number">-10</span>)</span><br><span class="line">        <span class="keyword">if</span> out == <span class="number">1</span>:</span><br><span class="line">            ans.append(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> ans[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="第一题-汉诺塔"><a href="#第一题-汉诺塔" class="headerlink" title="第一题 汉诺塔"></a>第一题 汉诺塔</h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p><img src="https://tva1.sinaimg.cn/large/008aoOh1gy1glaptlbjd8j30xw0o7wga.jpg" alt="汉诺塔.png"></p>
+<h4 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h4><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hano</span><span class="params">(a, b, c, floor, step, plate)</span>:</span>  <span class="comment"># 输入汉诺塔的层数</span></span><br><span class="line">    <span class="keyword">if</span> floor == <span class="number">1</span>:</span><br><span class="line">        print(<span class="string">"[step %d] move plate %d# from %c to %c"</span> % (step[<span class="number">0</span>], plate[<span class="number">0</span>], a, c))</span><br><span class="line">        step[<span class="number">0</span>] = step[<span class="number">0</span>] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    hano(a, c, b, floor - <span class="number">1</span>, step, plate)</span><br><span class="line">    print(<span class="string">"[step %d] move plate %d# from %c to %c"</span> % (step[<span class="number">0</span>], plate[floor - <span class="number">1</span>], a, c))</span><br><span class="line">    step[<span class="number">0</span>] += <span class="number">1</span></span><br><span class="line">    hano(b, a, c, floor - <span class="number">1</span>, step, plate)</span><br><span class="line"></span><br><span class="line"><span class="comment"># f(k+1)=2*f(k)+1 汉诺塔移动次数</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    f = int(input())</span><br><span class="line">    lst = [<span class="number">1</span>]</span><br><span class="line">    plt = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, f + <span class="number">1</span>):   <span class="comment"># 创建一个数组放盘子，顶层为1，向下依次加1.</span></span><br><span class="line">        plt.append(i)</span><br><span class="line"></span><br><span class="line">    hano(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, f, lst, plt)  <span class="comment"># step初始化为1,传入list时才能改变</span></span><br><span class="line">    print(lst[<span class="number">0</span>] - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>这道题我是一步一步来做的。用递归的方式实现汉诺塔不难，但是又要添加具体是哪个汉诺塔的盘子在移动的信息，也要知道是第几步。由于我用的方法是递归，step必须要可以传出的变量表示。</p>
+<ol>
+<li>移动x层汉诺塔的思路：把x-1层汉诺塔移动到第二根杆，把最底层的盘子放到第三根杆，把x-1层汉诺塔移动到第三根杆。</li>
+<li>floor和plate用数组传输。<br>python数组是可以在传参后传出被改变的值。例如<code>hano(a, b, c, floor, step, plate)</code>中，step[0]和plate[0]在函数内赋值后都是可以直接传出函数的,传出后变量名对应<code>hano(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, f, lst, plt)</code>。<br>通过以下方法访问：<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">hano(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, f, lst, plt)  <span class="comment"># step初始化为1,传入list时才能改变</span></span><br><span class="line">print(lst[<span class="number">0</span>] - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><h4 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h4><p><img src="https://tva1.sinaimg.cn/large/008aoOh1gy1glapu40y6kj30sx0k4glr.jpg" alt="integ.png"></p>
+<h4 id="答案-1"><a href="#答案-1" class="headerlink" title="答案"></a>答案</h4><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findM</span><span class="params">(n, ansr)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> ansr:</span><br><span class="line">        <span class="keyword">if</span> i % n == <span class="number">0</span> <span class="keyword">and</span> i != <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> i // n</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"No"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">answer_range</span><span class="params">(l, bits, sub, unic)</span>:</span>  <span class="comment"># 输出8位的结果</span></span><br><span class="line">    <span class="keyword">if</span> bits == <span class="number">1</span>:</span><br><span class="line">        l.append(sub + unic)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        sub = sub + unic</span><br><span class="line">        answer_range(l, bits - <span class="number">1</span>, sub, <span class="string">"0"</span>)</span><br><span class="line">        answer_range(l, bits - <span class="number">1</span>, sub, <span class="string">"1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    n = int(input())</span><br><span class="line">    <span class="comment"># 列出所有可能的m*n的结果：</span></span><br><span class="line">    l = []</span><br><span class="line">    answer_range(l, <span class="number">8</span>, <span class="string">""</span>, <span class="string">"0"</span>)</span><br><span class="line">    answer_range(l, <span class="number">8</span>, <span class="string">""</span>, <span class="string">"1"</span>)</span><br><span class="line">    t = [int(x) <span class="keyword">for</span> x <span class="keyword">in</span> l]  <span class="comment"># 8位的所有结果</span></span><br><span class="line">    <span class="comment"># print(t)</span></span><br><span class="line">    print(findM(n, t))</span><br></pre></td></tr></table></figure>
+
+<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>这道题用<strong>枚举思路</strong>也可以实现，先算出N*M（M范围1~30000），最后判断乘积是不是由1、0构成的。<br>但是时间是O(n),问题规模很大，时间较长。<br>我这里使用的方法是列举所有由1和0能组成的8位数。然后做除法判断能否整除，这样既缩小了问题规模，也把时间缩小到O(1)。</p>
 ]]></content>
       <categories>
         <category>Professional learning</category>
@@ -446,34 +528,6 @@
         <tag>python</tag>
         <tag>practice</tag>
         <tag>topcoder</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>刷题记录————汉诺塔</title>
-    <url>/archives/3be882b0.html</url>
-    <content><![CDATA[<p>借个不重要的课记录一下我做的题~<br>这周又开始懈怠了，还有超多的作业没有写完，难受……</p>
-<a id="more"></a>
-<h3 id="第一题-汉诺塔"><a href="#第一题-汉诺塔" class="headerlink" title="第一题 汉诺塔"></a>第一题 汉诺塔</h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p><img src="https://tva1.sinaimg.cn/large/008aoOh1gy1glaptlbjd8j30xw0o7wga.jpg" alt="汉诺塔.png"></p>
-<h4 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h4><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hano</span><span class="params">(a, b, c, floor, step, plate)</span>:</span>  <span class="comment"># 输入汉诺塔的层数</span></span><br><span class="line">    <span class="keyword">if</span> floor == <span class="number">1</span>:</span><br><span class="line">        print(<span class="string">"[step %d] move plate %d# from %c to %c"</span> % (step[<span class="number">0</span>], plate[<span class="number">0</span>], a, c))</span><br><span class="line">        step[<span class="number">0</span>] = step[<span class="number">0</span>] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    hano(a, c, b, floor - <span class="number">1</span>, step, plate)</span><br><span class="line">    print(<span class="string">"[step %d] move plate %d# from %c to %c"</span> % (step[<span class="number">0</span>], plate[floor - <span class="number">1</span>], a, c))</span><br><span class="line">    step[<span class="number">0</span>] += <span class="number">1</span></span><br><span class="line">    hano(b, a, c, floor - <span class="number">1</span>, step, plate)</span><br><span class="line"></span><br><span class="line"><span class="comment"># f(k+1)=2*f(k)+1 汉诺塔移动次数</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    f = int(input())</span><br><span class="line">    lst = [<span class="number">1</span>]</span><br><span class="line">    plt = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, f + <span class="number">1</span>):   <span class="comment"># 创建一个数组放盘子，顶层为1，向下依次加1.</span></span><br><span class="line">        plt.append(i)</span><br><span class="line"></span><br><span class="line">    hano(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, f, lst, plt)  <span class="comment"># step初始化为1,传入list时才能改变</span></span><br><span class="line">    print(lst[<span class="number">0</span>] - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>这道题我是一步一步来做的。用递归的方式实现汉诺塔不难，但是又要添加具体是哪个汉诺塔的盘子在移动的信息，也要知道是第几步。由于我用的方法是递归，step必须要可以传出的变量表示。</p>
-<ol>
-<li>移动x层汉诺塔的思路：把x-1层汉诺塔移动到第二根杆，把最底层的盘子放到第三根杆，把x-1层汉诺塔移动到第三根杆。</li>
-<li>floor和plate用数组传输。<br>python数组是可以在传参后传出被改变的值。例如<code>hano(a, b, c, floor, step, plate)</code>中，step[0]和plate[0]在函数内赋值后都是可以直接传出函数的,传出后变量名对应<code>hano(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, f, lst, plt)</code>。<br>通过以下方法访问：<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">hano(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, f, lst, plt)  <span class="comment"># step初始化为1,传入list时才能改变</span></span><br><span class="line">print(lst[<span class="number">0</span>] - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><h4 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h4><p><img src="https://tva1.sinaimg.cn/large/008aoOh1gy1glapu40y6kj30sx0k4glr.jpg" alt="integ.png"></p>
-<h4 id="答案-1"><a href="#答案-1" class="headerlink" title="答案"></a>答案</h4><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findM</span><span class="params">(n, ansr)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> ansr:</span><br><span class="line">        <span class="keyword">if</span> i % n == <span class="number">0</span> <span class="keyword">and</span> i != <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> i // n</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"No"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">answer_range</span><span class="params">(l, bits, sub, unic)</span>:</span>  <span class="comment"># 输出8位的结果</span></span><br><span class="line">    <span class="keyword">if</span> bits == <span class="number">1</span>:</span><br><span class="line">        l.append(sub + unic)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        sub = sub + unic</span><br><span class="line">        answer_range(l, bits - <span class="number">1</span>, sub, <span class="string">"0"</span>)</span><br><span class="line">        answer_range(l, bits - <span class="number">1</span>, sub, <span class="string">"1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    n = int(input())</span><br><span class="line">    <span class="comment"># 列出所有可能的m*n的结果：</span></span><br><span class="line">    l = []</span><br><span class="line">    answer_range(l, <span class="number">8</span>, <span class="string">""</span>, <span class="string">"0"</span>)</span><br><span class="line">    answer_range(l, <span class="number">8</span>, <span class="string">""</span>, <span class="string">"1"</span>)</span><br><span class="line">    t = [int(x) <span class="keyword">for</span> x <span class="keyword">in</span> l]  <span class="comment"># 8位的所有结果</span></span><br><span class="line">    <span class="comment"># print(t)</span></span><br><span class="line">    print(findM(n, t))</span><br></pre></td></tr></table></figure>
-
-<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>这道题用<strong>枚举思路</strong>也可以实现，先算出N*M（M范围1~30000），最后判断乘积是不是由1、0构成的。<br>但是时间是O(n),问题规模很大，时间较长。<br>我这里使用的方法是列举所有由1和0能组成的8位数。然后做除法判断能否整除，这样既缩小了问题规模，也把时间缩小到O(1)。</p>
-]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>practice</tag>
       </tags>
   </entry>
   <entry>
@@ -712,11 +766,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts9414" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts6977" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts9414'));
+	var myChart = echarts.init(document.getElementById('echarts6977'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -752,11 +806,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts3432" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts5352" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts3432'));
+	var myChart = echarts.init(document.getElementById('echarts5352'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
@@ -1582,6 +1636,21 @@ option = {
       </categories>
   </entry>
   <entry>
+    <title>Nginx config 文件</title>
+    <url>/archives/bd43a1d3.html</url>
+    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
+<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
+<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
+<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
+
+<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2020年4月读书计划</title>
     <url>/archives/977a2c8.html</url>
     <content><![CDATA[<ul>
@@ -1605,21 +1674,6 @@ option = {
       <tags>
         <tag>plan</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Nginx config 文件</title>
-    <url>/archives/bd43a1d3.html</url>
-    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
-<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
-<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
-<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
-
-<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>Linux</category>
-      </categories>
   </entry>
   <entry>
     <title>covid-19各国病死率</title>
