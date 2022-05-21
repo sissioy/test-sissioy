@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2022-05-12T16:00:00.000Z</updated>
+  <updated>2022-05-20T16:00:00.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-20T16:00:00.000Z</published>
+    <updated>2022-05-20T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月28日&lt;br&gt;倒计时6天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-17T16:00:00.000Z</published>
+    <updated>2022-05-17T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月28日&lt;br&gt;考试时间更新了，5月31日那场人满了。&lt;br&gt;倒计时10天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-16T16:00:00.000Z</published>
+    <updated>2022-05-16T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月28日&lt;br&gt;考试时间更新了，5月31日那场人满了。&lt;br&gt;倒计时10天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
   
   <entry>
     <title>RHCSA/RHCE学习记录</title>
@@ -458,81 +539,6 @@
       <category term="English" scheme="http://www.sissioy.com/tags/English/"/>
     
       <category term="short essay" scheme="http://www.sissioy.com/tags/short-essay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刷题记录————两道小题</title>
-    <link href="http://www.sissioy.com/archives/a2e1d30a.html"/>
-    <id>http://www.sissioy.com/archives/a2e1d30a.html</id>
-    <published>2020-11-11T16:00:00.000Z</published>
-    <updated>2020-11-11T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近重拾python，在廖雪峰的网站上学习了许多。闺蜜刚好问了我几道题，我就顺手做了一下，不得不说还是python代码写起来容易有成就感。于是这里把答案和代码记录一下，再写一下自己这个初学者的做题感受和收获。&lt;br&gt;除此之外，最近我还学了区块链技术和git使用技巧。这两个内容之后的文章也会介绍。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何从github下载谷歌的开发者版扩展程序</title>
-    <link href="http://www.sissioy.com/archives/537a240d.html"/>
-    <id>http://www.sissioy.com/archives/537a240d.html</id>
-    <published>2020-10-28T16:00:00.000Z</published>
-    <updated>2020-10-28T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前一直被如何从github下载并安装扩展程序所困扰，我的微博图床已经很久用不了了（due to some reasons），据说只能自己安装，找了半天教程也没找到，没有办法只能弃而不用。现在终于找到了方法，参考了其他repo的&lt;code&gt;README.md&lt;/code&gt;,下面来看具体过程。&lt;br&gt;&lt;strong&gt;注明：这种方法适用于谷歌商店未上架的以及各种原因无法翻墙的情况。&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Personal promotion" scheme="http://www.sissioy.com/categories/Personal-promotion/"/>
-    
-      <category term="computer using" scheme="http://www.sissioy.com/categories/Personal-promotion/computer-using/"/>
-    
-    
-      <category term="github" scheme="http://www.sissioy.com/tags/github/"/>
-    
-      <category term="extension" scheme="http://www.sissioy.com/tags/extension/"/>
-    
-      <category term="chrome" scheme="http://www.sissioy.com/tags/chrome/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码块折叠设置</title>
-    <link href="http://www.sissioy.com/archives/2dbc2a40.html"/>
-    <id>http://www.sissioy.com/archives/2dbc2a40.html</id>
-    <published>2020-10-09T16:00:00.000Z</published>
-    <updated>2020-10-09T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;设置代码块折叠的步骤&quot;&gt;&lt;a href=&quot;#设置代码块折叠的步骤&quot; class=&quot;headerlink&quot; title=&quot;设置代码块折叠的步骤&quot;&gt;&lt;/a&gt;设置代码块折叠的步骤&lt;/h2&gt;&lt;h3 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h3&gt;&lt;p&gt;&lt;code&gt;/hexo/script/tags&lt;/code&gt;文件目录下，新建&lt;code&gt;fold_tag.js&lt;/code&gt;:&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Moonlighting" scheme="http://www.sissioy.com/categories/Moonlighting/"/>
-    
-      <category term="Hexo" scheme="http://www.sissioy.com/categories/Moonlighting/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://www.sissioy.com/tags/hexo/"/>
     
   </entry>
   

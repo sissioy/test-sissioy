@@ -23,6 +23,74 @@
   <entry>
     <title>RHCSA/RHCE学习记录</title>
     <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时6天。  </p>
+<a id="more"></a>
+<h3 id="chmod-R"><a href="#chmod-R" class="headerlink" title="chmod -R"></a>chmod -R</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">u+s  用户所有者可修改</span><br><span class="line">u<span class="_">-s</span>  </span><br><span class="line">g+s  用户所有组可修改</span><br><span class="line">g<span class="_">-s</span>  </span><br><span class="line">o+t  其他用户不可修改</span><br><span class="line">o-t</span><br></pre></td></tr></table></figure>
+<p>S（之前没有x权限）s（之前有x权限）</p>
+<h3 id="chown-R递归"><a href="#chown-R递归" class="headerlink" title="chown -R递归"></a>chown -R递归</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>考试时间更新了，5月31日那场人满了。<br>倒计时10天。  </p>
+<a id="more"></a>
+
+<h3 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a>shell脚本</h3><h4 id="example1"><a href="#example1" class="headerlink" title="example1"></a>example1</h4><p>要点：</p>
+<ul>
+<li>if fi</li>
+<li>;then</li>
+<li>while do done</li>
+<li>if语句后面的[condition]要有空格<code>if [ $PRICE -eq $INT ]</code> <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">PRICE=$(expr <span class="variable">$RANDOM</span> % 1000)</span><br><span class="line">COUNT=0</span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">        <span class="built_in">read</span> -p <span class="string">"ENTER:"</span> INT</span><br><span class="line">        <span class="built_in">let</span> COUNT++</span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$PRICE</span> -eq <span class="variable">$INT</span> ];<span class="keyword">then</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"You guessed <span class="variable">$COUNT</span> times. Congratulations!"</span></span><br><span class="line">                <span class="built_in">exit</span> 0</span><br><span class="line">        <span class="keyword">elif</span> [ <span class="variable">$PRICE</span> -gt <span class="variable">$INT</span> ];<span class="keyword">then</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"too low"</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"too high"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h4 id="example2"><a href="#example2" class="headerlink" title="example2"></a>example2</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"Enter:"</span> KEY</span><br><span class="line"><span class="keyword">case</span> <span class="variable">$KEY</span> <span class="keyword">in</span></span><br><span class="line">        [a-z]|[A-Z])</span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"alphabet"</span></span><br><span class="line">                ;;</span><br><span class="line">        [0-9])  </span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"number"</span></span><br><span class="line">                ;;</span><br><span class="line">        *)      </span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"error"</span></span><br><span class="line">                ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h3><h4 id="一次性-at-8-00"><a href="#一次性-at-8-00" class="headerlink" title="一次性 at 8:00"></a>一次性 at 8:00</h4><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">at <span class="number">8</span>:<span class="number">00</span> 设置任务</span><br><span class="line">at -l 查看任务</span><br><span class="line">atrm <span class="number">2</span> 删除任务</span><br><span class="line">at -c <span class="number">2</span> 查看任务详情</span><br></pre></td></tr></table></figure>
+
+<h4 id="周期crond"><a href="#周期crond" class="headerlink" title="周期crond"></a>周期crond</h4><p><code>crontab -e</code>编辑计划任务<br>分钟 小时</p>
+]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>考试时间更新了，5月31日那场人满了。<br>倒计时10天。  </p>
+<a id="more"></a>
+
+<h3 id="alias-一次性别名"><a href="#alias-一次性别名" class="headerlink" title="alias 一次性别名"></a>alias 一次性别名</h3><figure class="highlight monkey"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alias</span> <span class="title">sam</span>=<span class="string">"rm -rf xxxx"</span></span><br><span class="line">sam<span class="meta"> # 执行上面的rm操作</span></span><br></pre></td></tr></table></figure>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
     <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月31日<br>倒计时18天。  </p>
 <a id="more"></a>
 
@@ -779,11 +847,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts8380" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts8374" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8380'));
+	var myChart = echarts.init(document.getElementById('echarts8374'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -819,11 +887,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts562" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts8212" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts562'));
+	var myChart = echarts.init(document.getElementById('echarts8212'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
