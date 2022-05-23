@@ -23,11 +23,71 @@
   <entry>
     <title>RHCSA/RHCE学习记录</title>
     <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时4天。  </p>
+<a id="more"></a>
+
+<h2 id="分区挂载拿分走人"><a href="#分区挂载拿分走人" class="headerlink" title="分区挂载拿分走人"></a>分区挂载拿分走人</h2><h3 id="fdisk-分区"><a href="#fdisk-分区" class="headerlink" title="fdisk 分区"></a>fdisk 分区</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ls</span> <span class="string">/dev/sd</span>*</span><br><span class="line">fdisk <span class="string">/dev/sdb</span></span><br></pre></td></tr></table></figure>
+<p>重要的参数：<br>d 删除分区<br>l 列出分区类型<br>n 新建分区<br>p 显示分区表<br>w 保存并退出<br>q 不保存退出（配置过程输错了）</p>
+<p>l-逻辑分区<br>p-主分区</p>
+<h3 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h3><p>mkfs.ext4 /dev/sdb1</p>
+<h3 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h3><p>mkdir /hahaha<br>mount /dev/sdb1 /hahaha</p>
+<h3 id="最重要的一步，不添加就是0分"><a href="#最重要的一步，不添加就是0分" class="headerlink" title="最重要的一步，不添加就是0分"></a>最重要的一步，不添加就是0分</h3><p><code>vim /etc/fstab</code></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">/dev/sdb1 /hahaha ext4 defaults <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="blkid-查询挂载设备的id"><a href="#blkid-查询挂载设备的id" class="headerlink" title="blkid 查询挂载设备的id"></a>blkid 查询挂载设备的id</h3><h3 id="挂载到swap分区"><a href="#挂载到swap分区" class="headerlink" title="挂载到swap分区"></a>挂载到swap分区</h3><p>mkswap /dev/sdb2<br>swapon /dev/sdb2  </p>
+<h3 id="磁盘配额"><a href="#磁盘配额" class="headerlink" title="磁盘配额"></a>磁盘配额</h3><p>vim /etc/fstab</p>
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"><span class="built_in">defaults,</span>uquota</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">[root@sissioy ~]# mount | grep boot</span><br><span class="line">/dev/sda1 on /boot<span class="built_in"> type </span>xfs (rw,relatime,seclabel,attr2,inode64,usrquota)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时5天。  </p>
+<a id="more"></a>
+
+<h2 id="11"><a href="#11" class="headerlink" title="11"></a>11</h2><h3 id="firewalld"><a href="#firewalld" class="headerlink" title="firewalld"></a>firewalld</h3><p>区域<br>public 默认 可定制<br>trust 允许所有流量<br>drop 拒绝所有</p>
+<h4 id="firewall-cmd"><a href="#firewall-cmd" class="headerlink" title="firewall-cmd"></a>firewall-cmd</h4><figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"><span class="comment">--zone=</span></span><br><span class="line"><span class="comment">--panic-on</span></span><br><span class="line"><span class="comment">--panic-off</span></span><br><span class="line"><span class="comment">--get-default-zone</span></span><br><span class="line"><span class="comment">--change-interface=</span></span><br><span class="line"><span class="comment">--add-service=</span></span><br><span class="line"><span class="comment">--add-port=</span></span><br><span class="line"><span class="comment">--query-service=</span></span><br><span class="line"><span class="comment">--remove-service=</span></span><br><span class="line"><span class="comment">--remove-port=</span></span><br><span class="line"><span class="comment">--reload</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>端口转发</strong><br><code>firewall-cmd --permanent --zone=public --add-forward-port=port=888:proto=tcp:toport=22:toaddr=192.168.10.10</code></p>
+<h4 id="firewall-config"><a href="#firewall-config" class="headerlink" title="firewall-config"></a>firewall-config</h4><p>允许流量的题，全选；拒绝流量，单个匹配。</p>
+<h3 id="虚拟机网段问题"><a href="#虚拟机网段问题" class="headerlink" title="虚拟机网段问题"></a>虚拟机网段问题</h3><p>遇到主机不能ping虚拟机的ip，最后发现是网段配置的问题。打开虚拟网络编辑器，修改即可。(VM1)  </p>
+<h3 id="nmcli"><a href="#nmcli" class="headerlink" title="nmcli"></a>nmcli</h3><p><code>nmcli connection add con-name company ifname ens160 autoconnect no type ethernet ip4 192.168.10.10/24 gw4 192.168.10.1</code><br><code>nmcli connection add type bond con-name bond0 ifname bond0 bond.options &quot;mode=balance-rr&quot;</code>  </p>
+<h3 id="etc-sysconfig-network-scripts-ifcg"><a href="#etc-sysconfig-network-scripts-ifcg" class="headerlink" title="/etc/sysconfig/network-scripts/ifcg"></a>/etc/sysconfig/network-scripts/ifcg</h3><p>特别重要的配置：<br>ONBOOT=yes</p>
+]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
     <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时6天。  </p>
 <a id="more"></a>
-<h3 id="chmod-R"><a href="#chmod-R" class="headerlink" title="chmod -R"></a>chmod -R</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">u+s  用户所有者可修改</span><br><span class="line">u<span class="_">-s</span>  </span><br><span class="line">g+s  用户所有组可修改</span><br><span class="line">g<span class="_">-s</span>  </span><br><span class="line">o+t  其他用户不可修改</span><br><span class="line">o-t</span><br></pre></td></tr></table></figure>
-<p>S（之前没有x权限）s（之前有x权限）</p>
-<h3 id="chown-R递归"><a href="#chown-R递归" class="headerlink" title="chown -R递归"></a>chown -R递归</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+
+<h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a>mount</h3><h4 id="第一种挂载方式："><a href="#第一种挂载方式：" class="headerlink" title="第一种挂载方式："></a>第一种挂载方式：</h4><p><code>mount /dev/sda /backup</code>  </p>
+<h4 id="第二种UUID挂载方式：网络设备挂载"><a href="#第二种UUID挂载方式：网络设备挂载" class="headerlink" title="第二种UUID挂载方式：网络设备挂载"></a>第二种UUID挂载方式：网络设备挂载</h4><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">blkid</span><br><span class="line">mount <span class="attribute">UUID</span>=xxxxxxxxxxxx /backup</span><br></pre></td></tr></table></figure>
+<h4 id="第三种挂载方式"><a href="#第三种挂载方式" class="headerlink" title="第三种挂载方式"></a>第三种挂载方式</h4><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim /etc/fstab</span></span><br><span class="line"><span class="regexp">/dev/</span>cdrom    <span class="regexp">/media/</span>cdrom   iso9660    defaults       <span class="number">0</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># mount -a 自动挂载</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="umount-dev-sdb2"><a href="#umount-dev-sdb2" class="headerlink" title="umount /dev/sdb2"></a>umount /dev/sdb2</h4><p>处于挂载目录下时，不能取消挂载，会显示busy</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
       <categories>
         <category>Learning note</category>
         <category>Linux</category>
@@ -59,7 +119,17 @@
 <h3 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h3><h4 id="一次性-at-8-00"><a href="#一次性-at-8-00" class="headerlink" title="一次性 at 8:00"></a>一次性 at 8:00</h4><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">at <span class="number">8</span>:<span class="number">00</span> 设置任务</span><br><span class="line">at -l 查看任务</span><br><span class="line">atrm <span class="number">2</span> 删除任务</span><br><span class="line">at -c <span class="number">2</span> 查看任务详情</span><br></pre></td></tr></table></figure>
 
 <h4 id="周期crond"><a href="#周期crond" class="headerlink" title="周期crond"></a>周期crond</h4><p><code>crontab -e</code>编辑计划任务<br>分钟 小时</p>
-]]></content>
+<h3 id="chmod-R"><a href="#chmod-R" class="headerlink" title="chmod -R"></a>chmod -R</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">u+s  用户所有者可修改</span><br><span class="line">u<span class="_">-s</span>  </span><br><span class="line">g+s  用户所有组可修改</span><br><span class="line">g<span class="_">-s</span>  </span><br><span class="line">o+t  其他用户不可修改</span><br><span class="line">o-t</span><br></pre></td></tr></table></figure>
+<p>S（之前没有x权限）s（之前有x权限）</p>
+<h3 id="chown-R递归"><a href="#chown-R递归" class="headerlink" title="chown -R递归"></a>chown -R递归</h3><h3 id="chattr"><a href="#chattr" class="headerlink" title="chattr"></a>chattr</h3><p>+a  Append-only (不能rm)<br>-a  </p>
+<h3 id="lsattr"><a href="#lsattr" class="headerlink" title="lsattr"></a>lsattr</h3><h3 id="setfacl-Rm-u-sissioy-rwx-root-tmp"><a href="#setfacl-Rm-u-sissioy-rwx-root-tmp" class="headerlink" title="setfacl -Rm u:sissioy:rwx /root/tmp"></a>setfacl -Rm u:sissioy:rwx /root/tmp</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">setfacl -b tmp <span class="comment"># 删除所有acl权限</span></span><br><span class="line">setfacl -x u:sissioy <span class="regexp">/root/</span>tmp <span class="comment"># 删除指定一条命令的权限</span></span><br></pre></td></tr></table></figure>
+<p>ACL权限设置时要注意备份原来的文件权限，否则备份错误就不能恢复了。<br>如何备份？  </p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">[<span class="symbol">root@</span>linuxprobe ~]# cd /</span><br><span class="line">[<span class="symbol">root@</span>linuxprobe /]# getfacl -R home &gt; backup.acl  #getfacl命令不能使用绝对路径，所以先进入上层目录操作</span><br><span class="line">[<span class="symbol">root@</span>linuxprobe /]# ls -l </span><br><span class="line">-rw-r--r--. <span class="number">1</span> root root <span class="number">834</span> Jul <span class="number">18</span> <span class="number">14</span>:<span class="number">14</span> backup.acl</span><br></pre></td></tr></table></figure>
+<p>如何恢复？</p>
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">setfacl <span class="comment">--restore backup.acl</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="su"><a href="#su" class="headerlink" title="su -"></a>su -</h3><p>su命令与用户名之间有一个减号（-），这意味着完全切换到新的用户，即把环境变量信息也变更为新用户的相应信息，而不是保留原始的信息。强烈建议在切换用户身份时添加这个减号（-）。  </p>
+<h3 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h3>]]></content>
       <categories>
         <category>Learning note</category>
         <category>Linux</category>
@@ -847,11 +917,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts8374" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts8758" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8374'));
+	var myChart = echarts.init(document.getElementById('echarts8758'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -887,11 +957,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts8212" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts8940" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8212'));
+	var myChart = echarts.init(document.getElementById('echarts8940'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
