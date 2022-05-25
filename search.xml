@@ -23,6 +23,93 @@
   <entry>
     <title>RHCSA/RHCE学习记录</title>
     <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时2天。  </p>
+<a id="more"></a>
+
+<p>不要直接修改/var/ftp的权限，这有可能导致服务被“安全锁定”而不能登录。</p>
+]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时3天。  </p>
+<a id="more"></a>
+<h2 id="考试注意事项"><a href="#考试注意事项" class="headerlink" title="考试注意事项"></a>考试注意事项</h2><ol>
+<li>enable</li>
+<li>/etc/fstab</li>
+<li>nmtui修改成功后仍然需要修改/etc/sysconfig/network-scripts/ifcfg-eth0<br>的“ONBOOT=yes”</li>
+<li></li>
+</ol>
+<h2 id="知识点补充"><a href="#知识点补充" class="headerlink" title="知识点补充"></a>知识点补充</h2><h3 id="同步时间NTP"><a href="#同步时间NTP" class="headerlink" title="同步时间NTP"></a>同步时间NTP</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">配置系统时间与服务器同步，重启后依然生效</span></span><br><span class="line"><span class="attr">vim</span> <span class="string">/etc/chrony.conf 更改和服务器相同</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">restart chronyd.service</span></span><br><span class="line"><span class="attr">chronyc</span> <span class="string">sources -v 查看是否同步</span></span><br></pre></td></tr></table></figure>
+<h3 id="etc-hostname"><a href="#etc-hostname" class="headerlink" title="/etc/hostname"></a>/etc/hostname</h3><h3 id="nmtui"><a href="#nmtui" class="headerlink" title="nmtui"></a>nmtui</h3><h3 id="过滤注释信息grep-v-“-”-gt"><a href="#过滤注释信息grep-v-“-”-gt" class="headerlink" title="过滤注释信息grep -v “#” &gt;"></a>过滤注释信息grep -v “#” &gt;</h3><h3 id="setsebool-P-tfpd-full-access-on"><a href="#setsebool-P-tfpd-full-access-on" class="headerlink" title="setsebool -P tfpd_full_access=on"></a>setsebool -P tfpd_full_access=on</h3><p>-P 重启也生效</p>
+]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
+    <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时3天。  </p>
+<a id="more"></a>
+
+<h2 id="RHCSA"><a href="#RHCSA" class="headerlink" title="RHCSA"></a>RHCSA</h2><h3 id="httpd"><a href="#httpd" class="headerlink" title="httpd"></a>httpd</h3><p>安装&amp;<strong>设置开机启动</strong><br>配置文件地址<code>/etc/httpd/conf/httpd.conf</code><br>文件夹权限问题  </p>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">[root@sissioy ~]<span class="comment"># ls -Zd /var/www/</span></span><br><span class="line">system_u:object_r:httpd_sys_content_t:s0 /var/www/</span><br><span class="line"></span><br><span class="line">[root@linuxprobe ~]<span class="comment"># semanage fcontext -a -t httpd_sys_content_t /home/wwwroot</span></span><br><span class="line">[root@linuxprobe ~]<span class="comment"># semanage fcontext -a -t httpd_sys_content_t /home/wwwroot/*</span></span><br><span class="line">[root@linuxprobe ~]<span class="comment"># restorecon -Rv /home/wwwroot/</span></span><br></pre></td></tr></table></figure>
+
+<p>配置用户http的目录，一系列</p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">getsebool -<span class="keyword">a</span> | grep <span class="keyword">http</span></span><br><span class="line">setsebool -P httpd_enable_homedirs=<span class="keyword">on</span> # -<span class="title">P</span>参数立即永久生效</span><br></pre></td></tr></table></figure>
+<h4 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h4><p>生成密码数据库。-c参数表示第一次生成；后面再分别添加密码数据库的存放文件，以及验证要用到的用户名称（该用户不必是系统中已有的本地账户）。</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">htpasswd -c <span class="regexp">/etc/</span>httpd<span class="regexp">/passwd linuxprobe</span></span><br></pre></td></tr></table></figure>
+<p>编辑配置文件<code>vim /etc/httpd/conf.d/userdir.conf</code></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">31</span> <span class="string">&lt;Directory "/home/*/public_html"&gt;</span></span><br><span class="line"><span class="attr">32</span>     <span class="string">AllowOverride all </span></span><br><span class="line"><span class="comment">       #刚刚生成出的密码验证文件保存路径</span></span><br><span class="line"><span class="attr">33</span>     <span class="string">authuserfile "/etc/httpd/passwd" </span></span><br><span class="line"><span class="comment">       #当用户访问网站时的提示信息</span></span><br><span class="line"><span class="attr">34</span>     <span class="string">authname "My privately website"</span></span><br><span class="line"><span class="comment">       #验证方式为口令模式</span></span><br><span class="line"><span class="attr">35</span>     <span class="string">authtype basic</span></span><br><span class="line"><span class="comment">       #访问网站时需要验证的用户名称</span></span><br><span class="line"><span class="attr">36</span>     <span class="string">require user linuxprobe</span></span><br><span class="line"><span class="attr">37</span> <span class="string">&lt;/Directory&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h3><p><strong>enable</strong></p>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">[root@linuxprobe ~]# vim /etc/dhcp/dhcpd.conf</span><br><span class="line">ddns-update-style none;</span><br><span class="line">ignore client-updates;</span><br><span class="line">subnet <span class="number">192.168</span><span class="number">.10</span><span class="number">.0</span> netmask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span> &#123;</span><br><span class="line">        range <span class="number">192.168</span><span class="number">.10</span><span class="number">.50</span> <span class="number">192.168</span><span class="number">.10</span><span class="number">.150</span>;</span><br><span class="line">        option subnet-mask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span>;</span><br><span class="line">        option routers <span class="number">192.168</span><span class="number">.10</span><span class="number">.1</span>;</span><br><span class="line">        option domain-name <span class="string">"linuxprobe.com"</span>;</span><br><span class="line">        option domain-name-servers <span class="number">192.168</span><span class="number">.10</span><span class="number">.1</span>;</span><br><span class="line">        <span class="section">default</span>-lease-time <span class="number">21600</span>;</span><br><span class="line">        max-lease-time <span class="number">43200</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">[<span class="symbol">root@</span>linuxprobe ~]# vim /etc/dhcp/dhcpd.conf </span><br><span class="line">ddns-update-style none;</span><br><span class="line">ignore client-updates;</span><br><span class="line">subnet <span class="number">192.168</span><span class="number">.10</span><span class="number">.0</span> netmask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span> &#123;</span><br><span class="line">        range <span class="number">192.168</span><span class="number">.10</span><span class="number">.50</span> <span class="number">192.168</span><span class="number">.10</span><span class="number">.150</span>;</span><br><span class="line">        option subnet-mask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span>;</span><br><span class="line">        option routers <span class="number">192.168</span><span class="number">.10</span><span class="number">.1</span>;</span><br><span class="line">        option domain-name <span class="string">"linuxprobe.com"</span>;</span><br><span class="line">        option domain-name-servers <span class="number">192.168</span><span class="number">.10</span><span class="number">.1</span>;</span><br><span class="line">        <span class="keyword">default</span>-lease-time <span class="number">21600</span>;</span><br><span class="line">        max-lease-time <span class="number">43200</span>;</span><br><span class="line">        host linuxprobe &#123;</span><br><span class="line">                hardware ethernet <span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:dd:f2:<span class="number">22</span>;</span><br><span class="line">                fixed-address <span class="number">192.168</span><span class="number">.10</span><span class="number">.88</span>;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>systemctl restart dhcpd</code></p>
+<h2 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h2><h3 id="安装Ansible"><a href="#安装Ansible" class="headerlink" title="安装Ansible"></a>安装Ansible</h3><h3 id="设置-etc-ansible-hosts"><a href="#设置-etc-ansible-hosts" class="headerlink" title="设置/etc/ansible/hosts"></a>设置/etc/ansible/hosts</h3><figure class="highlight accesslog"><table><tr><td class="code"><pre><span class="line"><span class="string">[root@linuxprobe ~]</span># vim /etc/ansible/hosts</span><br><span class="line"><span class="string">[dev]</span></span><br><span class="line"><span class="number">192.168.10.20</span></span><br><span class="line"><span class="string">[test]</span></span><br><span class="line"><span class="number">192.168.10.21</span></span><br><span class="line"><span class="string">[prod]</span></span><br><span class="line"><span class="number">192.168.10.22</span></span><br><span class="line"><span class="number">192.168.10.23</span></span><br><span class="line"><span class="string">[balancers]</span></span><br><span class="line"><span class="number">192.168.10.24</span></span><br><span class="line"><span class="string">[all:vars]</span></span><br><span class="line">ansible_user=root</span><br><span class="line">ansible_password=redhat</span><br></pre></td></tr></table></figure>
+
+<p><code>vim /etc/ansible/ansible.cfg</code></p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">host_key_checking</span>=<span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="attr">remote_user</span>=root</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="ansible-all-m-ping"><a href="#ansible-all-m-ping" class="headerlink" title="ansible all -m ping"></a>ansible all -m ping</h3><p>-m参数指定模块名</p>
+<h3 id="ansible-inventory-–graph"><a href="#ansible-inventory-–graph" class="headerlink" title="ansible-inventory –graph"></a>ansible-inventory –graph</h3><h3 id="ansible-doc-l"><a href="#ansible-doc-l" class="headerlink" title="ansible-doc -l"></a>ansible-doc -l</h3><p>ansible-doc yum_repository</p>
+<h3 id="ansible-all-m-yum-repository"><a href="#ansible-all-m-yum-repository" class="headerlink" title="ansible all -m yum_repository"></a>ansible all -m yum_repository</h3><p>ansible all -m yum_repository -a ‘“name=EX294_BASE description=”EX294 base software” baseurl=”file:///“ gpgcheck=1 gpgkey=”file:///“ enabled=1’</p>
+<h3 id="ansible-playbook-package-yml"><a href="#ansible-playbook-package-yml" class="headerlink" title="ansible-playbook package.yml"></a>ansible-playbook package.yml</h3><p>vim package.yml</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">yum</span> <span class="string">config</span></span><br><span class="line">  <span class="attr">hosts:</span> <span class="string">dev,</span> <span class="string">test,</span> <span class="string">prod</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">one</span></span><br><span class="line">      <span class="attr">yum:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">mariadb</span></span><br><span class="line">        <span class="attr">state:</span> <span class="string">latest</span></span><br></pre></td></tr></table></figure>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <categories>
+        <category>Learning note</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>RHCSA</tag>
+        <tag>RHCE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <url>/archives/c895e024.html</url>
     <content><![CDATA[<h3 id="RHCSA-RHCE考试"><a href="#RHCSA-RHCE考试" class="headerlink" title="RHCSA/RHCE考试"></a>RHCSA/RHCE考试</h3><p>考试日期：5月28日<br>倒计时4天。  </p>
 <a id="more"></a>
 
@@ -35,12 +122,27 @@
 <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">/dev/sdb1 /hahaha ext4 defaults <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="blkid-查询挂载设备的id"><a href="#blkid-查询挂载设备的id" class="headerlink" title="blkid 查询挂载设备的id"></a>blkid 查询挂载设备的id</h3><h3 id="挂载到swap分区"><a href="#挂载到swap分区" class="headerlink" title="挂载到swap分区"></a>挂载到swap分区</h3><p>mkswap /dev/sdb2<br>swapon /dev/sdb2  </p>
-<h3 id="磁盘配额"><a href="#磁盘配额" class="headerlink" title="磁盘配额"></a>磁盘配额</h3><p>vim /etc/fstab</p>
+<h2 id="磁盘配额"><a href="#磁盘配额" class="headerlink" title="磁盘配额"></a>磁盘配额</h2><p>vim /etc/fstab</p>
 <figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"><span class="built_in">defaults,</span>uquota</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">[root@sissioy ~]# mount | grep boot</span><br><span class="line">/dev/sda1 on /boot<span class="built_in"> type </span>xfs (rw,relatime,seclabel,attr2,inode64,usrquota)</span><br></pre></td></tr></table></figure>
 
-]]></content>
+<h3 id="xfs-quota-x-c-‘limit-bsoft-3m-bhard-6m-isoft-3-ihard-6-sissioy’-boot"><a href="#xfs-quota-x-c-‘limit-bsoft-3m-bhard-6m-isoft-3-ihard-6-sissioy’-boot" class="headerlink" title="xfs_quota -x -c ‘limit bsoft=3m bhard=6m isoft=3 ihard=6 sissioy’ /boot"></a>xfs_quota -x -c ‘limit bsoft=3m bhard=6m isoft=3 ihard=6 sissioy’ /boot</h3><p><code>xfs_quota -x -c report /boot</code>  </p>
+<p><code>edqouta sissioy</code> vim 编辑器修改6144（6M）改为61440（60M）<br><img src="http://tva1.sinaimg.cn/large/008aoOh1gy1h2iml8g5b5j30v605ajsb.jpg" alt="image.png"></p>
+<h3 id="ln硬链接"><a href="#ln硬链接" class="headerlink" title="ln硬链接"></a>ln硬链接</h3><h3 id="ln-s-软链接"><a href="#ln-s-软链接" class="headerlink" title="ln -s 软链接"></a>ln -s 软链接</h3><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">-rw-r--r--. <span class="number">5</span> root root <span class="number">1567</span> May <span class="number">13</span> <span class="number">07</span>:<span class="number">31</span> init.cfg</span><br></pre></td></tr></table></figure>
+<h3 id="vdo"><a href="#vdo" class="headerlink" title="vdo"></a>vdo</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum <span class="keyword">install</span> -y vdo kmod-kvdo</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">vdo <span class="keyword">create</span> <span class="comment">--name=storage --device=/dev/sdc --vdoLogicalSize=200G</span></span><br><span class="line">vdo <span class="keyword">status</span> <span class="comment">--name=storage</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式化&amp;挂载</span></span><br><span class="line">mkfs.xfs /dev/mapper/<span class="keyword">storage</span> </span><br><span class="line">devadm settle <span class="comment"># 对设备进行一次刷新操作</span></span><br><span class="line">mkdir /<span class="keyword">storage</span></span><br><span class="line"><span class="keyword">mount</span> /dev/mapper/<span class="keyword">storage</span> /<span class="keyword">storage</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看情况</span></span><br><span class="line">vdostats <span class="comment">--human-readable</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="RAID-10"><a href="#RAID-10" class="headerlink" title="RAID 10"></a>RAID 10</h3><p>mdama<br>/dev/md0<br><code>mdadm -Cv /dev/md0 -n 4 -l 10 /dev/sdb /dev/sdc /dev/sdd /dev/sde</code></p>
+<h3 id="VG-PV-LV"><a href="#VG-PV-LV" class="headerlink" title="VG PV LV"></a>VG PV LV</h3><p>VG卷组<br>PV物理卷<br>LV逻辑卷</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">pvcreate <span class="regexp">/dev/</span>sdb</span><br><span class="line">pvcreate <span class="regexp">/dev/</span>sdc</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="重点考察部分"><a href="#重点考察部分" class="headerlink" title="重点考察部分"></a>重点考察部分</h2><h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><h3 id="仓库配置"><a href="#仓库配置" class="headerlink" title="仓库配置"></a>仓库配置</h3><figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[BaseOS]</span></span><br><span class="line"><span class="attr">name</span>=BaseOS</span><br><span class="line"><span class="attr">baseurl</span>=http://</span><br><span class="line"><span class="attr">enable</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="section">[AppStream]</span></span><br><span class="line"><span class="attr">name</span>=AppStream</span><br><span class="line"><span class="attr">baseurl</span>=http://</span><br><span class="line"><span class="attr">enable</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="逻辑扇区"><a href="#逻辑扇区" class="headerlink" title="逻辑扇区"></a>逻辑扇区</h3><h3 id="tar参数"><a href="#tar参数" class="headerlink" title="tar参数"></a>tar参数</h3><p>-xzvf解压<br>-czvf压缩</p>
+<h3 id="sysroot-重启设置root-passwd"><a href="#sysroot-重启设置root-passwd" class="headerlink" title="/sysroot 重启设置root passwd"></a>/sysroot 重启设置root passwd</h3><h3 id="VDO-创建"><a href="#VDO-创建" class="headerlink" title="VDO 创建"></a>VDO 创建</h3><h3 id="系统调优"><a href="#系统调优" class="headerlink" title="系统调优"></a>系统调优</h3>]]></content>
       <categories>
         <category>Learning note</category>
         <category>Linux</category>
@@ -61,9 +163,12 @@
 <h4 id="firewall-cmd"><a href="#firewall-cmd" class="headerlink" title="firewall-cmd"></a>firewall-cmd</h4><figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"><span class="comment">--zone=</span></span><br><span class="line"><span class="comment">--panic-on</span></span><br><span class="line"><span class="comment">--panic-off</span></span><br><span class="line"><span class="comment">--get-default-zone</span></span><br><span class="line"><span class="comment">--change-interface=</span></span><br><span class="line"><span class="comment">--add-service=</span></span><br><span class="line"><span class="comment">--add-port=</span></span><br><span class="line"><span class="comment">--query-service=</span></span><br><span class="line"><span class="comment">--remove-service=</span></span><br><span class="line"><span class="comment">--remove-port=</span></span><br><span class="line"><span class="comment">--reload</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>端口转发</strong><br><code>firewall-cmd --permanent --zone=public --add-forward-port=port=888:proto=tcp:toport=22:toaddr=192.168.10.10</code></p>
-<h4 id="firewall-config"><a href="#firewall-config" class="headerlink" title="firewall-config"></a>firewall-config</h4><p>允许流量的题，全选；拒绝流量，单个匹配。</p>
+<h4 id="firewall-config"><a href="#firewall-config" class="headerlink" title="firewall-config"></a>firewall-config</h4><p>允许流量的题，全选；拒绝流量，单个匹配。<br>SNAT配置<br><code>sysctl net.ipv4.ip_forward=1</code><br>打开firewall-config设置<code>masquerade</code></p>
+<h3 id="cockpit-服务管理工具"><a href="#cockpit-服务管理工具" class="headerlink" title="cockpit 服务管理工具"></a>cockpit 服务管理工具</h3><figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">[root<span class="symbol">@linuxprobe</span> ~]<span class="meta"># systemctl start cockpit  # 系统默认没有开启</span></span><br><span class="line">[root<span class="symbol">@linuxprobe</span> ~]<span class="meta"># systemctl enable cockpit.socket</span></span><br></pre></td></tr></table></figure>
+<p>浏览器输入 <code>本机ip:9090</code>  </p>
+<p>Cockpit总共分为13个功能模块：系统状态（System）、日志信息（Logs）、硬盘存储（Storage）、网卡网络（Networking）、账户安全（Accounts）、服务程序（Services）、软件仓库（Applications）、报告分析（Diagnostic Reports）、内核排错（Kernel Dump）、SElinux、更新软件（Software Updates）、订阅服务（Subscriptions）、终端界面（Terminal）。  </p>
 <h3 id="虚拟机网段问题"><a href="#虚拟机网段问题" class="headerlink" title="虚拟机网段问题"></a>虚拟机网段问题</h3><p>遇到主机不能ping虚拟机的ip，最后发现是网段配置的问题。打开虚拟网络编辑器，修改即可。(VM1)  </p>
-<h3 id="nmcli"><a href="#nmcli" class="headerlink" title="nmcli"></a>nmcli</h3><p><code>nmcli connection add con-name company ifname ens160 autoconnect no type ethernet ip4 192.168.10.10/24 gw4 192.168.10.1</code><br><code>nmcli connection add type bond con-name bond0 ifname bond0 bond.options &quot;mode=balance-rr&quot;</code>  </p>
+<h3 id="nmcli"><a href="#nmcli" class="headerlink" title="nmcli"></a>nmcli</h3><p><code>nmcli connection add con-name company ifname ens160 autoconnect no type ethernet ip4 192.168.10.10/24 gw4 192.168.10.1</code><br><code>nmcli connection add type bond con-name bond0 ifname bond0 bond.options &quot;mode=balance-rr&quot;</code><br><code>nmcli connection add type ethernet con-name ens160 ifname ens160 ipv4.dns 192.168.10.1 ipv4.method manual</code><br><code>nmcli connection modify ens160 ipv4.gateway 192.168.10.1</code><br><code>ipv4.addresses 192.168.10.0/24</code></p>
 <h3 id="etc-sysconfig-network-scripts-ifcg"><a href="#etc-sysconfig-network-scripts-ifcg" class="headerlink" title="/etc/sysconfig/network-scripts/ifcg"></a>/etc/sysconfig/network-scripts/ifcg</h3><p>特别重要的配置：<br>ONBOOT=yes</p>
 ]]></content>
       <categories>
@@ -917,11 +1022,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts8758" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts4844" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8758'));
+	var myChart = echarts.init(document.getElementById('echarts4844'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -957,11 +1062,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts8940" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts8055" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8940'));
+	var myChart = echarts.init(document.getElementById('echarts8055'));
 	// 指定图表的配置项和数据
 	option = {
     title: {

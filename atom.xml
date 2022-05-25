@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.sissioy.com/"/>
-  <updated>2022-05-22T16:00:00.000Z</updated>
+  <updated>2022-05-24T16:00:00.000Z</updated>
   <id>http://www.sissioy.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-24T16:00:00.000Z</published>
+    <updated>2022-05-24T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月28日&lt;br&gt;倒计时2天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-24T02:00:00.000Z</published>
+    <updated>2022-05-24T02:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月28日&lt;br&gt;倒计时3天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RHCSA/RHCE学习记录</title>
+    <link href="http://www.sissioy.com/archives/c895e024.html"/>
+    <id>http://www.sissioy.com/archives/c895e024.html</id>
+    <published>2022-05-23T16:00:00.000Z</published>
+    <updated>2022-05-23T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RHCSA-RHCE考试&quot;&gt;&lt;a href=&quot;#RHCSA-RHCE考试&quot; class=&quot;headerlink&quot; title=&quot;RHCSA/RHCE考试&quot;&gt;&lt;/a&gt;RHCSA/RHCE考试&lt;/h3&gt;&lt;p&gt;考试日期：5月28日&lt;br&gt;倒计时3天。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Learning note" scheme="http://www.sissioy.com/categories/Learning-note/"/>
+    
+      <category term="Linux" scheme="http://www.sissioy.com/categories/Learning-note/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.sissioy.com/tags/Linux/"/>
+    
+      <category term="RHCSA" scheme="http://www.sissioy.com/tags/RHCSA/"/>
+    
+      <category term="RHCE" scheme="http://www.sissioy.com/tags/RHCE/"/>
+    
+  </entry>
   
   <entry>
     <title>RHCSA/RHCE学习记录</title>
@@ -457,84 +538,6 @@
       <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
     
       <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python爬虫项目（基础）</title>
-    <link href="http://www.sissioy.com/archives/a526df3b.html"/>
-    <id>http://www.sissioy.com/archives/a526df3b.html</id>
-    <published>2021-01-21T16:00:00.000Z</published>
-    <updated>2021-01-21T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV12E411A7ZQ?p=15&quot; rel=&quot;external nofollow noreferrer&quot;&gt;豆瓣电影TOP250————爬虫项目教程视频b站地址&lt;/a&gt;&lt;br&gt;有python语言基础的可以从第15个视频直接看。&lt;br&gt;后面的教程可以放1.25或1.5倍速观看。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-      <category term="project" scheme="http://www.sissioy.com/tags/project/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刷题记录————汉诺塔</title>
-    <link href="http://www.sissioy.com/archives/3be882b0.html"/>
-    <id>http://www.sissioy.com/archives/3be882b0.html</id>
-    <published>2020-12-02T16:00:00.000Z</published>
-    <updated>2020-12-02T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;借个不重要的课记录一下我做的题~&lt;br&gt;这周又开始懈怠了，还有超多的作业没有写完，难受……&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刷题记录————topcoder</title>
-    <link href="http://www.sissioy.com/archives/3572b528.html"/>
-    <id>http://www.sissioy.com/archives/3572b528.html</id>
-    <published>2020-12-02T16:00:00.000Z</published>
-    <updated>2020-12-02T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;第一次在topcoder上做题，分享一个小视频：&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7mdw94MZ5wI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-    
-    </summary>
-    
-    
-      <category term="Professional learning" scheme="http://www.sissioy.com/categories/Professional-learning/"/>
-    
-      <category term="python" scheme="http://www.sissioy.com/categories/Professional-learning/python/"/>
-    
-    
-      <category term="python" scheme="http://www.sissioy.com/tags/python/"/>
-    
-      <category term="practice" scheme="http://www.sissioy.com/tags/practice/"/>
-    
-      <category term="topcoder" scheme="http://www.sissioy.com/tags/topcoder/"/>
     
   </entry>
   
