@@ -27,7 +27,23 @@
 <a id="more"></a>
 
 <p>不要直接修改/var/ftp的权限，这有可能导致服务被“安全锁定”而不能登录。</p>
-]]></content>
+<h3 id="ansible-galaxy-list"><a href="#ansible-galaxy-list" class="headerlink" title="ansible-galaxy list"></a>ansible-galaxy list</h3><p>复制系统本来就存在的yml文件到新的目录下。<br><code>cp /usr/share/dic/rhel-system-role/example-timesync-playbook.yml</code><br>下载新的role：</p>
+<ol>
+<li>官网（<a href="https://galaxy.ansible.com）ansible-galaxy" rel="external nofollow noreferrer">https://galaxy.ansible.com）ansible-galaxy</a> install xxx</li>
+<li>别人的网站，编写yml,执行<code>ansible-galaxy install -r  nginx.yml</code><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">src:</span> <span class="string">https://</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-core</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="创建新角色-最好在-etc-ansible-roles文件夹下"><a href="#创建新角色-最好在-etc-ansible-roles文件夹下" class="headerlink" title="创建新角色(最好在/etc/ansible/roles文件夹下)"></a>创建新角色(最好在/etc/ansible/roles文件夹下)</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/etc/ansible/roles</span>  </span><br><span class="line">ansible-galaxy init apache</span><br><span class="line"><span class="keyword">cd</span> apache</span><br></pre></td></tr></table></figure>
+<p>这里的目录有：pass</p>
+<h3 id="示例1-Apache网站"><a href="#示例1-Apache网站" class="headerlink" title="示例1-Apache网站"></a>示例1-Apache网站</h3><h4 id="tasks"><a href="#tasks" class="headerlink" title="tasks"></a>tasks</h4><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">one</span></span><br><span class="line">  <span class="attr">yum:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">httpd</span></span><br><span class="line">    <span class="attr">state:</span> <span class="string">latest</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">two</span></span><br><span class="line">  <span class="attr">service:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">httpd</span></span><br><span class="line">    <span class="attr">state:</span> <span class="string">started</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">yes</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">three</span></span><br><span class="line">  <span class="attr">firewalld:</span></span><br><span class="line">    <span class="attr">service:</span> <span class="string">https</span></span><br><span class="line">    <span class="attr">permanent:</span> <span class="literal">yes</span></span><br><span class="line">    <span class="attr">state:</span> <span class="string">enabled</span></span><br><span class="line">    <span class="attr">immediate:</span> <span class="literal">yes</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">four</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">src:</span> <span class="string">index.html.j2</span></span><br><span class="line">    <span class="attr">dest:</span> <span class="string">/var/www/html/index.html</span></span><br></pre></td></tr></table></figure>
+<p>setup模块收集主管机上的变量信息。<br><code>ansible all -m setup -a &#39;filter=&quot;*ip*&quot;&#39;</code><br>修改<code>index.html.j2</code>文件。<br><code>vim index.html.j2</code></p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> &#123;&#123; ansible_fqdn &#125;&#125; <span class="keyword">on</span> &#123;&#123; ansible_all_ipv4_addresses &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建调用apache的yml"><a href="#创建调用apache的yml" class="headerlink" title="创建调用apache的yml"></a>创建调用apache的yml</h4><p><code>cd ~</code><br><code>vim roles.yml</code><br><code>ansible-playbook roles.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">run</span> <span class="string">apache</span> <span class="string">website</span></span><br><span class="line">  <span class="attr">hosts:</span> <span class="string">all</span></span><br><span class="line">  <span class="attr">roles:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">apache</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="示例2-创建使用逻辑卷"><a href="#示例2-创建使用逻辑卷" class="headerlink" title="示例2-创建使用逻辑卷"></a>示例2-创建使用逻辑卷</h3>]]></content>
       <categories>
         <category>Learning note</category>
         <category>Linux</category>
@@ -47,7 +63,7 @@
 <li>enable</li>
 <li>/etc/fstab</li>
 <li>nmtui修改成功后仍然需要修改/etc/sysconfig/network-scripts/ifcfg-eth0<br>的“ONBOOT=yes”</li>
-<li></li>
+<li>检查拼写错误</li>
 </ol>
 <h2 id="知识点补充"><a href="#知识点补充" class="headerlink" title="知识点补充"></a>知识点补充</h2><h3 id="同步时间NTP"><a href="#同步时间NTP" class="headerlink" title="同步时间NTP"></a>同步时间NTP</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">配置系统时间与服务器同步，重启后依然生效</span></span><br><span class="line"><span class="attr">vim</span> <span class="string">/etc/chrony.conf 更改和服务器相同</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">restart chronyd.service</span></span><br><span class="line"><span class="attr">chronyc</span> <span class="string">sources -v 查看是否同步</span></span><br></pre></td></tr></table></figure>
 <h3 id="etc-hostname"><a href="#etc-hostname" class="headerlink" title="/etc/hostname"></a>/etc/hostname</h3><h3 id="nmtui"><a href="#nmtui" class="headerlink" title="nmtui"></a>nmtui</h3><h3 id="过滤注释信息grep-v-“-”-gt"><a href="#过滤注释信息grep-v-“-”-gt" class="headerlink" title="过滤注释信息grep -v “#” &gt;"></a>过滤注释信息grep -v “#” &gt;</h3><h3 id="setsebool-P-tfpd-full-access-on"><a href="#setsebool-P-tfpd-full-access-on" class="headerlink" title="setsebool -P tfpd_full_access=on"></a>setsebool -P tfpd_full_access=on</h3><p>-P 重启也生效</p>
@@ -1022,11 +1038,11 @@
     <content><![CDATA[<h3 id="终于成功了！！！"><a href="#终于成功了！！！" class="headerlink" title="终于成功了！！！"></a>终于成功了！！！</h3><p>尝试了几个小时，换了不知道多少个攻略，自行搜索网页+人形查看代码报错。。。<br>特别想唱一曲感动中国！<br>这里先做一下成果展示，下面一篇文章更新我的debug过程。（开个坑给自己）<br><strong>芜湖起飞<del>~</del></strong></p>
 <a id="more"></a>
 
-<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts4844" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第一个例子"><a href="#第一个例子" class="headerlink" title="第一个例子"></a>第一个例子</h2><div id="echarts743" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts4844'));
+	var myChart = echarts.init(document.getElementById('echarts743'));
 	// 指定图表的配置项和数据
 	var data = [];
 
@@ -1062,11 +1078,11 @@ option = {
 </script>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">echarts</span> <span class="number">400</span> <span class="string">'85%'</span> <span class="string">%&#125;</span></span><br><span class="line"><span class="string">var</span> <span class="string">data</span> <span class="string">=</span> <span class="string">[];</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">(var</span> <span class="string">u</span> <span class="string">=</span> <span class="number">0</span><span class="string">;</span> <span class="string">u</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">;</span> <span class="string">u</span> <span class="string">+=</span> <span class="number">0.2</span><span class="string">)</span> <span class="string">&#123;</span></span><br><span class="line">	<span class="string">var</span> <span class="string">f</span> <span class="string">=</span> <span class="number">12</span><span class="string">*u;</span></span><br><span class="line">	<span class="string">f</span> <span class="string">=</span> <span class="string">Math.round(f*100)/100;</span></span><br><span class="line">	<span class="string">data.push([u,</span> <span class="string">f]);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">option</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">"某地区蒸发量和降水量"</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">tooltip:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line">	<span class="attr">xAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'U/V'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">1</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">yAxis:</span> <span class="string">&#123;</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">'f/Hz'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">interval:</span> <span class="number">10</span></span><br><span class="line">	<span class="string">&#125;,</span></span><br><span class="line">	<span class="attr">series:</span> <span class="string">[&#123;</span></span><br><span class="line">		<span class="attr">data:</span> <span class="string">data,</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">'line'</span><span class="string">,</span></span><br><span class="line">		<span class="attr">lineStyle:</span> <span class="string">&#123;</span></span><br><span class="line">			<span class="attr">width:</span> <span class="number">4</span></span><br><span class="line">		<span class="string">&#125;</span></span><br><span class="line">	<span class="string">&#125;]</span></span><br><span class="line"><span class="string">&#125;;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endecharts</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts8055" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h2 id="第二个例子"><a href="#第二个例子" class="headerlink" title="第二个例子"></a>第二个例子</h2><div id="echarts698" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8055'));
+	var myChart = echarts.init(document.getElementById('echarts698'));
 	// 指定图表的配置项和数据
 	option = {
     title: {
@@ -1892,6 +1908,21 @@ option = {
       </categories>
   </entry>
   <entry>
+    <title>Nginx config 文件</title>
+    <url>/archives/bd43a1d3.html</url>
+    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
+<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
+<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
+<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
+
+<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Professional learning</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2020年4月读书计划</title>
     <url>/archives/977a2c8.html</url>
     <content><![CDATA[<ul>
@@ -1915,21 +1946,6 @@ option = {
       <tags>
         <tag>plan</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Nginx config 文件</title>
-    <url>/archives/bd43a1d3.html</url>
-    <content><![CDATA[<p>一般修改文件之前，先下载到本地的电脑上，否则容易写错。改完再上传。</p>
-<h4 id="从vps下载conf（centos）"><a href="#从vps下载conf（centos）" class="headerlink" title="从vps下载conf（centos）"></a>从vps下载conf（centos）</h4><p><code>sz /path/to/file</code></p>
-<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p><code>rz</code></p>
-<h4 id="如果报错则先下载"><a href="#如果报错则先下载" class="headerlink" title="如果报错则先下载"></a>如果报错则先下载</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> lrzsz</span><br></pre></td></tr></table></figure>
-
-<h3 id="我的文件"><a href="#我的文件" class="headerlink" title="我的文件"></a>我的文件</h3><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name www.domain.com;</span><br><span class="line">        # return 301 https:&#x2F;&#x2F;$server_name$request_uri; #这里不知道为什么老出错</span><br><span class="line">        index index.html index.htm index.php;</span><br><span class="line">        root &#x2F;var&#x2F;www&#x2F;blog;</span><br><span class="line">        access_log  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;access.log;</span><br><span class="line">        error_log   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;error.log; </span><br><span class="line">        ssl_certificate      &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;fullchain.pem;</span><br><span class="line">        ssl_certificate_key  &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.domain.com&#x2F;privkey.pem;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">            index index.html index.htm; # 这里写你暴露的静态文件</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~ &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            default_type &quot;text&#x2F;plain&quot;;</span><br><span class="line">            root &#x2F;var&#x2F;www&#x2F;blog; # 这里写你的静态文件目录</span><br><span class="line">        &#125;</span><br><span class="line">        location &#x3D; &#x2F;.well-known&#x2F;acme-challenge&#x2F; &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Professional learning</category>
-        <category>Linux</category>
-      </categories>
   </entry>
   <entry>
     <title>covid-19各国病死率</title>
