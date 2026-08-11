@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -27,7 +27,7 @@ jobs:
         run: git fetch origin gh-pages:refs/remotes/origin/gh-pages
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -44,7 +44,7 @@ jobs:
 
       - name: Upload site artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: site-${{ github.sha }}
           path: ${{ runner.temp }}/site.tar.gz
@@ -58,10 +58,10 @@ jobs:
     environment: production
     steps:
       - name: Check out deployment scripts
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Download site artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: site-${{ github.sha }}
           path: ${{ runner.temp }}
