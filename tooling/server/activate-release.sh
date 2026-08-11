@@ -17,6 +17,10 @@ esac
 test -f "$incoming_archive"
 rm -rf "$release_tmp"
 mkdir -p "$release_tmp"
+cleanup_release_tmp() {
+  rm -rf "$release_tmp"
+}
+trap cleanup_release_tmp EXIT
 tar -xzf "$incoming_archive" -C "$release_tmp"
 test -s "$release_tmp/index.html"
 test -s "$release_tmp/archives/a5547e95.html"
@@ -33,6 +37,7 @@ if [ -e "$release_dir" ]; then
 else
   mv "$release_tmp" "$release_dir"
 fi
+trap - EXIT
 rm -f "$incoming_archive"
 
 current_target="$(readlink -f "$current_link" 2>/dev/null || true)"
