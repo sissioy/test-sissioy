@@ -1,0 +1,38 @@
+{
+  "name": "sissioy-hexo-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Source and deployment tooling for www.sissioy.top",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "scripts": {
+    "clean": "hexo clean && node tooling/clean.mjs",
+    "build": "node tooling/build-site.mjs",
+    "check:links": "node tooling/check-links.mjs dist",
+    "test": "node --test",
+    "ci": "npm test && npm run build && npm run check:links",
+    "server": "hexo server"
+  },
+  "dependencies": {
+    "@fontsource/noto-serif-sc": "5.3.0",
+    "hexo": "8.1.2",
+    "hexo-cli": "4.3.2",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-feed": "4.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-searchdb": "1.5.0",
+    "hexo-generator-sitemap": "3.0.1",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-ejs": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-stylus": "3.0.1",
+    "hexo-server": "3.0.0",
+    "hexo-theme-next": "8.29.0",
+    "js-yaml": "4.3.1"
+  }
+}

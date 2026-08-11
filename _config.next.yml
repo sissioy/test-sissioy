@@ -1,0 +1,144 @@
+scheme: Gemini
+darkmode: false
+excerpt_description: false
+read_more_btn: true
+
+favicon:
+  small: /legacy-assets/images/blog_ico_logo.png
+  medium: /legacy-assets/images/blog_ico_logo.png
+  apple_touch_icon: /legacy-assets/images/blog_ico_logo.png
+  safari_pinned_tab: /legacy-assets/images/blog_ico_logo.png
+
+custom_logo: /legacy-assets/images/custom-logo.PNG
+
+menu:
+  首页: / || fa fa-home
+  热榜: /top/ || fa fa-signal
+  关于: /about/ || fa fa-user
+  标签: /tags/ || fa fa-tags
+  分类: /categories/ || fa fa-th
+  归档: /archives/ || fa fa-archive
+  RBG: /RBG/ || fa fa-university
+  日程: /schedule/ || fa fa-calendar
+  友情链接: /links/ || fa fa-link
+  公益 404: /404/ || fa fa-heartbeat
+
+menu_settings:
+  icons: true
+  badges: true
+
+avatar:
+  url: /legacy-assets/images/logo.png
+  rounded: true
+  rotated: false
+
+site_state: true
+social:
+  GitHub: https://github.com/sissioy || fab fa-github
+  Email: mailto:sissioy@outlook.com || fa fa-envelope
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+
+footer:
+  since: 2020
+  icon:
+    name: fa fa-heart
+    animated: false
+    color: "#607d8b"
+  powered: true
+  theme:
+    enable: true
+    version: false
+
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: false
+  language:
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+
+post_edit:
+  enable: false
+
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: false
+  awl: 4
+  wpm: 275
+
+tag_icon: true
+reward_settings:
+  enable: false
+
+follow_me:
+
+related_posts:
+  enable: false
+
+post_end_tag:
+  enabled: false
+
+font:
+  enable: false
+
+motion:
+  enable: true
+  async: false
+  transition:
+    post_block: fadeIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
+    sidebar: fadeInUp
+
+sidebar:
+  position: left
+  display: post
+  padding: 18
+  offset: 12
+
+toc:
+  enable: true
+  number: true
+  wrap: false
+  expand_all: false
+  max_depth: 6
+
+back2top:
+  enable: false
+
+reading_progress:
+  enable: false
+
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: false
+
+pjax: false
+fancybox: false
+mediumzoom: false
+lazyload: false
+
+comments:
+  style: tabs
+  active:
+  storage: false
+  lazyload: false
+  nav:
+
+custom_file_path:
+  bodyEnd: source/_data/body-end.njk
+  style: source/_data/styles.styl

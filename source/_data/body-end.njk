@@ -1,0 +1,19 @@
+<nav class="moon-menu" aria-label="页面快速导航">
+  <button class="moon-menu__toggle" type="button" aria-expanded="false" aria-controls="moon-menu-actions" aria-label="打开页面导航">
+    <i class="fa fa-moon" aria-hidden="true"></i>
+  </button>
+  <span class="moon-menu__progress" aria-hidden="true"></span>
+  <span class="moon-menu__actions" id="moon-menu-actions">
+    <button type="button" data-scroll-target="top" aria-label="回到页面顶部"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <button type="button" data-scroll-target="bottom" aria-label="前往页面底部"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+  </span>
+</nav>
+<script src="/js/legacy-ui.js" defer></script>
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var fireworks = document.createElement('script');
+    fireworks.src = '/legacy-assets/js/cursor/fireworks.js';
+    fireworks.defer = true;
+    document.body.appendChild(fireworks);
+  }
+</script>

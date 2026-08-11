@@ -1,0 +1,207 @@
+@import url('/fonts/noto-serif-sc.css')
+
+:root
+  --sissioy-card-radius: 20px
+  --sissioy-shadow: 0 10px 30px rgba(26, 38, 52, .18)
+  --sissioy-surface: rgba(255, 255, 255, .90)
+  --sissioy-accent: #607d8b
+
+html
+  scroll-behavior: smooth
+
+body
+  background: #eee url('/legacy-assets/images/yourbackground_compress.webp') center center / cover fixed no-repeat
+  color: #555
+  font-family: 'Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', sans-serif
+  font-size: 16px
+  line-height: 2
+
+a
+  color: #555
+
+a:hover
+  color: #222
+
+header.header,
+.sidebar-inner,
+.main-inner .post-block,
+.main-inner .pagination
+  border-radius: var(--sissioy-card-radius)
+  box-shadow: var(--sissioy-shadow)
+
+header.header
+  background: var(--sissioy-surface)
+  overflow: hidden
+
+.site-brand-container
+  background: #222
+
+.site-meta
+  padding: 24px 16px 20px
+
+.custom-logo-image
+  max-width: 190px
+  max-height: 92px
+
+.site-title,
+.site-subtitle
+  color: #f5f5f5
+
+.site-nav
+  padding-bottom: 16px
+
+.menu .menu-item a
+  transition: color .2s ease, background-color .2s ease, transform .2s ease
+
+.menu .menu-item a:active
+  transform: translateY(1px)
+
+.main-inner .post-block
+  background: var(--sissioy-surface)
+  margin-left: 25px
+  margin-right: 25px
+  padding: 40px
+
+.posts-expand
+  padding-top: 50px
+  padding-bottom: 50px
+
+.posts-expand .post-title
+  font-weight: 400
+
+.post-body
+  color: #555
+
+.post-body img
+  border-radius: 8px
+
+.sidebar-inner
+  background: var(--sissioy-surface)
+  opacity: .92
+
+.main-inner .pagination
+  background: var(--sissioy-surface)
+  margin-top: 12px
+  padding: 12px
+
+.moon-menu
+  align-items: center
+  bottom: 1.5rem
+  display: flex
+  flex-direction: column-reverse
+  gap: 10px
+  position: fixed
+  right: 1.5rem
+  z-index: 30
+
+.moon-menu button
+  align-items: center
+  background: rgba(96, 125, 139, .92)
+  border: 1px solid rgba(255, 255, 255, .5)
+  border-radius: 50%
+  color: #fff
+  cursor: pointer
+  display: flex
+  height: 44px
+  justify-content: center
+  padding: 0
+  transition: opacity .2s ease, transform .2s ease
+  width: 44px
+
+.moon-menu button:hover
+  color: #fff
+  transform: translateY(-2px)
+
+.moon-menu button:focus-visible
+  outline: 3px solid rgba(96, 125, 139, .45)
+  outline-offset: 3px
+
+.moon-menu__toggle
+  font-size: 21px
+  height: 64px !important
+  width: 64px !important
+
+.moon-menu__progress
+  animation: moon-progress linear both
+  animation-timeline: scroll(root block)
+  background: conic-gradient(#fff var(--moon-progress, 0%), transparent 0)
+  border-radius: 50%
+  bottom: 3px
+  height: 58px
+  mask: radial-gradient(circle, transparent 27px, #000 28px)
+  pointer-events: none
+  position: absolute
+  right: 3px
+  width: 58px
+
+@keyframes moon-progress
+  from
+    --moon-progress: 0%
+  to
+    --moon-progress: 100%
+
+@property --moon-progress
+  syntax: '<percentage>'
+  inherits: false
+  initial-value: 0%
+
+.moon-menu__actions
+  display: flex
+  flex-direction: column
+  gap: 8px
+  opacity: 0
+  pointer-events: none
+  transform: translateY(12px)
+  transition: opacity .2s ease, transform .2s ease
+
+.moon-menu.is-open .moon-menu__actions
+  opacity: 1
+  pointer-events: auto
+  transform: translateY(0)
+
+@media (max-width: 767px)
+  body
+    background-attachment: scroll
+
+  header.header
+    border-radius: 0
+    box-shadow: none
+
+  .site-brand-container
+    min-height: 114px
+
+  .posts-expand
+    padding: 69px 0 30px
+
+  .main-inner .post-block
+    margin: 0 33px 8px
+    padding: 12px
+
+  .moon-menu
+    bottom: 1rem
+    right: 1rem
+
+@media (min-width: 768px) and (max-width: 991px)
+  .main-inner .post-block
+    margin-left: 20px
+    margin-right: 20px
+    padding: 20px
+
+@media (prefers-reduced-motion: reduce)
+  html
+    scroll-behavior: auto
+
+  *, *::before, *::after
+    animation-duration: .01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: .01ms !important
+
+  #fireworks
+    display: none !important
+
+@media (prefers-reduced-transparency: reduce)
+  header.header,
+  .sidebar-inner,
+  .main-inner .post-block,
+  .main-inner .pagination
+    background: #fff

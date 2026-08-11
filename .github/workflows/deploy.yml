@@ -1,0 +1,98 @@
+name: Build and deploy Hexo
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hexo-production
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch frozen legacy branch
+        run: git fetch origin gh-pages:refs/remotes/origin/gh-pages
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test and build
+        run: npm run ci
+
+      - name: Package site
+        if: github.event_name != 'pull_request'
+        run: tar -czf "$RUNNER_TEMP/site.tar.gz" -C dist .
+
+      - name: Upload site artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ github.sha }}
+          path: ${{ runner.temp }}/site.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Check out deployment scripts
+        uses: actions/checkout@v4
+
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-${{ github.sha }}
+          path: ${{ runner.temp }}
+
+      - name: Configure SSH
+        env:
+          DEPLOY_KEY: ${{ secrets.HOSTWINDS_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.HOSTWINDS_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d "$HOME/.ssh"
+          printf '%s\n' "$DEPLOY_KEY" > "$RUNNER_TEMP/deploy_key"
+          chmod 600 "$RUNNER_TEMP/deploy_key"
+          printf '%s\n' "$KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/known_hosts"
+
+      - name: Upload release
+        env:
+          DEPLOY_HOST: ${{ secrets.HOSTWINDS_DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.HOSTWINDS_DEPLOY_USER }}
+        run: |
+          ssh -i "$RUNNER_TEMP/deploy_key" "$DEPLOY_USER@$DEPLOY_HOST" "mkdir -p /var/www/hexo-blog/incoming"
+          scp -i "$RUNNER_TEMP/deploy_key" "$RUNNER_TEMP/site.tar.gz" "$DEPLOY_USER@$DEPLOY_HOST:/var/www/hexo-blog/incoming/${GITHUB_SHA}.tar.gz"
+
+      - name: Activate and verify release
+        env:
+          DEPLOY_HOST: ${{ secrets.HOSTWINDS_DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.HOSTWINDS_DEPLOY_USER }}
+        run: |
+          ssh -i "$RUNNER_TEMP/deploy_key" "$DEPLOY_USER@$DEPLOY_HOST" "bash -s -- '$GITHUB_SHA'" < tooling/server/activate-release.sh
+
+      - name: Verify public HTTPS
+        run: |
+          curl --fail --silent --show-error --retry 3 --retry-delay 3 https://www.sissioy.top/ >/dev/null
+          curl --fail --silent --show-error --retry 3 --retry-delay 3 https://www.sissioy.top/archives/a5547e95.html >/dev/null
