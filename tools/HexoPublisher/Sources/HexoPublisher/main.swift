@@ -15,7 +15,7 @@ private enum PublishState: Equatable {
 }
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    private let repositoryPath = "/Users/syo/Documents/ChatGPT/hexo-blog"
+    private let repositoryPath = "/Users/syo/MYWORK/hexo-blog"
     private let logPath = NSString(string: "~/Library/Logs/HexoPublisher/publish.log").expandingTildeInPath
     private var statusItem: NSStatusItem!
     private var publishing = false

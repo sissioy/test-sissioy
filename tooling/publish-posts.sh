@@ -2,7 +2,7 @@
 set -euo pipefail
 
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-repo_dir="/Users/syo/Documents/ChatGPT/hexo-blog"
+repo_dir="/Users/syo/MYWORK/hexo-blog"
 log_dir="$HOME/Library/Logs/HexoPublisher"
 mkdir -p "$log_dir"
 log_file="$log_dir/publish.log"

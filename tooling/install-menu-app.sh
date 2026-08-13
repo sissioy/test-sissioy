@@ -1,7 +1,7 @@
 #!/bin/zsh
 set -euo pipefail
 
-repo_dir="/Users/syo/Documents/ChatGPT/hexo-blog"
+repo_dir="/Users/syo/MYWORK/hexo-blog"
 source_dir="$repo_dir/tools/HexoPublisher"
 build_dir="$source_dir/build"
 app_dir="$HOME/Applications/Hexo Publisher.app"
