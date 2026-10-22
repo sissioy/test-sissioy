@@ -2,7 +2,7 @@
 set -euo pipefail
 
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-repo_dir="/Users/syo/MYWORK/hexo-blog"
+repo_dir="$(cd "$(dirname "$0")/.." && pwd)"
 log_dir="$HOME/Library/Logs/HexoPublisher"
 mkdir -p "$log_dir"
 log_file="$log_dir/publish.log"
@@ -35,6 +35,18 @@ if [ "$local_sha" != "$remote_sha" ]; then
   fi
 fi
 
+redaction_skipped=0
+set +e
+npm run redact:new
+redaction_exit=$?
+set -e
+if [ "$redaction_exit" -eq 12 ]; then
+  redaction_skipped=1
+  echo "警告：本地模型检查失败，本次未检查或替换敏感信息，将照常发布。"
+elif [ "$redaction_exit" -ne 0 ]; then
+  exit "$redaction_exit"
+fi
+
 npm run ci
 git add -A -- source/_posts
 if git diff --cached --quiet; then
@@ -59,4 +71,8 @@ if [ -z "$run_id" ]; then
 fi
 
 gh run watch "$run_id" --exit-status
+if [ "$redaction_skipped" -eq 1 ]; then
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] 线上发布成功，但未执行敏感信息检查"
+  exit 12
+fi
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] 线上发布成功"

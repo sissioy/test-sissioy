@@ -13,6 +13,8 @@
     "clean": "hexo clean && node tooling/clean.mjs",
     "build": "node tooling/build-site.mjs",
     "check:links": "node tooling/check-links.mjs dist",
+    "redact:new": "node tooling/redact-sensitive.mjs --new --write --fail-open",
+    "audit:sensitive": "node tooling/redact-sensitive.mjs --all --check",
     "test": "node --test",
     "ci": "npm test && npm run build && npm run check:links",
     "server": "hexo server"

@@ -21,6 +21,37 @@ description: 一句话摘要。
 
 配图放入同名资源目录。仓库是公开的，不要提交私密草稿、令牌或服务器凭据。
 
+### 发布前敏感信息检查
+
+菜单栏助手只检查尚未出现在 `HEAD` 中的新增 Markdown 文章。它会通过本机 LM Studio 启动
+`osmapi/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2-abliterated-OptiQ-3.7bpw-mlx`，
+结合确定性规则，将公网 IP、UUID、用户绝对路径和常见凭据替换为公开占位符。已存在文章的修改、图片和附件不会自动检查。
+
+允许公开的示例值可以写入仅保存在本机的：
+
+```text
+~/Library/Application Support/HexoPublisher/redaction-allowlist.json
+```
+
+内容格式为：
+
+```json
+{
+  "literals": ["203.0.113.10", "550e8400-e29b-41d4-a716-446655440000"]
+}
+```
+
+只有模型和所有分块都成功返回有效结构化结果时，文章才会被修改。改写前的原文保存在
+`~/Library/Application Support/HexoPublisher/RedactionBackups/`，权限仅限当前用户，30 天后自动清理。
+
+如果模型无法启动、超时或输出无效，本次检查会被完全跳过，文章保持原样并照常公开发布；菜单栏会显示黄色的“已发布，但未检查敏感信息”状态。文件读取、备份或写入失败仍会阻止发布。
+
+可以手工执行一次只读的全库审计；发现敏感内容时命令返回状态码 2，不会修改文章：
+
+```bash
+npm run audit:sensitive
+```
+
 ## 本地验证
 
 ```bash
@@ -45,3 +76,5 @@ npm run ci
 ## 菜单栏助手
 
 `tooling/install-menu-app.sh` 构建 ARM64 App，安装到 `~/Applications/Hexo Publisher.app` 并注册用户级 LaunchAgent。左键发布，右键打开仓库、日志或退出。
+
+修改助手源码后，重新运行安装脚本即可更新菜单栏程序。
