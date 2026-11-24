@@ -25,11 +25,9 @@ import {
 } from './lib/redaction.mjs';
 
 const execFile = promisify(execFileCallback);
-const MODEL_KEY = 'qwen3.6-27b-claude-opus-reasoning-distill-v2-abliterated-optiq-3.7bpw-mlx';
-const MODEL_PATH = 'osmapi/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2-abliterated-OptiQ-3.7bpw-mlx';
+const MODEL_KEY = process.env.HEXO_REDACTION_MODEL ?? 'qwen3-8b';
 const MODEL_IDENTIFIER = 'hexo-sensitive-redactor';
 const DEFAULT_PORT = 1234;
-const SKIPPED_EXIT_CODE = 12;
 const FINDINGS_EXIT_CODE = 2;
 const BACKUP_RETENTION_MS = 30 * 24 * 60 * 60 * 1_000;
 
@@ -68,9 +66,8 @@ function entryValue(entry, keys) {
 }
 
 function entryMatchesModel(entry) {
-  const basename = MODEL_PATH.split('/').at(-1).toLowerCase();
   return Object.values(entry ?? {}).some(
-    (value) => typeof value === 'string' && value.toLowerCase().includes(basename),
+    (value) => typeof value === 'string' && value.toLowerCase().includes(MODEL_KEY.toLowerCase()),
   );
 }
 
@@ -84,10 +81,11 @@ async function defaultCommand(file, args, options = {}) {
 }
 
 export function parseChatCompletion(payload) {
+  if (payload?.choices?.[0]?.finish_reason && payload.choices[0].finish_reason !== 'stop') {
+    throw new ModelCheckError('模型未完整完成检查。');
+  }
   const message = payload?.choices?.[0]?.message;
-  const content = typeof message?.content === 'string' && message.content.trim()
-    ? message.content
-    : message?.reasoning_content;
+  const content = message?.content;
   if (typeof content !== 'string' || !content.trim()) {
     throw new ModelCheckError('模型响应缺少结构化正文。');
   }
@@ -202,11 +200,12 @@ export class LmStudioReviewer {
             '找出不应公开的精确原文片段，例如真实身份、账号、邮箱、电话、主机名、内部标识、凭据、IP、UUID 或本机路径。',
             'literal 必须是输入中连续存在的最短原文，不得改写、解释或虚构；没有发现时返回空 findings。',
             '公开知识、明显占位符和通用技术名称不属于敏感信息。',
+            '只返回 JSON，不输出思考过程。 /no_think',
           ].join('\n'),
         },
         {
           role: 'user',
-          content: `文件 ${file}，分块 ${chunkIndex + 1}/${chunkCount}：\n<article>\n${content}\n</article>`,
+          content: `文件 ${file}，分块 ${chunkIndex + 1}/${chunkCount}：\n<article>\n${content}\n</article>\n/no_think`,
         },
       ],
       response_format: {
@@ -218,7 +217,7 @@ export class LmStudioReviewer {
         },
       },
       temperature: 0,
-      max_tokens: 1_024,
+      max_tokens: 4_096,
       stream: false,
     };
 
@@ -290,9 +289,19 @@ export async function listMarkdownFiles(cwd, scope) {
   );
   if (scope === 'all') return files.sort();
 
-  const trackedResult = await git(cwd, ['ls-tree', '-r', '--name-only', 'HEAD', '--', 'source/_posts']);
-  const tracked = new Set(trackedResult.stdout.split('\n').filter(Boolean));
-  return files.filter((file) => !tracked.has(file)).sort();
+  if (scope === 'new') {
+    const trackedResult = await git(cwd, ['ls-tree', '-rz', '--name-only', 'HEAD', '--', 'source/_posts']);
+    const tracked = new Set(trackedResult.stdout.split('\0').filter(Boolean));
+    return files.filter((file) => !tracked.has(file)).sort();
+  }
+  if (scope !== 'changed') throw new Error(`未知检查范围：${scope}`);
+
+  const changedResult = await git(cwd, [
+    'diff', 'HEAD', '--name-only', '-z', '--no-renames', '--diff-filter=ACMRT', '--', 'source/_posts',
+  ]);
+  const untrackedResult = await git(cwd, ['ls-files', '--others', '--exclude-standard', '-z', '--', 'source/_posts']);
+  const changed = new Set(`${changedResult.stdout}${untrackedResult.stdout}`.split('\0').filter(Boolean));
+  return files.filter((file) => changed.has(file)).sort();
 }
 
 export async function loadAllowlist(file) {
@@ -397,9 +406,8 @@ function reportFindings(log, document) {
 
 export async function runRedaction({
   cwd = process.cwd(),
-  scope = 'new',
+  scope = 'changed',
   write = false,
-  failOpen = false,
   reviewer,
   appSupportDir = path.join(os.homedir(), 'Library', 'Application Support', 'HexoPublisher'),
   now = new Date(),
@@ -407,7 +415,7 @@ export async function runRedaction({
 } = {}) {
   const files = await listMarkdownFiles(cwd, scope);
   if (!files.length) {
-    log(scope === 'new' ? '没有新增 Markdown 文章需要脱敏。' : '没有 Markdown 文章需要审计。');
+    log(scope === 'all' ? '没有 Markdown 文章需要审计。' : '没有新增或修改的 Markdown 文章需要脱敏。');
     return { status: 'checked', files: 0, findings: 0, changed: 0 };
   }
 
@@ -419,7 +427,6 @@ export async function runRedaction({
   }
 
   const activeReviewer = reviewer ?? new LmStudioReviewer({ logger: log });
-  let modelFailure = null;
   try {
     if (typeof activeReviewer.start === 'function') await activeReviewer.start();
     for (const document of documents) {
@@ -440,17 +447,11 @@ export async function runRedaction({
       }
     }
   } catch (error) {
-    modelFailure = error instanceof ModelCheckError
+    throw error instanceof ModelCheckError
       ? error
       : new ModelCheckError('本地模型检查失败或输出无效。', { cause: error });
   } finally {
     if (typeof activeReviewer.close === 'function') await activeReviewer.close();
-  }
-
-  if (modelFailure) {
-    if (!failOpen) throw modelFailure;
-    log(`警告：${modelFailure.message} 本次完全跳过敏感信息检查，文章保持原样。`);
-    return { status: 'skipped', files: files.length, findings: 0, changed: 0 };
   }
 
   const findings = documents.reduce((sum, document) => sum + document.findings.length, 0);
@@ -462,9 +463,9 @@ export async function runRedaction({
   }
 
   const backupRoot = path.join(appSupportDir, 'RedactionBackups');
+  await assertDocumentsUnchanged(cwd, documents);
   await cleanupExpiredBackups(backupRoot, now);
   if (changedDocuments.length) {
-    await assertDocumentsUnchanged(cwd, documents);
     await createBackup(changedDocuments, backupRoot, now);
     await transactionalWrite(cwd, changedDocuments);
   }
@@ -478,13 +479,13 @@ export async function runRedaction({
 }
 
 function parseArguments(argv) {
-  const options = { scope: 'new', write: false, failOpen: false };
+  const options = { scope: 'changed', write: false };
   for (const argument of argv) {
     if (argument === '--new') options.scope = 'new';
+    else if (argument === '--changed') options.scope = 'changed';
     else if (argument === '--all') options.scope = 'all';
     else if (argument === '--write') options.write = true;
     else if (argument === '--check') options.write = false;
-    else if (argument === '--fail-open') options.failOpen = true;
     else throw new Error(`未知参数：${argument}`);
   }
   return options;
@@ -493,7 +494,6 @@ function parseArguments(argv) {
 async function main() {
   const options = parseArguments(process.argv.slice(2));
   const result = await runRedaction(options);
-  if (result.status === 'skipped') process.exitCode = SKIPPED_EXIT_CODE;
   if (result.status === 'findings') process.exitCode = FINDINGS_EXIT_CODE;
 }
 

@@ -17,6 +17,7 @@ import {
   LmStudioReviewer,
   ModelCheckError,
   parseChatCompletion,
+  listMarkdownFiles,
   runRedaction,
 } from '../tooling/redact-sensitive.mjs';
 import {
@@ -161,9 +162,12 @@ test('parses structured chat completions and rejects invalid output', () => {
   assert.deepEqual(parseChatCompletion({
     choices: [{ message: { content: '{"findings":[]}' } }],
   }), { findings: [] });
-  assert.deepEqual(parseChatCompletion({
+  assert.throws(() => parseChatCompletion({
     choices: [{ message: { content: '', reasoning_content: '{"findings":[]}' } }],
-  }), { findings: [] });
+  }), ModelCheckError);
+  assert.throws(() => parseChatCompletion({
+    choices: [{ finish_reason: 'length', message: { content: '{"findings":[]}' } }],
+  }), ModelCheckError);
   assert.throws(
     () => parseChatCompletion({ choices: [{ message: { content: '{' } }] }),
     ModelCheckError,
@@ -190,7 +194,6 @@ test('redacts only new posts and creates private recoverable backups', async () 
     cwd,
     scope: 'new',
     write: true,
-    failOpen: true,
     reviewer: successfulReviewer('alice@example.com'),
     appSupportDir,
     now: new Date('2026-08-14T00:00:00Z'),
@@ -216,7 +219,41 @@ test('redacts only new posts and creates private recoverable backups', async () 
   assert.doesNotMatch(logs.join('\n'), /8\.8\.8\.8|alice@example\.com|550e8400/);
 });
 
-test('model failure skips every rule replacement and creates no backup', async () => {
+test('checks new and modified posts by default and leaves unchanged posts alone', async () => {
+  const cwd = await repository();
+  await writeFile(path.join(cwd, 'source/_posts/unchanged.md'), 'unchanged 1.1.1.1\n');
+  git(cwd, ['add', '--', 'source/_posts/unchanged.md']);
+  git(cwd, ['commit', '-m', 'unchanged fixture']);
+  await writeFile(path.join(cwd, 'source/_posts/existing.md'), 'modified 8.8.4.4\n');
+  await writeFile(path.join(cwd, 'source/_posts/new.md'), 'new 8.8.8.8\n');
+
+  const result = await runRedaction({
+    cwd,
+    write: true,
+    reviewer: successfulReviewer(),
+    appSupportDir: path.join(cwd, 'app-support'),
+    log: () => {},
+  });
+  assert.deepEqual(result, { status: 'checked', files: 2, findings: 2, changed: 2 });
+  assert.equal(await readFile(path.join(cwd, 'source/_posts/existing.md'), 'utf8'), 'modified your-ip-address\n');
+  assert.equal(await readFile(path.join(cwd, 'source/_posts/new.md'), 'utf8'), 'new your-ip-address\n');
+  assert.equal(await readFile(path.join(cwd, 'source/_posts/unchanged.md'), 'utf8'), 'unchanged 1.1.1.1\n');
+});
+
+test('changed scope includes staged and untracked posts with non-ASCII names and excludes deletions', async () => {
+  const cwd = await repository();
+  git(cwd, ['rm', '--', 'source/_posts/existing.md']);
+  await mkdir(path.join(cwd, 'source/_posts'), { recursive: true });
+  await writeFile(path.join(cwd, 'source/_posts/已暂存.md'), 'staged\n');
+  git(cwd, ['add', '--', 'source/_posts/已暂存.md']);
+  await writeFile(path.join(cwd, 'source/_posts/未暂存.md'), 'untracked\n');
+  await writeFile(path.join(cwd, 'source/_posts/image.png'), 'attachment');
+  assert.deepEqual(await listMarkdownFiles(cwd, 'changed'), [
+    'source/_posts/已暂存.md', 'source/_posts/未暂存.md',
+  ]);
+});
+
+test('model failure rejects the check without modifying articles or creating backups', async () => {
   const cwd = await repository();
   const appSupportDir = path.join(cwd, 'app-support');
   const original = 'IP 8.8.8.8 and UUID 550e8400-e29b-41d4-a716-446655440000\n';
@@ -227,22 +264,19 @@ test('model failure skips every rule replacement and creates no backup', async (
     async close() {},
   };
 
-  const result = await runRedaction({
+  await assert.rejects(runRedaction({
     cwd,
     scope: 'new',
     write: true,
-    failOpen: true,
     reviewer,
     appSupportDir,
     log: () => {},
-  });
-
-  assert.equal(result.status, 'skipped');
+  }), ModelCheckError);
   assert.equal(await readFile(path.join(cwd, 'source/_posts/new.md'), 'utf8'), original);
   await assert.rejects(access(path.join(appSupportDir, 'RedactionBackups')), /ENOENT/);
 });
 
-test('one failed article skips the whole multi-article transaction', async () => {
+test('one failed article rejects the whole multi-article transaction', async () => {
   const cwd = await repository();
   const first = 'first 8.8.8.8\n';
   const second = 'second 1.1.1.1\n';
@@ -259,16 +293,14 @@ test('one failed article skips the whole multi-article transaction', async () =>
     async close() {},
   };
 
-  const result = await runRedaction({
+  await assert.rejects(runRedaction({
     cwd,
     scope: 'new',
     write: true,
-    failOpen: true,
     reviewer,
     appSupportDir: path.join(cwd, 'app-support'),
     log: () => {},
-  });
-  assert.equal(result.status, 'skipped');
+  }), ModelCheckError);
   assert.equal(await readFile(path.join(cwd, 'source/_posts/first.md'), 'utf8'), first);
   assert.equal(await readFile(path.join(cwd, 'source/_posts/second.md'), 'utf8'), second);
 });
@@ -284,7 +316,6 @@ test('audit fails instead of returning an incomplete report when the model fails
       cwd,
       scope: 'all',
       write: false,
-      failOpen: false,
       reviewer,
       appSupportDir: path.join(cwd, 'app-support'),
       log: () => {},
@@ -307,7 +338,6 @@ test('removes backup directories older than 30 days during a successful write', 
     cwd,
     scope: 'new',
     write: true,
-    failOpen: true,
     reviewer: successfulReviewer(),
     appSupportDir,
     now: new Date('2026-08-14T00:00:00Z'),

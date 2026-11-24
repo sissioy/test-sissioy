@@ -4,6 +4,7 @@ import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promi
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
+import { writeKnowledgeGraph } from './lib/knowledge-graph.mjs';
 import {
   LEGACY_SAMPLE_PATH,
   PIN_PATH,
@@ -161,6 +162,10 @@ await run(path.join(root, 'node_modules/.bin/hexo'), ['generate']);
 await copyFontAssets();
 await copyLegacySnapshot();
 await overlayModernBuild();
+const publishedPosts = await collectPublishedPosts();
+const legacyArticles = (await walk(legacyDir)).filter(isLegacyArticlePath);
+await writeKnowledgeGraph(distDir, [...legacyArticles, ...publishedPosts.map(post => post.path)],
+  yaml.load(await readFile(path.join(root, '_config.yml'), 'utf8')).url);
 await writeDeploymentManifest();
 
 console.log('Built merged site in dist/');

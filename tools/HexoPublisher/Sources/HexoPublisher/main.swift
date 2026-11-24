@@ -67,8 +67,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                     self.setState(.success, tooltip: "线上发布成功")
                 case 10:
                     self.setState(.warning, tooltip: "没有文章改动")
-                case 12:
-                    self.setState(.warning, tooltip: "已发布，但未检查敏感信息")
                 default:
                     self.setState(.failure, tooltip: "发布失败，右键查看日志")
                 }

@@ -13,6 +13,7 @@ custom_logo: /legacy-assets/images/custom-logo.PNG
 
 menu:
   首页: / || fa fa-home
+  知识图谱: /graph/ || fa fa-project-diagram
   热榜: /top/ || fa fa-signal
   关于: /about/ || fa fa-user
   标签: /tags/ || fa fa-tags
