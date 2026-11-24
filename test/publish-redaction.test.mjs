@@ -26,7 +26,8 @@ test('any failed privacy check stops publication before build, commit, or push',
       .replace(/^log_dir=.*$/m, `log_dir="${directory}/logs"`);
     const file = path.join(directory, 'publish.sh');
     await writeFile(file, script);
-    const result = spawnSync('/bin/zsh', [file], {
+    const shell = process.platform === 'darwin' ? '/bin/zsh' : '/bin/bash';
+    const result = spawnSync(shell, [file], {
       encoding: 'utf8', env: { ...process.env, TRACE: trace, CHECK_EXIT: String(exitCode) },
     });
     assert.equal(result.status, exitCode, result.stderr);
