@@ -64,7 +64,8 @@ if (!homepage.includes('https://ghchart.rshah.org/sissioy')) missing.push('Homep
 
 const graph = JSON.parse(await readFile(path.join(distDir, 'knowledge-graph.json'), 'utf8'));
 const nodeIds = new Set(graph.nodes.map(node => node.id));
-for (const node of graph.nodes.filter(node => node.type === 'article')) {
+const articles = graph.nodes.filter(node => node.type === 'article');
+for (const node of articles) {
   try {
     if (!(await stat(localTarget(node.url))).isFile()) missing.push(`Graph article missing: ${node.url}`);
   } catch { missing.push(`Graph article missing: ${node.url}`); }
@@ -72,9 +73,31 @@ for (const node of graph.nodes.filter(node => node.type === 'article')) {
 for (const edge of graph.edges) {
   if (!nodeIds.has(edge.source) || !nodeIds.has(edge.target)) missing.push('Graph edge references an unknown node');
 }
-if (graph.nodes.filter(node => node.type === 'article' && /^\/archives\/[0-9a-f]+\.html$/i.test(node.url)).length !== 45) {
+if (articles.filter(node => /^\/archives\/[0-9a-f]+\.html$/i.test(node.url)).length !== 45) {
   missing.push('Knowledge graph must contain all 45 legacy articles');
 }
+
+const cardsPerPage = 10;
+const pageCount = Math.ceil(articles.length / cardsPerPage);
+const unseen = new Set(articles.map(article => article.id));
+const homePages = htmlFiles.filter(file => file === 'index.html' || /^page\/\d+\/index\.html$/.test(file));
+if (homePages.length !== pageCount) missing.push(`Expected ${pageCount} homepage listing pages, found ${homePages.length}`);
+for (let page = 1; page <= pageCount; page++) {
+  const file = page === 1 ? 'index.html' : `page/${page}/index.html`;
+  if (!homePages.includes(file)) {
+    missing.push(`Missing homepage listing page: ${file}`);
+    continue;
+  }
+  const html = page === 1 ? homepage : await readFile(path.join(distDir, file), 'utf8');
+  const cards = [...html.matchAll(/<link itemprop="mainEntityOfPage" href="([^"]+)"/g)];
+  const expected = Math.min(cardsPerPage, articles.length - (page - 1) * cardsPerPage);
+  if (cards.length !== expected) missing.push(`${file}: expected ${expected} article cards, found ${cards.length}`);
+  for (const [, url] of cards) {
+    const article = decodeURI(new URL(url).pathname).replace(/index\.html$/, '');
+    if (!unseen.delete(article)) missing.push(`${file}: unexpected or duplicate article ${article}`);
+  }
+}
+for (const article of unseen) missing.push(`Article card missing from the homepage listing: ${article}`);
 
 if (missing.length) {
   console.error(missing.join('\n'));
