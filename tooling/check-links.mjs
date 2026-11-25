@@ -1,4 +1,5 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 
 const distDir = path.resolve(process.argv[2] ?? 'dist');
@@ -61,6 +62,8 @@ const pin = await readFile(path.join(distDir, 'archives/a5547e95.html'), 'utf8')
 if (!pin.includes('https://ghchart.rshah.org/sissioy')) missing.push('Pinned page is missing the GitHub contribution chart');
 const homepage = await readFile(path.join(distDir, 'index.html'), 'utf8');
 if (!homepage.includes('https://ghchart.rshah.org/sissioy')) missing.push('Homepage is missing the pinned GitHub contribution chart');
+const stylesheet = await readFile(path.join(distDir, 'css/main.css'));
+const styleVersion = createHash('sha256').update(stylesheet).digest('hex').slice(0, 16);
 
 const graph = JSON.parse(await readFile(path.join(distDir, 'knowledge-graph.json'), 'utf8'));
 const nodeIds = new Set(graph.nodes.map(node => node.id));
@@ -89,6 +92,9 @@ for (let page = 1; page <= pageCount; page++) {
     continue;
   }
   const html = page === 1 ? homepage : await readFile(path.join(distDir, file), 'utf8');
+  if (!html.includes(`href="/css/main.css?v=${styleVersion}"`) || html.includes('href="/css/main.css"')) {
+    missing.push(`${file}: stylesheet URL must use its current content hash`);
+  }
   const cards = [...html.matchAll(/<link itemprop="mainEntityOfPage" href="([^"]+)"/g)];
   const expected = Math.min(cardsPerPage, articles.length - (page - 1) * cardsPerPage);
   if (cards.length !== expected) missing.push(`${file}: expected ${expected} article cards, found ${cards.length}`);

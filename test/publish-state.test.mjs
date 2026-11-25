@@ -41,12 +41,17 @@ test('accepts changed and new files only under source/_posts', async () => {
   assert.equal(validate(cwd).status, 0);
 });
 
-test('rejects unrelated working-tree changes', async () => {
+test('allows article changes alongside unrelated unstaged changes', async () => {
+  const cwd = await repository();
+  await writeFile(path.join(cwd, 'README.md'), 'unrelated\n');
+  await writeFile(path.join(cwd, 'source/_posts/first.md'), 'changed\n');
+  assert.equal(validate(cwd).status, 0);
+});
+
+test('returns warning status when only unrelated files changed', async () => {
   const cwd = await repository();
   await writeFile(path.join(cwd, 'README.md'), 'changed\n');
-  const result = validate(cwd);
-  assert.notEqual(result.status, 0);
-  assert.match(result.stderr, /文章目录之外/);
+  assert.equal(validate(cwd).status, 10);
 });
 
 test('rejects pre-staged changes', async () => {

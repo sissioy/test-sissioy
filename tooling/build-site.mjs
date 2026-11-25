@@ -1,4 +1,5 @@
 import { execFile } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { promisify } from 'node:util';
 import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -86,6 +87,8 @@ async function copyFontAssets() {
 }
 
 async function overlayModernBuild() {
+  const stylesheet = await readFile(path.join(modernDir, 'css/main.css'));
+  const styleVersion = createHash('sha256').update(stylesheet).digest('hex').slice(0, 16);
   const files = await walk(modernDir);
   for (const relative of files) {
     const source = path.join(modernDir, relative);
@@ -96,7 +99,12 @@ async function overlayModernBuild() {
       if (error.code !== 'ENOENT') throw error;
     }
     await mkdir(path.dirname(target), { recursive: true });
-    await cp(source, target, { force: true });
+    if (relative.endsWith('.html')) {
+      const html = await readFile(source, 'utf8');
+      await writeFile(target, html.replaceAll('href="/css/main.css"', `href="/css/main.css?v=${styleVersion}"`));
+    } else {
+      await cp(source, target, { force: true });
+    }
   }
 }
 

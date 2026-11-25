@@ -91,4 +91,6 @@ npm run ci
 
 `tooling/install-menu-app.sh` 构建 ARM64 App，安装到 `~/Applications/Hexo Publisher.app` 并注册用户级 LaunchAgent。左键发布，右键打开仓库、日志或退出。
 
+发布时用已提交的站点代码和本批文章做隔离构建，其他未暂存的本地改动可以留在工作区。GitHub Actions 完成后，工具核对线上版本再显示发布成功。
+
 修改助手源码后，重新运行安装脚本即可更新菜单栏程序。
