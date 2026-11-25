@@ -4,15 +4,17 @@ const { parse } = require('parse5');
 const { isLegacyArticlePath } = require('../tooling/lib/legacy.mjs');
 const { escapeHtml } = require('../tooling/lib/knowledge-graph.mjs');
 
-const generateIndex = hexo.extend.generator.get('index');
+const moment = hexo.extend.helper.get('moment');
+let publishedPosts;
 
-hexo.extend.generator.register('index', async function(locals) {
+hexo.extend.filter.register('before_generate', async function() {
   const directory = path.join(this.base_dir, '.build/legacy');
   const files = await readdir(path.join(directory, 'archives')).catch(error => {
     if (error.code !== 'ENOENT') throw error;
     return [];
   });
-  const posts = locals.posts.toArray();
+  const currentPosts = this.locals.get('posts');
+  const posts = currentPosts.toArray();
   const currentPaths = new Set(posts.map(post => post.path.replace(/^\/+/, '')));
   const legacyPaths = files.sort().map(file => `archives/${file}`)
     .filter(file => isLegacyArticlePath(file) && !currentPaths.has(file));
@@ -25,8 +27,8 @@ hexo.extend.generator.register('index', async function(locals) {
       return [attrs.property ?? attrs.name, attrs.content];
     }));
     const title = meta.get('og:title');
-    const date = new Date(meta.get('article:published_time'));
-    if (!title || Number.isNaN(date.getTime())) throw new Error(`Missing title or date for ${file}`);
+    const date = moment(new Date(meta.get('article:published_time'))).tz(this.config.timezone);
+    if (!title || !date.isValid()) throw new Error(`Missing title or date for ${file}`);
     const summary = meta.get('description');
     return {
       path: file,
@@ -39,9 +41,17 @@ hexo.extend.generator.register('index', async function(locals) {
     };
   }));
 
-  // Give only the homepage generator the combined list.
-  return generateIndex.call(this, {
-    ...locals,
-    posts: new locals.posts.constructor([...posts, ...legacyPosts])
+  publishedPosts = new currentPosts.constructor([...posts, ...legacyPosts]);
+});
+
+for (const name of ['index', 'archive']) {
+  const generate = hexo.extend.generator.get(name);
+  hexo.extend.generator.register(name, function(locals) {
+    return generate.call(this, { ...locals, posts: publishedPosts });
   });
+}
+
+hexo.extend.filter.register('template_locals', function(locals) {
+  locals.site = { ...locals.site, posts: publishedPosts };
+  return locals;
 });

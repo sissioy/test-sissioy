@@ -61,6 +61,7 @@ async function copyLegacySnapshot() {
 
   for (const relative of files) {
     if (/^page\/\d+\/index\.html$/.test(relative)) continue;
+    if (/^archives\/(?:\d{4}\/(?:\d{2}\/)?)?(?:page\/\d+\/)?index\.html$/.test(relative)) continue;
     const source = path.join(legacyDir, relative);
     const target = path.join(distDir, mapLegacyPath(relative));
     await mkdir(path.dirname(target), { recursive: true });

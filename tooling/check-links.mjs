@@ -82,6 +82,7 @@ if (articles.filter(node => /^\/archives\/[0-9a-f]+\.html$/i.test(node.url)).len
 
 const cardsPerPage = 10;
 const pageCount = Math.ceil(articles.length / cardsPerPage);
+const sidebarCount = /<div class="site-state-item site-state-posts">\s*<a href="\/archives\/">\s*<span class="site-state-item-count">(\d+)<\/span>/;
 const unseen = new Set(articles.map(article => article.id));
 const homePages = htmlFiles.filter(file => file === 'index.html' || /^page\/\d+\/index\.html$/.test(file));
 if (homePages.length !== pageCount) missing.push(`Expected ${pageCount} homepage listing pages, found ${homePages.length}`);
@@ -92,6 +93,9 @@ for (let page = 1; page <= pageCount; page++) {
     continue;
   }
   const html = page === 1 ? homepage : await readFile(path.join(distDir, file), 'utf8');
+  if (Number(html.match(sidebarCount)?.[1]) !== articles.length) {
+    missing.push(`${file}: sidebar must show all ${articles.length} articles`);
+  }
   if (!html.includes(`href="/css/main.css?v=${styleVersion}"`) || html.includes('href="/css/main.css"')) {
     missing.push(`${file}: stylesheet URL must use its current content hash`);
   }
@@ -104,6 +108,28 @@ for (let page = 1; page <= pageCount; page++) {
   }
 }
 for (const article of unseen) missing.push(`Article card missing from the homepage listing: ${article}`);
+
+const archivePages = htmlFiles.filter(file => file === 'archives/index.html' || /^archives\/page\/\d+\/index\.html$/.test(file));
+if (archivePages.length !== pageCount) missing.push(`Expected ${pageCount} archive listing pages, found ${archivePages.length}`);
+const unseenLegacy = new Set(legacyArticles.map(file => `/${file}`));
+for (let page = 1; page <= pageCount; page++) {
+  const file = page === 1 ? 'archives/index.html' : `archives/page/${page}/index.html`;
+  if (!archivePages.includes(file)) {
+    missing.push(`Missing archive listing page: ${file}`);
+    continue;
+  }
+  const html = await readFile(path.join(distDir, file), 'utf8');
+  const entries = [...html.matchAll(/<article itemscope itemtype="http:\/\/schema.org\/Article">/g)];
+  const expected = Math.min(cardsPerPage, articles.length - (page - 1) * cardsPerPage);
+  if (entries.length !== expected) missing.push(`${file}: expected ${expected} archive entries, found ${entries.length}`);
+  if (Number(html.match(sidebarCount)?.[1]) !== articles.length) {
+    missing.push(`${file}: sidebar must show all ${articles.length} articles`);
+  }
+  for (const [, article] of html.matchAll(/<a class="post-title-link" href="(\/archives\/[0-9a-f]+\.html)"/gi)) {
+    if (!unseenLegacy.delete(article)) missing.push(`${file}: unexpected or duplicate legacy archive entry ${article}`);
+  }
+}
+for (const article of unseenLegacy) missing.push(`Article missing from the archive listing: ${article}`);
 
 if (missing.length) {
   console.error(missing.join('\n'));
